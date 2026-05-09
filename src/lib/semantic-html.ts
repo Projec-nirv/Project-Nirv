@@ -224,14 +224,6 @@ export function generateSemanticEmphasis(
     relatedConcepts?: string[]
   },
 ) {
-  const typeMapping: Record<typeof type, string> = {
-    definition: 'dfn', // <dfn>
-    emphasis: 'strong', // <strong>
-    'technical-term': 'abbr', // <abbr>
-    'key-metric': 'mark', // <mark>
-    'named-entity': 'span', // <span> with data attributes
-  }
-
   return {
     '@context': 'https://schema.org',
     '@type': 'DefinedTerm',

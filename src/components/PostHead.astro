@@ -83,13 +83,13 @@ const isCurrentSubpost = isSubpost(post.id)
 
 <!-- JSON-LD Structured Data Schemas -->
 <!-- BlogPosting Schema -->
-<script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} is:inline />
 
 <!-- Article Schema -->
-<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} is:inline />
 
 <!-- Breadcrumb Schema for Navigation Understanding -->
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
 
 <!-- Article Metadata for AI Extraction -->
 <meta name="article:published_time" content={post.data.date?.toISOString() || new Date().toISOString()} />
