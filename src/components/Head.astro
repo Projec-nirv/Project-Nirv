@@ -5,6 +5,7 @@ import Favicons from './Favicons.astro'
 ---
 
 <head>
+  <!-- Character Encoding & Viewport -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -13,6 +14,7 @@ import Favicons from './Favicons.astro'
   />
   <meta name="generator" content={Astro.generator} />
 
+  <!-- Mobile & App Metadata -->
   <meta name="HandheldFriendly" content="True" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -22,6 +24,7 @@ import Favicons from './Favicons.astro'
     content="telephone=no,date=no,address=no,email=no,url=no"
   />
 
+  <!-- Theme Color -->
   <meta
     name="theme-color"
     content="#121212"
@@ -33,6 +36,7 @@ import Favicons from './Favicons.astro'
     media="(prefers-color-scheme: light)"
   />
 
+  <!-- SEO & Discovery -->
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="manifest" href="/site.webmanifest" />
   <link
@@ -42,8 +46,52 @@ import Favicons from './Favicons.astro'
     href={new URL('rss.xml', Astro.site)}
   />
 
+  <!-- AI & LLM Optimization -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  
+  <!-- Semantic Metadata for AI Systems -->
+  <meta name="description" content={SITE.description} />
+  <meta name="keywords" content="research, systems, markets, data-driven analysis, structured thinking, intelligence" />
+  <meta name="author" content={SITE.author} />
+  <meta name="creator" content={SITE.author} />
+  <meta name="publisher" content={SITE.title} />
+  <meta name="language" content={SITE.locale} />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Open Graph - Social Media & LLM Context Windows -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={SITE.title} />
+  <meta property="og:description" content={SITE.description} />
+  <meta property="og:image" content={new URL('/static/1200x630.png', Astro.site)} />
+  <meta property="og:image:alt" content={SITE.title} />
+  <meta property="og:url" content={SITE.href} />
+  <meta property="og:site_name" content={SITE.title} />
+  <meta property="og:locale" content={SITE.locale} />
+
+  <!-- Twitter Card - AI Agent Compatibility -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={SITE.title} />
+  <meta name="twitter:description" content={SITE.description} />
+  <meta name="twitter:image" content={new URL('/static/1200x630.png', Astro.site)} />
+  <meta name="twitter:image:alt" content={SITE.title} />
+
+  <!-- Canonical & Link Relations for Search -->
+  <link rel="canonical" href={SITE.href} />
+  <link rel="home" href={SITE.href} />
+  <link rel="search" type="application/opensearchdescription+xml" title={SITE.title} href="/opensearch.xml" />
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+  <!-- Favicons -->
   <Favicons />
+  
+  <!-- Client-side Router -->
   <ClientRouter />
 
+  <!-- Semantic Content Slot -->
   <slot />
 </head>

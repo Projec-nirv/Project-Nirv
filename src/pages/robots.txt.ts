@@ -1,10 +1,118 @@
 import type { APIRoute } from 'astro'
 
 const getRobotsTxt = (sitemapURL: URL) => `
+# Project NIRV robots.txt - Optimized for search engines and AI crawlers
+# Last Updated: 2026-05-09
+
+# === Default Rules (All Crawlers) ===
 User-agent: *
 Allow: /
+Disallow: /404
 
+# Allow AI/LLM crawlers
+Allow: /blog
+Allow: /about
+Allow: /tags
+Allow: /authors
+
+# Crawl-delay helps with server load management (in seconds)
+Crawl-delay: 1
+
+# Request-rate: allow 30 requests per 60 seconds (conservative)
+Request-rate: 30/60
+
+# === OpenAI GPTBot ===
+User-agent: GPTBot
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Anthropic ClaudeBot ===
+User-agent: ClaudeBot
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Perplexity AI Bot ===
+User-agent: PerplexityBot
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Google Bot (with extended access for AI) ===
+User-agent: Googlebot
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Google Extended (for AI training) ===
+User-agent: Google-Extended
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === ChatGPT User Agent ===
+User-agent: ChatGPT-User
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Bing Bot ===
+User-agent: Bingbot
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Apple Spotlight ===
+User-agent: Applebot
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Yandex Bot ===
+User-agent: YandexBot
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Meta WhatsApp Bot ===
+User-agent: facebookexternalhit
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Generic AI/LLM User Agents ===
+User-agent: *bot*
+Allow: /blog/
+Allow: /about/
+Allow: /
+Crawl-delay: 0.5
+
+# === Disallow for Bad Bots ===
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap locations for crawlers
 Sitemap: ${sitemapURL.href}
+
+# Comment: This robots.txt optimizes for both traditional SEO and AI retrieval systems
+# - All blog and about content is freely crawlable
+# - Crawl-delays prevent server overload
+# - Specific AI bots are given explicit permission
+# - Bad/aggressive bots are blocked
 `
 
 export const GET: APIRoute = ({ site }) => {

@@ -18,6 +18,21 @@ const blog = defineCollection({
         url: z.string().url().optional(),
         citation: z.string().optional(),
       })).optional(),
+      // AI-First Semantic Metadata
+      semanticTags: z.array(z.string()).optional(),
+      keywords: z.array(z.string()).optional(),
+      concepts: z.array(z.string()).optional(),
+      entities: z.array(z.object({
+        type: z.string(),
+        name: z.string(),
+        description: z.string().optional(),
+        url: z.string().optional(),
+      })).optional(),
+      summary: z.string().optional(),
+      mainArguments: z.array(z.string()).optional(),
+      assumptions: z.array(z.string()).optional(),
+      implications: z.array(z.string()).optional(),
+      retrievalTags: z.array(z.string()).optional(),
     }),
 })
 

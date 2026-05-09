@@ -1,0 +1,514 @@
+{
+  "semanticOntology": {
+    "version": "1.0.0",
+    "description": "Semantic ontology for Project NIRV - defines consistent terminology, concepts, keywords, and relationships between topics for AI retrieval and semantic understanding",
+    "language": "en",
+    "domains": [
+      "economics",
+      "systems-theory",
+      "markets",
+      "technology",
+      "infrastructure",
+      "development",
+      "policy"
+    ],
+    "taxonomies": {
+      "systems": {
+        "label": "Systems & Dynamics",
+        "description": "Research focused on system behavior, feedback loops, organizational structures",
+        "synonyms": [
+          "system dynamics",
+          "structural analysis",
+          "organizational systems",
+          "network effects"
+        ],
+        "relatedConcepts": [
+          "feedback loops",
+          "incentive structures",
+          "organizational behavior",
+          "structural constraints",
+          "equilibrium",
+          "emergence"
+        ],
+        "subtopics": {
+          "systemDynamics": {
+            "label": "System Dynamics",
+            "concepts": [
+              "feedback loops",
+              "stocks and flows",
+              "delay effects",
+              "system boundaries",
+              "state variables",
+              "causal relationships"
+            ]
+          },
+          "organizationalSystems": {
+            "label": "Organizational Systems",
+            "concepts": [
+              "incentive alignment",
+              "organizational structure",
+              "decision-making processes",
+              "information flow",
+              "authority and accountability",
+              "coordination mechanisms"
+            ]
+          },
+          "networkEffects": {
+            "label": "Network Effects",
+            "concepts": [
+              "user externalities",
+              "cross-side network effects",
+              "winner-take-all dynamics",
+              "two-sided markets",
+              "platform effects",
+              "network topology"
+            ]
+          }
+        }
+      },
+      "markets": {
+        "label": "Market Economics",
+        "description": "Research on market structure, competition, pricing, and economic dynamics",
+        "synonyms": [
+          "market structure",
+          "competitive dynamics",
+          "market equilibrium",
+          "price discovery",
+          "market failure"
+        ],
+        "relatedConcepts": [
+          "unit economics",
+          "market structure",
+          "competitive intensity",
+          "pricing power",
+          "supply and demand",
+          "market entry barriers"
+        ],
+        "subtopics": {
+          "unitEconomics": {
+            "label": "Unit Economics",
+            "concepts": [
+              "customer acquisition cost (CAC)",
+              "lifetime value (LTV)",
+              "gross margin",
+              "payback period",
+              "contribution margin",
+              "unit efficiency"
+            ]
+          },
+          "marketStructure": {
+            "label": "Market Structure",
+            "concepts": [
+              "concentration ratios",
+              "market share dynamics",
+              "competitive positioning",
+              "monopolistic competition",
+              "oligopoly dynamics",
+              "market fragmentation"
+            ]
+          },
+          "platformEconomics": {
+            "label": "Platform Economics",
+            "concepts": [
+              "multi-sided platforms",
+              "network externalities",
+              "cold-start problem",
+              "chicken-and-egg problem",
+              "pricing structures",
+              "platform lock-in"
+            ]
+          }
+        }
+      },
+      "development": {
+        "label": "Economic Development",
+        "description": "Research on growth, infrastructure, and development constraints in economies",
+        "synonyms": [
+          "economic growth",
+          "development economics",
+          "infrastructure systems",
+          "development constraints",
+          "capacity building"
+        ],
+        "relatedConcepts": [
+          "GDP growth",
+          "productivity growth",
+          "structural constraints",
+          "resource availability",
+          "infrastructure quality",
+          "human capital"
+        ],
+        "subtopics": {
+          "growthDynamics": {
+            "label": "Growth Dynamics",
+            "concepts": [
+              "GDP growth rates",
+              "sectoral growth",
+              "productivity growth",
+              "innovation rates",
+              "convergence/divergence",
+              "growth constraints"
+            ]
+          },
+          "infrastructureConstraints": {
+            "label": "Infrastructure Constraints",
+            "concepts": [
+              "resource management",
+              "technical efficiency",
+              "system capacity",
+              "supply constraints",
+              "distribution systems",
+              "infrastructure investment"
+            ]
+          },
+          "structuralBarriers": {
+            "label": "Structural Barriers",
+            "concepts": [
+              "structural bottlenecks",
+              "path dependency",
+              "institutional constraints",
+              "regulatory frameworks",
+              "historical constraints",
+              "systemic barriers"
+            ]
+          }
+        }
+      },
+      "ideas": {
+        "label": "Ideas & Frameworks",
+        "description": "Research on conceptual frameworks, theories, and thought leadership",
+        "synonyms": [
+          "conceptual frameworks",
+          "theoretical models",
+          "intellectual frameworks",
+          "analytical approaches"
+        ],
+        "relatedConcepts": [
+          "economic theory",
+          "analytical frameworks",
+          "conceptual models",
+          "intellectual synthesis",
+          "research methodology",
+          "analytical rigor"
+        ],
+        "subtopics": {
+          "economicTheory": {
+            "label": "Economic Theory",
+            "concepts": [
+              "equilibrium models",
+              "game theory",
+              "mechanism design",
+              "behavioral economics",
+              "macroeconomic theory",
+              "microeconomic theory"
+            ]
+          },
+          "frameworkDevelopment": {
+            "label": "Framework Development",
+            "concepts": [
+              "analytical frameworks",
+              "problem decomposition",
+              "variable identification",
+              "hypothesis formation",
+              "testing approaches",
+              "intellectual models"
+            ]
+          }
+        }
+      }
+    },
+    "entities": {
+      "platforms": {
+        "label": "Platform Companies",
+        "examples": [
+          {
+            "name": "Airbnb",
+            "type": "accommodation-platform",
+            "relevantConcepts": [
+              "two-sided markets",
+              "network effects",
+              "supply-side constraints",
+              "regulatory challenges"
+            ]
+          },
+          {
+            "name": "Uber",
+            "type": "transportation-platform",
+            "relevantConcepts": [
+              "ride-sharing economics",
+              "driver supply dynamics",
+              "unit economics",
+              "market entry barriers"
+            ]
+          },
+          {
+            "name": "DoorDash",
+            "type": "food-delivery-platform",
+            "relevantConcepts": [
+              "unit economics",
+              "dark store model",
+              "supply-demand matching",
+              "market competition"
+            ]
+          }
+        ]
+      },
+      "sectors": {
+        "label": "Economic Sectors",
+        "examples": [
+          {
+            "name": "EdTech",
+            "type": "education-technology",
+            "relevantConcepts": [
+              "demand gravity",
+              "unit economics",
+              "customer churn",
+              "willingness-to-pay"
+            ]
+          },
+          {
+            "name": "Cloud Infrastructure",
+            "type": "technology-infrastructure",
+            "relevantConcepts": [
+              "cost structure",
+              "pricing dynamics",
+              "waste management",
+              "discount adoption"
+            ]
+          },
+          {
+            "name": "Agriculture",
+            "type": "primary-sector",
+            "relevantConcepts": [
+              "water intensity",
+              "irrigation systems",
+              "resource constraints",
+              "productivity growth"
+            ]
+          }
+        ]
+      },
+      "geographies": {
+        "label": "Geographic Regions",
+        "focus": "India-centric analysis",
+        "regions": [
+          {
+            "name": "Punjab",
+            "significance": "agricultural production, groundwater depletion"
+          },
+          {
+            "name": "Haryana",
+            "significance": "agricultural production, groundwater stress"
+          },
+          {
+            "name": "India",
+            "significance": "macro development, EdTech adoption, water scarcity"
+          }
+        ]
+      },
+      "researchers": {
+        "label": "Research Authors",
+        "primary": [
+          {
+            "name": "ADV",
+            "expertise": [
+              "systems analysis",
+              "market economics",
+              "economic development",
+              "data-driven research"
+            ],
+            "bio": "Primary author focusing on structural economic analysis and systems research"
+          }
+        ]
+      }
+    },
+    "conceptualRelationships": {
+      "cloudCostGravity": {
+        "name": "Cloud Cost Gravity",
+        "definition": "Structural economic phenomenon where infrastructure expenses grow faster than revenue as startups scale",
+        "relatedConcepts": [
+          "unit economics",
+          "organizational misalignment",
+          "technical debt",
+          "cost management",
+          "scaling challenges"
+        ],
+        "implications": [
+          "Infrastructure costs eventually constrain profitability",
+          "Architectural decisions early on create permanent cost drag",
+          "Cost reduction requires organizational transformation"
+        ],
+        "oppositeOf": "Economies of Scale (traditional)",
+        "examples": [
+          "AWS cost growth outpacing SaaS revenue growth",
+          "Microservices creating baseline infrastructure overhead"
+        ]
+      },
+      "demandGravity": {
+        "name": "Demand Gravity",
+        "definition": "Structural phenomenon where user demand normalizes after emergency conditions, creating unsustainable unit economics",
+        "relatedConcepts": [
+          "demand seasonality",
+          "pandemic-driven adoption",
+          "willingness-to-pay",
+          "customer churn",
+          "market saturation"
+        ],
+        "implications": [
+          "Emergency demand is not structural demand",
+          "Customer acquisition costs remain elevated even at scale",
+          "Preference reversals can occur when choice returns"
+        ],
+        "oppositeOf": "Secular Growth",
+        "examples": [
+          "EdTech demand collapse post-pandemic",
+          "Online education preference decline"
+        ]
+      },
+      "coldStartProblem": {
+        "name": "Cold-Start Problem",
+        "definition": "Challenge faced by two-sided platforms in acquiring initial critical mass on both demand and supply sides",
+        "relatedConcepts": [
+          "chicken-and-egg problem",
+          "network effects",
+          "bootstrap phase",
+          "initial growth dynamics",
+          "platform seeding"
+        ],
+        "implications": [
+          "Early platform growth requires strategic subsidization",
+          "Timing and sequencing of supply/demand acquisition is critical",
+          "Bootstrap success determines long-term viability"
+        ],
+        "relatedArticles": [
+          "The Chicken-and-Egg Problem"
+        ]
+      },
+      "waterConstraint": {
+        "name": "Water as Growth Constraint",
+        "definition": "Structural constraint where water availability directly limits economic growth in resource-dependent economies",
+        "relatedConcepts": [
+          "resource constraints",
+          "infrastructure constraints",
+          "agricultural dependency",
+          "groundwater depletion",
+          "environmental economics"
+        ],
+        "implications": [
+          "Water scarcity imposes ceiling on agricultural GDP",
+          "Urbanization and industrialization face physical limits",
+          "Infrastructure inefficiency amplifies resource constraints"
+        ],
+        "relatedArticles": [
+          "Water Scarcity and India's Economic Growth"
+        ]
+      }
+    },
+    "researchMethodology": {
+      "dataTypes": [
+        "empirical quantitative",
+        "macro-level aggregates",
+        "case studies",
+        "field research",
+        "industry reports",
+        "regulatory filings"
+      ],
+      "analyticalApproaches": [
+        "system dynamics",
+        "economic decomposition",
+        "unit economics analysis",
+        "elasticity estimation",
+        "comparative analysis",
+        "structural analysis"
+      ],
+      "sourceTypes": [
+        "academic research",
+        "industry reports",
+        "government statistics",
+        "SEC filings",
+        "company reports",
+        "regulatory data"
+      ]
+    },
+    "metrics": {
+      "economic": [
+        {
+          "name": "Water Intensity of GDP",
+          "definition": "Total freshwater withdrawals (m³) per unit real GDP",
+          "unit": "m³/USD",
+          "relevantTo": ["development", "infrastructure"]
+        },
+        {
+          "name": "Customer Acquisition Cost (CAC)",
+          "definition": "Sales and marketing spend per acquired customer",
+          "unit": "USD",
+          "relevantTo": ["markets", "platforms"]
+        },
+        {
+          "name": "Lifetime Value (LTV)",
+          "definition": "Total revenue expected from customer over lifetime",
+          "unit": "USD",
+          "relevantTo": ["markets", "platforms"]
+        },
+        {
+          "name": "Cloud Cost Intensity",
+          "definition": "Cloud infrastructure costs as % of revenue",
+          "unit": "%",
+          "relevantTo": ["systems", "markets"]
+        },
+        {
+          "name": "Groundwater Dependency Ratio",
+          "definition": "Area irrigated by groundwater / total irrigated area",
+          "unit": "ratio",
+          "relevantTo": ["development", "infrastructure"]
+        }
+      ],
+      "qualitative": [
+        {
+          "name": "Market Structure Concentration",
+          "description": "Competitive intensity and concentration in market",
+          "scale": "fragmented to monopolistic"
+        },
+        {
+          "name": "Demand Gravity Intensity",
+          "description": "Degree of emergency demand dependency",
+          "scale": "structural to emergency-driven"
+        }
+      ]
+    },
+    "keywords": {
+      "general": [
+        "research",
+        "analysis",
+        "systems",
+        "markets",
+        "economics",
+        "data-driven",
+        "structured thinking",
+        "intelligence"
+      ],
+      "technical": [
+        "unit economics",
+        "network effects",
+        "feedback loops",
+        "structural constraints",
+        "system dynamics",
+        "organizational alignment",
+        "market structure"
+      ],
+      "geographic": [
+        "India",
+        "emerging markets",
+        "developing economies",
+        "regional analysis"
+      ],
+      "temporal": [
+        "trend analysis",
+        "historical comparison",
+        "forecast",
+        "structural change",
+        "evolution"
+      ]
+    }
+  }
+}

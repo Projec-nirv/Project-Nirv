@@ -8,6 +8,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { Icon } from 'astro-icon/components'
+import { SITE } from '@/consts'
 
 export interface BreadcrumbItem {
   href?: string
@@ -20,22 +21,45 @@ interface Props {
 }
 
 const { items } = Astro.props
+
+// Generate JSON-LD breadcrumb schema
+const breadcrumbItems = [
+  { name: 'Home', url: SITE.href },
+  ...items.map((item) => ({
+    name: item.label,
+    url: item.href ? (item.href.startsWith('http') ? item.href : `${SITE.href}${item.href}`) : undefined,
+  })),
+]
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url || Astro.url.toString(),
+  })),
+}
 ---
+
+<!-- JSON-LD Breadcrumb Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
 <Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
-      <BreadcrumbLink href="/">
+      <BreadcrumbLink href="/" aria-label="Home">
         <Icon name="lucide:home" class="size-4 shrink-0" />
       </BreadcrumbLink>
     </BreadcrumbItem>
     {
       items.map((item, index) => (
         <>
-          <BreadcrumbSeparator />
+          <BreadcrumbSeparator aria-hidden="true" />
           <BreadcrumbItem>
             {index === items.length - 1 ? (
-              <BreadcrumbPage>
+              <BreadcrumbPage aria-current="page">
                 <span class="flex items-center gap-x-2">
                   {item.icon && (
                     <Icon name={item.icon} class="size-4 shrink-0" />
@@ -44,7 +68,7 @@ const { items } = Astro.props
                 </span>
               </BreadcrumbPage>
             ) : (
-              <BreadcrumbLink href={item.href}>
+              <BreadcrumbLink href={item.href} aria-label={item.label}>
                 <span class="flex items-center gap-x-2">
                   {item.icon && (
                     <Icon name={item.icon} class="size-4 shrink-0" />
