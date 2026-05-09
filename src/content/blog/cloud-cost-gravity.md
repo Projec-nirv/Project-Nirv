@@ -51,7 +51,7 @@ sources:
 
 ## 1. The Pattern: How Costs Diverge from Revenue
 
-Consider a Series B SaaS startup at \$2M ARR with a cloud bill of \$120K annually (6% of revenue). The finance team forecasts 100% YoY revenue growth to \$4M, with cloud costs scaling at 50% YoY to reach \$180K (4.5% of revenue). This projection is rational: it assumes infrastructure optimizes with scale.
+Consider a series B SaaS startup at \$2M ARR with a cloud bill of \$120K annually (6% of revenue). The finance team forecasts 100% YoY revenue growth to \$4M, with cloud costs scaling at 50% YoY to reach \$180K (4.5% of revenue). This projection is rational: it assumes infrastructure optimizes with scale.
 
 Now observe the actual outcome at Year 4: the startup reaches \$20M ARR, but cloud costs have climbed to \$800K annually—a 6.7x increase from the Year 2 baseline of \$120K, despite revenue growing only 5x. The cost percentage has technically improved (4% vs. 4.5%), but the absolute annual expense has become material. A16z's research quantifies the aggregate impact: across 50 top public software companies, an estimated \$100 billion in market capitalization is suppressed due to cloud cost margin drag.
 
