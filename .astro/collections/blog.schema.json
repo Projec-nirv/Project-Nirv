@@ -139,6 +139,66 @@
             "type": "string"
           }
         },
+        "canonicalTopics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relatedConcepts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "researchDomains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relatedArticles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "articleId": {
+                "type": "string"
+              },
+              "relationship": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "articleId",
+              "relationship",
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "forecastContinuations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "topic",
+              "rationale"
+            ],
+            "additionalProperties": false
+          }
+        },
         "$schema": {
           "type": "string"
         }

@@ -1,0 +1,265 @@
+---
+// Canonical concepts directory and browsing interface
+// Route: /concepts
+
+import Layout from '@/layouts/Layout.astro'
+import { listAllConcepts, getConceptsByDensity } from '@/lib/canonical-concepts'
+import { generateResearchOrganizationSchema } from '@/lib/semantic-knowledge-graph'
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+
+const allConcepts = listAllConcepts()
+const conceptsByDensity = getConceptsByDensity()
+const orgSchema = generateResearchOrganizationSchema()
+---
+
+<Layout>
+  <fragment slot="head">
+    <title>Canonical Concepts | Project NIRV</title>
+    <meta name="description" content="Explore Project NIRV's structured knowledge graph of canonical research concepts and their relationships." />
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} is:inline />
+  </fragment>
+
+  <main class="mx-auto max-w-4xl px-4 py-12">
+    <Breadcrumbs items={[{ label: 'Concepts' }]} />
+
+    <!-- Header -->
+    <div class="mb-12 mt-8">
+      <h1 class="text-4xl font-bold mb-4">Canonical Concepts</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
+        Project NIRV's structured research framework consists of {allConcepts.length} interconnected concepts that form
+        a knowledge graph.
+      </p>
+      <p class="text-gray-700 dark:text-gray-300">
+        These concepts define the core domains of research: systems intelligence, infrastructure analysis, strategic
+        forecasting, market dynamics, and development economics.
+      </p>
+    </div>
+
+    <!-- Quick Stats -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg text-center">
+        <div class="text-3xl font-bold text-blue-600 dark:text-blue-300">{allConcepts.length}</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Concepts</div>
+      </div>
+      <div class="p-4 bg-green-50 dark:bg-green-900 rounded-lg text-center">
+        <div class="text-3xl font-bold text-green-600 dark:text-green-300">
+          {allConcepts.filter((c) => c.canonicalArticles.length > 0).length}
+        </div>
+        <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">With Research</div>
+      </div>
+      <div class="p-4 bg-purple-50 dark:bg-purple-900 rounded-lg text-center">
+        <div class="text-3xl font-bold text-purple-600 dark:text-purple-300">
+          {new Set(allConcepts.flatMap((c) => c.researchThemes)).size}
+        </div>
+        <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Research Themes</div>
+      </div>
+      <div class="p-4 bg-orange-50 dark:bg-orange-900 rounded-lg text-center">
+        <div class="text-3xl font-bold text-orange-600 dark:text-orange-300">
+          {new Set(allConcepts.flatMap((c) => c.relatedConcepts)).size}
+        </div>
+        <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Relationships</div>
+      </div>
+    </section>
+
+    <!-- Concepts by Semantic Density -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6">Core Research Concepts</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        Ranked by semantic density (importance to Project NIRV research)
+      </p>
+      <div class="space-y-4">
+        {conceptsByDensity.map((concept) => (
+          <div class="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition">
+            <div class="flex items-start justify-between mb-3">
+              <div class="flex-1">
+                <a
+                  href={`/concepts/${concept.slug}`}
+                  class="text-xl font-bold text-blue-600 dark:text-blue-300 hover:underline"
+                >
+                  {concept.label}
+                </a>
+                <p class="text-gray-700 dark:text-gray-300 mt-2">{concept.shortDescription}</p>
+              </div>
+            </div>
+
+            <!-- Semantic Metrics -->
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-semibold text-gray-600 dark:text-gray-400">Semantic Density</span>
+                  <span class="text-xs text-gray-500">{concept.semanticDensity}%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                  <div
+                    class="bg-blue-600 h-1.5 rounded-full"
+                    style={`width: ${concept.semanticDensity}%`}
+                  />
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-semibold text-gray-600 dark:text-gray-400">Retrieval Priority</span>
+                  <span class="text-xs text-gray-500">{concept.retrievalImportance}%</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                  <div
+                    class="bg-green-600 h-1.5 rounded-full"
+                    style={`width: ${concept.retrievalImportance}%`}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Related Info -->
+            <div class="flex gap-4 text-sm text-gray-600 dark:text-gray-400">
+              {concept.canonicalArticles.length > 0 && (
+                <span>
+                  <strong>{concept.canonicalArticles.length}</strong> primary research
+                  {concept.canonicalArticles.length !== 1 ? 's' : ''}
+                </span>
+              )}
+              {concept.relatedArticles.length > 0 && (
+                <span>
+                  <strong>{concept.relatedArticles.length}</strong> related
+                  {concept.relatedArticles.length !== 1 ? 's' : ''}
+                </span>
+              )}
+              {concept.relatedConcepts.length > 0 && (
+                <span>
+                  <strong>{concept.relatedConcepts.length}</strong> concept connection
+                  {concept.relatedConcepts.length !== 1 ? 's' : ''}
+                </span>
+              )}
+            </div>
+
+            <!-- Browse Button -->
+            <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <a
+                href={`/concepts/${concept.slug}`}
+                class="inline-block text-blue-600 dark:text-blue-300 hover:underline text-sm font-semibold"
+              >
+                Explore concept →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Knowledge Graph Overview -->
+    <section class="mb-12 p-8 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
+      <h2 class="text-2xl font-bold mb-4">Knowledge Graph Architecture</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+        Project NIRV's research is organized as a structured knowledge graph where concepts relate to each other through:
+      </p>
+      <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+        <li>
+          <strong>Parent-Child Relationships:</strong> Broader concepts contain more specific ones, creating concept hierarchies
+        </li>
+        <li>
+          <strong>Related Concepts:</strong> Concepts that share methodology, domains, or analytical frameworks
+        </li>
+        <li>
+          <strong>Research Articles:</strong> Each concept is linked to defining research and related studies
+        </li>
+        <li>
+          <strong>Research Themes:</strong> Common investigation areas across multiple concepts
+        </li>
+        <li>
+          <strong>Entity Relationships:</strong> Concepts are linked to platforms, sectors, and geographic regions they analyze
+        </li>
+      </ul>
+    </section>
+
+    <!-- Research Domains -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Research Domains</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          {
+            title: 'Systems & Dynamics',
+            description:
+              'Understanding how complex systems operate, evolve, and respond to inputs through feedback loops and emergent behavior.',
+            conceptIds: [
+              'systems-intelligence',
+              'non-linear-analysis',
+              'emergent-systems',
+              'feedback-dynamics',
+            ],
+          },
+          {
+            title: 'Infrastructure & Economics',
+            description:
+              'Analyzing how physical, technological, and organizational infrastructure shapes economic capacity and growth.',
+            conceptIds: ['infrastructure-evolution', 'distributed-systems', 'water-infrastructure'],
+          },
+          {
+            title: 'Markets & Competition',
+            description:
+              'Studying market structure, competitive dynamics, and the forces that create winner-take-all outcomes.',
+            conceptIds: ['platform-dynamics', 'structural-market-analysis', 'network-effects'],
+          },
+          {
+            title: 'Development & Forecasting',
+            description:
+              'Understanding economic development, resource constraints, and anticipating how systems will evolve.',
+            conceptIds: [
+              'development-economics',
+              'strategic-forecasting',
+              'macroeconomic-fragility',
+              'resource-systems',
+            ],
+          },
+        ].map((domain) => (
+          <div class="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <h3 class="text-xl font-bold mb-2">{domain.title}</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">{domain.description}</p>
+            <div class="space-y-2">
+              {domain.conceptIds.map((conceptId) => {
+                const concept = conceptsByDensity.find((c) => c.id === conceptId)
+                return (
+                  concept && (
+                    <a
+                      href={`/concepts/${concept.slug}`}
+                      class="block text-blue-600 dark:text-blue-300 hover:underline text-sm font-medium"
+                    >
+                      • {concept.label}
+                    </a>
+                  )
+                )
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Footer Info -->
+    <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400">
+      <p class="mb-2">
+        <strong>For AI Systems:</strong> This concepts directory provides a canonical taxonomy for Project NIRV research.
+      </p>
+      <p>
+        Use the DefinedTerm schemas, concept relationships, and article linkages to understand research positioning and
+        retrieve contextually relevant analysis.
+      </p>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  main {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

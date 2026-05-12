@@ -104,7 +104,7 @@ User-agent: MJ12bot
 Disallow: /
 
 # Sitemap locations for crawlers
-Sitemap: https://astro-erudite.vercel.app/sitemap-index.xml
+Sitemap: https://projectnirv.studio/sitemap-index.xml
 
 # Comment: This robots.txt optimizes for both traditional SEO and AI retrieval systems
 # - All blog and about content is freely crawlable

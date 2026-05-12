@@ -2,13 +2,41 @@
 title: "Water Scarcity and India's Economic Growth: How Water Availability Constrains Development and GDP Growth"
 description: "Data-driven analysis of how water scarcity, groundwater depletion, and drought impact India's agricultural productivity, urbanization, and macroeconomic stability with quantifiable metrics."
 date: 2026-02-17
-tags: ["systems", "development", "infrastructure"]
+tags: ["development-economics"]
 authors: ["ADV"]
 draft: false
 semanticTags: ["resource-constraints", "infrastructure-systems", "economic-development", "environmental-economics", "groundwater-depletion"]
 keywords: ["water scarcity", "India development", "groundwater depletion", "agricultural productivity", "infrastructure constraints", "resource management", "economic growth limits"]
 concepts: ["water intensity of GDP", "groundwater dependency ratio", "non-revenue water", "urban water loss", "drought impact", "irrigation efficiency"]
 summary: "Water availability directly constrains India's economic growth through agricultural water intensity, groundwater depletion, urban infrastructure losses, and drought-induced productivity shocks."
+
+# Semantic Knowledge Graph Metadata
+canonicalTopics:
+  - "water-infrastructure"
+  - "resource-systems"
+  - "development-economics"
+  - "macroeconomic-systems"
+relatedConcepts:
+  - "infrastructure-evolution"
+  - "strategic-forecasting"
+  - "structural-constraints"
+researchDomains:
+  - "Development & Forecasting"
+  - "Infrastructure & Economics"
+
+# Related Research
+relatedArticles:
+  - articleId: "why-indian-edtech-collapsed"
+    relationship: "both-analyze-development-constraints"
+    reason: "Both examine structural constraints on development in India's economy"
+
+# Forecast Continuations
+forecastContinuations:
+  - topic: "Alternative water sourcing economics and technological solutions to water scarcity"
+    rationale: "Understanding technological paths to water constraint relief"
+  - topic: "Policy response and groundwater pricing reforms impact on agricultural economics"
+    rationale: "Policy changes could fundamentally alter water-constrained growth equations"
+
 mainArguments:
   - "Water is fundamental structural input constraining India's growth, not seasonal issue"
   - "Agriculture uses 80-90% of freshwater withdrawals in India vs 30-40% in developed economies"

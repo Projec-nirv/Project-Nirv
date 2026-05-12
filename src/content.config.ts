@@ -33,6 +33,20 @@ const blog = defineCollection({
       assumptions: z.array(z.string()).optional(),
       implications: z.array(z.string()).optional(),
       retrievalTags: z.array(z.string()).optional(),
+      
+      // Semantic Knowledge Graph Integration
+      canonicalTopics: z.array(z.string()).optional(),
+      relatedConcepts: z.array(z.string()).optional(),
+      researchDomains: z.array(z.string()).optional(),
+      relatedArticles: z.array(z.object({
+        articleId: z.string(),
+        relationship: z.string(),
+        reason: z.string(),
+      })).optional(),
+      forecastContinuations: z.array(z.object({
+        topic: z.string(),
+        rationale: z.string(),
+      })).optional(),
     }),
 })
 

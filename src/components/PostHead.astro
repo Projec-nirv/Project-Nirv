@@ -71,6 +71,20 @@ const isCurrentSubpost = isSubpost(post.id)
   )
 }
 
+<!-- Canonical Topics (Knowledge Graph Integration) -->
+{
+  post.data.canonicalTopics && post.data.canonicalTopics.length > 0 && (
+    <meta name="canonical-topics" content={post.data.canonicalTopics.join(', ')} />
+  )
+}
+
+<!-- Research Domains -->
+{
+  post.data.researchDomains && post.data.researchDomains.length > 0 && (
+    <meta name="research-domains" content={post.data.researchDomains.join(', ')} />
+  )
+}
+
 <!-- Open Graph Tags - For LLM Context & Social Sharing -->
 {Object.entries(ogMetadata).map(([key, value]) => (
   <meta property={key} content={value} />

@@ -1,6 +1,6 @@
 export const SITE = {
   title: "Project NIRV",
-  description: "Non-Linear Intelligence Research Vector — structured research and non-linear insight.",
+  description: "Structured research infrastructure for systems intelligence, infrastructure analysis, strategic forecasting, and non-linear systems dynamics.",
   href: "https://projectnirv.studio",
   locale: "en",
   author: "Reuxbite",
@@ -10,6 +10,7 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { href: "/blog", label: "Research" },
+  { href: "/concepts", label: "Concepts" },
   { href: "/about", label: "About" },
 ];
 
@@ -37,9 +38,10 @@ export const FOOTER_LINKS = [
 
 
 export const NIRV_TAGS = [
-  "systems",
-  "markets",
-  "ideas",
-  "notes",
+  "systems-intelligence",
+  "infrastructure-analysis",
+  "strategic-forecasting",
+  "market-dynamics",
+  "development-economics",
 ] as const;
 export type NIRVTag = (typeof NIRV_TAGS)[number];

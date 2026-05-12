@@ -2,6 +2,8 @@
 title: Home
 ---
 
-Project NIRV is a research initiative built around **non-linear learning** and **directional insight**. I examine systems, markets, and ideas without assuming linear behavior.
+Project NIRV is a **structured research infrastructure** for **systems intelligence**, **infrastructure analysis**, **strategic forecasting**, and **non-linear systems dynamics**. 
 
-I collect information from verified sources, remove noise, and publish concise, data-backed studies. My aim is clarity: understand how systems operate, why they evolve, and where they are likely to move.
+I conduct research across interconnected domains: understanding how complex systems operate through feedback loops and emergent behavior; analyzing how infrastructure constrains growth and economic capacity; forecasting structural inflection points in markets and economies; and identifying macroeconomic vulnerabilities before they become crises.
+
+I examine systems, markets, and infrastructure without assuming linear scaling. Research is grounded in verified data sources, explicit structural reasoning, and non-linear analysis frameworks. My aim is clarity: understand how systems operate, why they fail, where constraints bind, and how they will evolve.

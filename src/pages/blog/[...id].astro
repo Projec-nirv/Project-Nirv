@@ -4,6 +4,7 @@ import ImageGallery from '@/components/ImageGallery.astro'
 import Link from '@/components/Link.astro'
 import PostHead from '@/components/PostHead.astro'
 import PostNavigation from '@/components/PostNavigation.astro'
+import SemanticRelationships from '@/components/SemanticRelationships.astro'
 import Sources from '@/components/Sources.astro'
 import SubpostsHeader from '@/components/SubpostsHeader.astro'
 import SubpostsSidebar from '@/components/SubpostsSidebar.astro'
@@ -229,6 +230,11 @@ const tocSections = await getTOCSections(currentPostId)
       <Content />
       <Sources sources={post.data.sources} />
     </article>
+
+    <!-- Semantic Knowledge Graph Relationships -->
+    <div class="col-start-2">
+      <SemanticRelationships post={post} />
+    </div>
 
     {
       (hasChildPosts || isCurrentSubpost) && (

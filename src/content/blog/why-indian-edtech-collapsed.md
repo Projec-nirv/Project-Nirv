@@ -2,13 +2,47 @@
 title: "The Structural Collapse of Indian Online Education Post-2021"
 description: "why EdTech platforms' unit economics deteriorated faster than revenue growth, grounded in artificial pandemic demand, organizational misalignment, and market structural dynamics."
 date: 2025-12-30
-tags: ["markets", "systems"]
+tags: ["strategic-forecasting"]
 authors: ["ADV"]
 draft: false
 semanticTags: ["demand-gravity", "unit-economics", "market-normalization", "customer-churn", "business-model-collapse"]
 keywords: ["EdTech collapse", "demand gravity", "unit economics", "customer acquisition", "pandemic demand", "willingness to pay", "market normalization"]
 concepts: ["demand gravity", "emergency vs structural demand", "customer acquisition cost", "lifetime value mismatch", "preference reversal", "churn dynamics"]
 summary: "EdTech platforms mistook artificial pandemic demand for structural adoption, leading to unsustainable CAC:LTV ratios, customer churn, and willingness-to-pay collapse as demand normalized."
+
+# Semantic Knowledge Graph Metadata
+canonicalTopics:
+  - "macroeconomic-fragility"
+  - "strategic-forecasting"
+  - "platform-dynamics"
+  - "development-economics"
+relatedConcepts:
+  - "non-linear-analysis"
+  - "structural-market-analysis"
+  - "macroeconomic-systems"
+researchDomains:
+  - "Markets & Competition"
+  - "Development & Forecasting"
+
+# Related Research
+relatedArticles:
+  - articleId: "cloud-cost-gravity"
+    relationship: "both-examine-scaling-unit-economics"
+    reason: "Both analyze how scaling creates unfavorable economics when velocity optimization meets market reality"
+  - articleId: "the-chicken-and-egg-problem"
+    relationship: "both-analyze-platform-dynamics"
+    reason: "EdTech collapse reflects platform network effects and cold-start dynamics"
+  - articleId: "water-growth-constraint"
+    relationship: "complementary-development-analysis"
+    reason: "Both examine structural constraints on development in India's economy"
+
+# Forecast Continuations
+forecastContinuations:
+  - topic: "EdTech platform recovery patterns and business models that survive demand normalization"
+    rationale: "Understanding which models can thrive after demand gravity reset"
+  - topic: "Policy role in EdTech sector stabilization and public education technology integration"
+    rationale: "Government interventions may create new equilibrium for digital education"
+
 mainArguments:
   - "Pandemic demand was emergency-driven, not structural - preference reversed when choice returned"
   - "Customer acquisition costs remained elevated (70-80% of revenue) despite scale"
