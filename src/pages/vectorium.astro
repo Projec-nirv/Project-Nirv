@@ -1,0 +1,103 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
+import Layout from '@/layouts/Layout.astro'
+import { getEntry, render } from 'astro:content'
+import { SITE } from '@/consts'
+
+const vectoriumContent = await getEntry('vectorium', 'vectorium')
+const { Content } = vectoriumContent ? await render(vectoriumContent) : { Content: null }
+
+const title = "Vectorium - Experimental Systems & Applied Research"
+const description = "Vectorium is the applied research ecosystem of Project NIRV—a dedicated space for experimental systems, intelligence platforms, and research-driven products emerging from rigorous analysis."
+
+// Generate JSON-LD schemas for Vectorium
+const vectoriumSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': new URL('/vectorium', Astro.site).toString(),
+  name: title,
+  description: description,
+  url: new URL('/vectorium', Astro.site).toString(),
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': `${SITE.href}/#website`,
+    name: SITE.title,
+  },
+  about: {
+    '@type': 'Thing',
+    name: 'Experimental Systems Research',
+    description: 'Applied research infrastructure and experimental systems'
+  },
+  mainEntity: {
+    '@type': 'Organization',
+    '@id': `${SITE.href}/#organization`,
+    name: 'Project NIRV',
+    description: 'Research-driven initiative for systems intelligence',
+    url: SITE.href
+  },
+  hasPart: [
+    {
+      '@type': 'SoftwareApplication',
+      '@id': new URL('/vectorium/trace', Astro.site).toString(),
+      name: 'Trace',
+      description: 'Attribution intelligence and verification system',
+      url: new URL('/vectorium/trace', Astro.site).toString(),
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': new URL('/vectorium', Astro.site).toString(),
+        name: 'Vectorium'
+      }
+    }
+  ]
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: SITE.href
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Vectorium',
+      item: new URL('/vectorium', Astro.site).toString()
+    }
+  ]
+}
+---
+
+<Layout class="max-w-3xl">
+  <PageHead slot="head" title={title} description={description} />
+  <script type="application/ld+json" set:html={JSON.stringify(vectoriumSchema)} is:inline />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
+  
+  <Breadcrumbs items={[{ label: 'Vectorium', icon: 'lucide:zap' }]} />
+
+  <section>
+    <div class="min-w-full">
+      <div class="prose mb-8">
+        {Content && <Content />}
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-blue-600">
+        <p class="text-muted-foreground text-sm text-center">
+          Part of <Link
+            href="https://projectnirv.studio"
+            class="text-foreground"
+            external
+            underline>Project NIRV</Link
+          >—Research-driven initiative for systems intelligence and strategic forecasting.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

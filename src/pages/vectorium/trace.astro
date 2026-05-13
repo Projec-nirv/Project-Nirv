@@ -1,0 +1,131 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
+import Layout from '@/layouts/Layout.astro'
+import { getEntry, render } from 'astro:content'
+import { SITE } from '@/consts'
+
+const traceContent = await getEntry('vectorium', 'trace')
+const { Content } = traceContent ? await render(traceContent) : { Content: null }
+
+const title = "Trace - Attribution Intelligence System"
+const description = "Trace is an attribution intelligence and verification system designed to analyze inconsistencies between ecommerce revenue signals and advertising platform attribution across Shopify, Meta Ads, Instagram Ads, and Google Ads."
+
+// Generate JSON-LD schemas for Trace
+const traceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': new URL('/vectorium/trace', Astro.site).toString(),
+  name: 'Trace',
+  description: description,
+  url: new URL('/vectorium/trace', Astro.site).toString(),
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  keywords: ['attribution', 'verification', 'ecommerce', 'advertising', 'analytics', 'signal integrity'],
+  abstract: 'An attribution intelligence platform that analyzes inconsistencies between revenue signals and advertising platform attribution data across multiple platforms.',
+  about: [
+    {
+      '@type': 'Thing',
+      name: 'Attribution Verification'
+    },
+    {
+      '@type': 'Thing',
+      name: 'Advertising Analytics'
+    },
+    {
+      '@type': 'Thing',
+      name: 'Cross-Platform Signal Analysis'
+    }
+  ],
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': new URL('/vectorium', Astro.site).toString(),
+    name: 'Vectorium',
+    url: new URL('/vectorium', Astro.site).toString()
+  },
+  mainEntity: {
+    '@type': 'Organization',
+    '@id': `${SITE.href}/#organization`,
+    name: 'Project NIRV',
+    url: SITE.href
+  },
+  codeRepository: 'https://github.com/Reuxbite/Trace',
+  author: {
+    '@type': 'Organization',
+    name: 'Project NIRV',
+    url: SITE.href
+  },
+  featureList: [
+    'Cross-platform signal reconciliation',
+    'Revenue and advertising data reconciliation',
+    'Consistency analysis across platforms',
+    'Structured anomaly detection',
+    'Operational visibility and verification'
+  ]
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: SITE.href
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Vectorium',
+      item: new URL('/vectorium', Astro.site).toString()
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Trace',
+      item: new URL('/vectorium/trace', Astro.site).toString()
+    }
+  ]
+}
+---
+
+<Layout class="max-w-3xl">
+  <PageHead slot="head" title={title} description={description} />
+  <script type="application/ld+json" set:html={JSON.stringify(traceSchema)} is:inline />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
+  
+  <Breadcrumbs items={[
+    { label: 'Vectorium', href: '/vectorium' },
+    { label: 'Trace', icon: 'lucide:zap' }
+  ]} />
+
+  <section>
+    <div class="min-w-full">
+      <div class="prose mb-8">
+        {Content && <Content />}
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-blue-600">
+        <div class="flex flex-col space-y-4">
+          <p class="text-muted-foreground text-sm">
+            Trace is part of <Link
+              href="/vectorium"
+              class="text-foreground font-medium"
+              underline>Vectorium</Link
+            >, the applied research ecosystem of Project NIRV.
+          </p>
+          <p class="text-muted-foreground text-sm">
+            Repository: <Link
+              href="https://github.com/Reuxbite/Trace"
+              class="text-foreground font-medium"
+              external
+              underline>github.com/Reuxbite/Trace</Link
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

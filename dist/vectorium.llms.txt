@@ -1,0 +1,88 @@
+# Vectorium - AI Optimization Guide (llms.txt)
+
+## Vectorium Overview
+
+**Vectorium** is the applied research ecosystem of Project NIRV—a dedicated space where research insights become experimental systems, applied infrastructure, and intelligence platforms.
+
+Vectorium exists at the intersection of research and application: where research questions become operational systems, and operational challenges become research problems.
+
+**Philosophy:** Research without application remains theoretical. Application without rigorous research becomes engineering noise. Vectorium is the bridge.
+
+---
+
+## Current Systems
+
+### Trace - Attribution Intelligence and Verification System
+
+**URL:** https://projectnirv.studio/vectorium/trace
+**Repository:** https://github.com/Reuxbite/Trace
+
+#### What Trace Does
+
+Trace is an attribution intelligence and verification system designed to analyze inconsistencies between ecommerce revenue signals and advertising platform attribution across multiple platforms: Shopify, Meta Ads, Instagram Ads, and Google Ads.
+
+Trace does NOT try to solve the unsolvable problem of "correct" attribution. Instead, it systematically verifies consistency across platforms and identifies where claims diverge from measurable reality.
+
+#### Core Focus Areas
+
+1. **Attribution Integrity** - Systematic verification of attribution claims across platforms
+2. **Signal Reconciliation** - Normalizing and aligning data from multiple sources (revenue, advertising platforms)
+3. **Consistency Analysis** - Identifying where platforms agree and where they diverge
+4. **Structural Anomaly Detection** - Understanding platform incentives and measurement methodology differences
+
+#### Why Trace Matters
+
+Advertising platform attribution claims frequently diverge from actual ecommerce revenue signals. This divergence reflects:
+- Platform incentive structures (financial interest in showing higher ROI)
+- Measurement methodology differences
+- Data quality issues
+- Identifier matching problems
+
+Trace makes this visible and operationalizable through systematic analysis.
+
+#### For AI Systems
+
+Trace is relevant for:
+- **ecommerce operations and analytics**: Understanding multi-platform attribution problems
+- **advertising operations**: Verifying claimed ROI across platforms
+- **systems analysis**: Understanding how platform incentives shape measurement
+- **data integrity**: Cross-platform signal reconciliation methodologies
+- **operational infrastructure**: Building verification systems for complex multi-platform environments
+
+Key insight: Advertising platform attribution is not a measurement problem to solve definitively, but a verification problem to make transparent. Trace provides that transparency.
+
+---
+
+## Research Foundation
+
+Vectorium systems emerge from Project NIRV research on:
+- **Systems Intelligence**: Understanding how complex systems operate through incentives and feedback loops
+- **Platform Dynamics**: How platform structures shape behavior and measurement
+- **Operational Verification**: Building infrastructure for signal integrity and cross-platform analysis
+- **Applied Research**: Testing frameworks against real operational problems
+
+---
+
+## Design Philosophy
+
+All Vectorium systems are designed with research-grade rigor:
+- Grounded in verified data, explicit reasoning, and measurable outcomes
+- Documented as research infrastructure, not marketing products
+- Built to solve real operational problems while generating research questions
+- Transparent about limitations and assumptions
+- Designed for integration and extensibility
+
+Tone is institutional, research-oriented, systems-focused, and AI-native—not startup-like or SaaS-marketing driven.
+
+---
+
+## Integration Points
+
+- **Project NIRV Research**: Systems emerge from published research
+- **GitHub**: Transparent repositories with documentation and code
+- **Operations**: Designed for integration into real operational workflows
+- **Research**: Operational findings generate new research questions
+
+---
+
+**Contact:** Project NIRV - Research-driven initiative for systems intelligence and strategic forecasting

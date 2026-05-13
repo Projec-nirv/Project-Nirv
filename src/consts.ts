@@ -1,16 +1,16 @@
 export const SITE = {
   title: "Project NIRV",
-  description: "Structured research infrastructure for systems intelligence, infrastructure analysis, strategic forecasting, and non-linear systems dynamics.",
+  description: "Project NIRV is a research-driven initiative focused on systems intelligence, strategic forecasting, infrastructure evolution, and non-linear analysis. We build products, publish research and insights, and explore emerging systems across technology, markets, society, and infrastructure.",
   href: "https://projectnirv.studio",
   locale: "en",
-  author: "Reuxbite",
+  author: "Project NIRV",
   featuredPostCount: 2,
   postsPerPage: 5,
 };
 
 export const NAV_LINKS = [
   { href: "/blog", label: "Research" },
-  { href: "/concepts", label: "Concepts" },
+  { href: "/vectorium", label: "Vectorium" },
   { href: "/about", label: "About" },
 ];
 
@@ -34,6 +34,7 @@ export const SOCIAL_LINKS: { href: string; icon: keyof typeof ICON_MAP }[] = [
 export const FOOTER_LINKS = [
   { href: "/about", label: "About" },
   { href: "/blog", label: "Research" },
+  { href: "/vectorium", label: "Vectorium" },
 ];
 
 

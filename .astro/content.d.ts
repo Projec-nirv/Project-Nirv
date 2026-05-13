@@ -198,6 +198,14 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
+"vectorium": Record<string, {
+  id: string;
+  body?: string;
+  collection: "vectorium";
+  data: InferEntrySchema<"vectorium">;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
 
 	};
 

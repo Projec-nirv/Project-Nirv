@@ -94,4 +94,22 @@ const home = defineCollection({
   }),
 })
 
-export const collections = { blog, authors, projects, about, home }
+const vectorium = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/vectorium' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    canonicalTopics: z.array(z.string()).optional(),
+    semanticTags: z.array(z.string()).optional(),
+    keywords: z.array(z.string()).optional(),
+    researchDomains: z.array(z.string()).optional(),
+    concepts: z.array(z.string()).optional(),
+    retrievalTags: z.array(z.string()).optional(),
+    summary: z.string().optional(),
+    mainArguments: z.array(z.string()).optional(),
+    assumptions: z.array(z.string()).optional(),
+    implications: z.array(z.string()).optional(),
+  }),
+})
+
+export const collections = { blog, authors, projects, about, home, vectorium }

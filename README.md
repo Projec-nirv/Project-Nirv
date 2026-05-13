@@ -1,29 +1,29 @@
 # Project NIRV
 ![Project Nirv Logo](public/logo.png)
 
-Project Nirv functions as a research initiative built around the idea of **non-linear learning** and **directional insight**.  
-The name represents its framework: **Non-Linear Intelligence Research Vector** — a structured method for examining systems, markets, and ideas without assuming linear behavior.
+Project NIRV (Non-Linear Intelligence Research Vector) is a research-driven initiative focused on systems intelligence, strategic forecasting, infrastructure evolution, and non-linear analysis.
 
-The project collects information from verified sources, removes noise, and publishes concise, data-backed studies.  
-The aim is clarity: understand how systems operate, why they evolve, and where they are likely to move.
+We build products, publish research and insights, and explore emerging systems across technology, markets, society, and infrastructure. Our mission is to develop rigorous understanding of how complex systems operate, fail, and evolve through structured analysis grounded in verified data and explicit reasoning.
 
 ---
 
-## Purpose
+## Our Focus
 
-- Establish a consistent vector for ongoing research  
-- Produce structured breakdowns of markets and systems  
-- Highlight patterns, interactions, and second-order effects  
-- Build a public archive of distilled insight  
+- Conduct rigorous research on systems intelligence and non-linear dynamics
+- Examine infrastructure as a constraint on growth and economic capacity
+- Forecast structural inflection points in markets and economies
+- Identify macroeconomic vulnerabilities before they become crises
+- Build experimental products and tools from research insights
 
 ---
 
-## Approach
+## Our Approach
 
-- Non-linear thinking models  
-- Source-based verification over speculation  
-- Synthesis over commentary  
-- Directional analysis over static description  
+- Non-linear thinking frameworks for complex systems
+- Source-based verification over speculation
+- Synthesis over commentary
+- Structural reasoning over static description
+- Experimental systems to test and validate research insights  
 
 
 
