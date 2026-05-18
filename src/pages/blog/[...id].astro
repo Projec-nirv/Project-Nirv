@@ -10,7 +10,6 @@ import SubpostsHeader from '@/components/SubpostsHeader.astro'
 import SubpostsSidebar from '@/components/SubpostsSidebar.astro'
 import TOCHeader from '@/components/TOCHeader.astro'
 import TOCSidebar from '@/components/TOCSidebar.astro'
-import { badgeVariants } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import Layout from '@/layouts/Layout.astro'
 import {
@@ -194,21 +193,6 @@ const tocSections = await getTOCSections(currentPostId)
                 {subpostCount} subpost{subpostCount === 1 ? '' : 's'}
               </div>
             )
-          }
-        </div>
-        <div class="flex flex-wrap justify-center gap-2">
-          {
-            post.data.tags &&
-              post.data.tags.length > 0 &&
-              post.data.tags.map((tag) => (
-                <a
-                  href={`/tags/${tag}`}
-                  class={badgeVariants({ variant: 'muted' })}
-                >
-                  <Icon name="lucide:hash" class="size-3" />
-                  {tag}
-                </a>
-              ))
           }
         </div>
       </div>
