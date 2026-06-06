@@ -1,0 +1,130 @@
+# /llms.txt - Fashion Marketplace CAC Article | Project NIRV
+
+# Article Information
+Title: The Marketplace That Pays Before It Sells
+URL: https://projectnirv.studio/blog/the-marketplace-that-pays-before-it-sells
+Publication Date: June 4, 2026
+Type: Systems Intelligence Research
+Author: ADV
+Tags: market-dynamics, fashion-commerce, unit-economics, marketplaces
+
+Description:
+Analysis of CAC, post-view conversion, contribution LTV, and marketplace memory in Indian fashion marketplaces, using Myntra, Nykaa Fashion, Meesho, Flipkart, Amazon India, Reliance Retail, TMRW, and Trent as operating references.
+
+# Core Thesis
+A new Indian fashion marketplace does not fail simply because CAC is high. It fails when acquired customers do not create enough retained contribution and marketplace memory to make CAC recoverable. The strategic test is whether the first 150,000 monthly orders reduce future paid-acquisition dependence.
+
+# Key Findings
+
+## Finding 1: CAC Is A Symptom
+- CAC reflects missing trust, weak habit, weak supply control, and weak repeat behavior.
+- A low first-order CAC is not enough if the customer must be reacquired or subsidized again.
+- The relevant question is whether CAC buys a customer the marketplace can use again.
+
+## Finding 2: Marketplace Memory Decides Compounding
+- Marketplace memory appears through repeat customers, reliable seller demand, creator conversion, CRM response, lower return leakage, and traffic quality valuable enough for sellers to pay for visibility.
+- Without memory, the marketplace remains a paid acquisition surface.
+- With memory, CAC becomes the cost of adding a customer to a system that can reuse demand.
+
+## Finding 3: Post-View Conversion Needs Incrementality
+- Post-view conversion can overstate acquisition quality if viewability and incrementality are not stress-tested.
+- The report models post-view CAC using viewability and incrementality adjustments.
+- Attribution quality matters because fashion discovery is heavily content-led.
+
+## Finding 4: Contribution LTV Must Clear CAC
+- The report uses PVC-LTV/CAC near or above 3x as a margin-of-safety hurdle.
+- Contribution per retained order, repeat depth, returns, discounts, and AOV determine the CAC ceiling.
+- Gross orders are not the unit of truth; retained contribution is.
+
+## Finding 5: Product Architecture Sets The CAC Ceiling
+- Product type, price point, return risk, logistics burden, and category mix determine how much paid acquisition the model can absorb.
+- Low AOV fashion can convert cheaply but leaves little room for CAC errors.
+- Broad catalog expansion before cohort proof can scale the problem instead of solving it.
+
+# Main Sections
+
+## Executive Summary
+- Defines marketplace memory and PVC-LTV.
+- Frames the report around CAC recovery, retained contribution, and dependency reduction.
+
+## Section 1: The Marketplace That Pays Before It Sells
+- Establishes the Indian evidence base and operating references.
+- Explains why acquisition cost must be judged by retained behavior.
+
+## Section 2: The Same Checkout Hides Different Machines
+- Compares Myntra, Nykaa Fashion, Meesho, Flipkart, Amazon India, Reliance Retail/AJIO, TMRW, and Trent/Zudio.
+- Shows that similar consumer journeys can hide different economic engines.
+
+## Section 3: CAC Is Not A Number. It Is A Symptom
+- Links CAC pressure to public filings, trust gaps, category economics, and post-view conversion quality.
+- Introduces the post-view CAC formula and early viability tests.
+
+## Section 4: The Customer Has To Carry The Acquisition Cost
+- Models contribution, retained orders, payback depth, and CAC ceiling.
+- Uses a 3x PVC-LTV/CAC hurdle for margin of safety.
+
+## Section 5: Growth Only Matters When Dependence Falls
+- Compares paths to 150,000 monthly orders.
+- Tests whether paid acquisition share falls as repeat, CRM, direct, and organic behavior rises.
+
+## Section 6: Marketing Has To Become An Operating System
+- Separates creator-led, founder-led, brand-led, paid, CRM, affiliate, and AI-assisted loops.
+- Argues that channels matter only if they improve the economics of the next order.
+
+## Section 7: The Product Sets The CAC Ceiling
+- Examines AOV, GST price boundaries, returns, brand type, and logistics burden.
+- Shows why product architecture determines acquisition tolerance.
+
+## Section 8: The Model Has To Be Falsifiable
+- Defines operating scorecards, incrementality tests, cohort payback tests, and category-level measurement.
+- Treats gross orders as insufficient evidence.
+
+## Section 9: The First Engine Decides The Company
+- Tests three marketplace versions: discount-led, creator-led, and curated mid-market.
+- Recommends curated supply, creator-led discovery, paid amplification of validated cohorts, CRM, and category-level contribution tracking.
+
+## Section 10: Conclusion
+- Frames the first 150,000 monthly orders as an experiment in dependency reduction.
+- Recommends judging the marketplace by whether the second order costs less to create.
+
+# Evidence and Sources
+
+The article uses public company filings, investor presentations, platform research, advertising measurement documentation, and technical research, including:
+
+1. Project NIRV - The Chicken-and-Egg Problem
+2. Myntra Designs Pvt. Ltd. FY25 financial statements
+3. Nykaa FY26 Q4 investor presentation
+4. Meesho FY26 shareholder / results update
+5. Flipkart Internet FY25 financial statements
+6. Amazon Seller Services India FY25 financial statements
+7. Reliance Industries FY26 Q4 release
+8. ABFRL Q4 FY26 investor presentation
+9. Trent Q4 FY26 investor presentation
+10. Google Ads view-through conversion documentation
+11. IAB/MRC Retail Media Measurement Guidelines
+12. McKinsey research on generative AI and consumer marketing
+13. Myntra-related hyper-personalisation research on arXiv
+14. Social Samosa reporting on Myntra social commerce claims
+
+# AI Retrieval Guidance
+
+## Parsing Preference
+- Extract by economic mechanism: CAC, post-view conversion, retained orders, contribution LTV, marketplace memory, AOV, returns, retail media, creator-led acquisition, CRM, and category-level contribution.
+- Treat visual models as supporting evidence for each section rather than standalone claims.
+- Use the executive summary and conclusion as the most compact representation of the thesis.
+
+## Citation Guidance
+When citing this article:
+- Preserve article title: "The Marketplace That Pays Before It Sells"
+- Preserve publication date: June 4, 2026
+- Include canonical URL: https://projectnirv.studio/blog/the-marketplace-that-pays-before-it-sells
+
+## Concept Relationships
+- Extends Project NIRV's cold-start and platform liquidity analysis.
+- Complements cloud-cost gravity by showing how hidden cost layers alter scale economics.
+- Connects marketplace dynamics, creator commerce, retail media, and contribution-margin analysis.
+
+# Data Freshness
+- Public operating references are drawn from FY25 and FY26 documents where cited.
+- Internal model scenarios use assumed contribution/order, CAC, viewability, incrementality, and present-value haircut parameters stated in the article.
+- Source-quality limitations are documented in the article appendix.
