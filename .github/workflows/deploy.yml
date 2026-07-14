@@ -19,29 +19,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      
+        uses: actions/checkout@v7
+
       - name: Install pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v6
         with:
-          version: 8
-      
+          version: 10.27.0
+
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'pnpm'
-      
+
+      # Generated dependencies were historically committed because of a
+      # malformed .gitignore. Always build from the lockfile instead.
+      - name: Remove tracked generated files
+        run: rm -rf node_modules .astro dist
+
       - name: Install dependencies
-        run: pnpm install
-      
+        run: pnpm install --frozen-lockfile
+
       - name: Build your site
         run: pnpm run build
-      
+
+      # Astro does not copy dot-directories from public/ into static output.
+      - name: Include agent discovery endpoints
+        run: |
+          mkdir -p dist/.well-known
+          cp -R public/.well-known/. dist/.well-known/
+          test -f dist/.well-known/api-catalog
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
+          include-hidden-files: true
 
   deploy:
     needs: build
@@ -52,4 +65,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
