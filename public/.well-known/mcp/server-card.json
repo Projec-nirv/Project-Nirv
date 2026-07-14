@@ -1,0 +1,39 @@
+{
+  "serverInfo": {
+    "name": "Project NIRV Public Discovery",
+    "version": "1.0.0",
+    "description": "Public discovery metadata for Project NIRV research content."
+  },
+  "transport": {
+    "type": "https",
+    "url": "https://projectnirv.studio/"
+  },
+  "capabilities": {
+    "resources": {
+      "list": true
+    },
+    "tools": {
+      "list": false
+    },
+    "prompts": {
+      "list": false
+    }
+  },
+  "resources": [
+    {
+      "uri": "https://projectnirv.studio/llms.txt",
+      "name": "Project NIRV AI guide",
+      "mimeType": "text/plain"
+    },
+    {
+      "uri": "https://projectnirv.studio/rss.xml",
+      "name": "Project NIRV RSS feed",
+      "mimeType": "application/rss+xml"
+    },
+    {
+      "uri": "https://projectnirv.studio/.well-known/api-catalog",
+      "name": "Project NIRV API catalog",
+      "mimeType": "application/linkset+json"
+    }
+  ]
+}

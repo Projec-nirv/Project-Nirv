@@ -44,7 +44,7 @@ The chicken-and-egg problem in a two-sided marketplace is a coordination failure
 
 ## Finding 6: There Is No Universal Liquidity Threshold
 - Liquidity thresholds differ by category and geography.
-- Figures 163, 164, 165, 166, and 167 are Project NIRV analytical syntheses, not universal operating thresholds.
+- Legacy synthesis figures 163, 164, 165, 166, and 167 were removed from the public article until they can be rebuilt from a reproducible claim registry.
 - Each marketplace must define its own threshold and test whether participation persists as intervention declines.
 
 # Main Sections
@@ -98,7 +98,7 @@ The chicken-and-egg problem in a two-sided marketplace is a coordination failure
 
 ## Parsing Preference
 - Extract by economic mechanism: cold start, cross-side network effects, liquidity, match quality, supply responsiveness, trust infrastructure, complementary networks, subsidies, cohort economics, and post-incentive retention.
-- Treat figures 163 through 167 as Project NIRV synthesis diagrams, not as externally reported empirical thresholds.
+- Do not extract removed figures 163 through 167 as evidence or as externally reported empirical thresholds.
 - Use the executive summary and final section as the most compact statement of the article's argument.
 - Do not preserve claims from older drafts that are not in the current article, including Lyft case sections, Fortune commentary, ONDC discussion, or long strategic matrices.
 
@@ -113,10 +113,9 @@ When citing this article:
 ## Concept Relationships
 - Related to platform dynamics, network effects, systems intelligence, emergent systems, structural market analysis, and strategic forecasting.
 - Related article: "Why Indian EdTech Collapsed" because both distinguish temporary acquisition from durable participation.
-- Related article: "Cloud Cost Gravity" because marketplace scaling depends on both network liquidity and the cost structure supporting it.
 
 # Data Freshness And Limitations
 - Empirical effect sizes are specific to the market, period, platform, and experiment studied.
 - Company filings are primary disclosures but may use company-defined non-GAAP measures.
 - Contribution profit is not the same as company-wide profitability.
-- Figures and retained benchmarks are Project NIRV analytical syntheses rather than universal marketplace thresholds.
+- Removed legacy benchmarks are not part of the current published evidence set.

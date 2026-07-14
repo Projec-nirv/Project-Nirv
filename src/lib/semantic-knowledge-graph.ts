@@ -24,10 +24,7 @@ export function generateResearchOrganizationSchema() {
     description:
       'Structured research infrastructure for systems intelligence, infrastructure analysis, strategic forecasting, and non-linear systems analysis.',
     url: 'https://projectnirv.studio',
-    sameAs: [
-      'https://github.com/Reuxbite',
-      'https://projectnirv.studio',
-    ],
+    sameAs: ['https://github.com/Reuxbite', 'https://projectnirv.studio'],
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Research Inquiry',
@@ -46,7 +43,8 @@ export function generateResearchOrganizationSchema() {
     /**
      * Research methodology - how research is conducted
      */
-    researchMethodology: 'Systems analysis, non-linear dynamics, structural constraint identification, data-driven forecasting',
+    researchMethodology:
+      'Systems analysis, non-linear dynamics, structural constraint identification, data-driven forecasting',
     /**
      * Knowledge graph definition - canonical topics covered
      */
@@ -77,7 +75,11 @@ export interface SemanticArticleRelationships {
   // Articles with closely related analysis
   relatedArticles: Array<{
     articleId: string
-    relationship: 'explores-same-concept' | 'complements' | 'provides-context' | 'contradicts'
+    relationship:
+      | 'explores-same-concept'
+      | 'complements'
+      | 'provides-context'
+      | 'contradicts'
     reason: string
   }>
 
@@ -97,7 +99,11 @@ export interface SemanticArticleRelationships {
   sources: Array<{
     title: string
     url: string
-    credibility: 'peer-reviewed' | 'industry-data' | 'field-expert' | 'published-research'
+    credibility:
+      | 'peer-reviewed'
+      | 'industry-data'
+      | 'field-expert'
+      | 'published-research'
     weight: number // 0-1 importance to article
   }>
 }
@@ -117,13 +123,6 @@ export function buildArticleSemanticRelationships(
       'systems-intelligence',
       'emergent-systems',
       'structural-market-analysis',
-    ],
-    'cloud-cost-gravity': [
-      'infrastructure-evolution',
-      'distributed-systems',
-      'systems-intelligence',
-      'non-linear-analysis',
-      'structural-constraints',
     ],
     'water-growth-constraint': [
       'water-infrastructure',
@@ -155,7 +154,7 @@ export function buildArticleSemanticRelationships(
     relatedArticles: buildRelatedArticles(articleId, canonicalTopics),
     forecastContinuations: buildForecastContinuations(articleId),
     entities: {
-      primary: post.data.entities?.map((e) => e.name) || [],
+      primary: post.data.entities?.map((e: { name: string }) => e.name) || [],
       secondary: [],
     },
     sources: buildSourceMetadata(post.data.sources || []),
@@ -176,13 +175,6 @@ function buildRelatedArticles(
       'systems-intelligence',
       'emergent-systems',
       'structural-market-analysis',
-    ],
-    'cloud-cost-gravity': [
-      'infrastructure-evolution',
-      'distributed-systems',
-      'systems-intelligence',
-      'non-linear-analysis',
-      'structural-constraints',
     ],
     'water-growth-constraint': [
       'water-infrastructure',
@@ -222,25 +214,22 @@ function buildRelatedArticles(
 /**
  * Identify follow-up research needed
  */
-function buildForecastContinuations(articleId: string): Array<{ topic: string; rationale: string }> {
-  const continuations: Record<string, Array<{ topic: string; rationale: string }>> = {
-    'cloud-cost-gravity': [
-      {
-        topic: 'Organizational restructuring impact on cloud cost management',
-        rationale: 'Article identifies organizational siloing as barrier to cost reduction',
-      },
-      {
-        topic: 'Long-term architectural decisions and technical debt accumulation',
-        rationale: 'Early decisions have compounding effects that need longitudinal study',
-      },
-    ],
+function buildForecastContinuations(
+  articleId: string,
+): Array<{ topic: string; rationale: string }> {
+  const continuations: Record<
+    string,
+    Array<{ topic: string; rationale: string }>
+  > = {
     'the-chicken-and-egg-problem': [
       {
         topic: 'Platform subsidy sustainability and profitability timelines',
-        rationale: 'Article raises questions about long-term viability of current subsidy models',
+        rationale:
+          'Article raises questions about long-term viability of current subsidy models',
       },
       {
-        topic: 'Regulatory impact on platform expansion and bootstrap strategies',
+        topic:
+          'Regulatory impact on platform expansion and bootstrap strategies',
         rationale: 'Regulatory constraints are increasing competitive barriers',
       },
     ],
@@ -251,7 +240,8 @@ function buildForecastContinuations(articleId: string): Array<{ topic: string; r
       },
       {
         topic: 'Policy response to agricultural water depletion',
-        rationale: 'Policy shifts will dramatically impact agricultural economics',
+        rationale:
+          'Policy shifts will dramatically impact agricultural economics',
       },
     ],
     'why-indian-edtech-collapsed': [
@@ -274,11 +264,24 @@ function buildForecastContinuations(articleId: string): Array<{ topic: string; r
  */
 function buildSourceMetadata(
   sources: Array<{ title: string; url?: string }>,
-): Array<{ title: string; url: string; credibility: 'peer-reviewed' | 'industry-data' | 'field-expert' | 'published-research'; weight: number }> {
+): Array<{
+  title: string
+  url: string
+  credibility:
+    | 'peer-reviewed'
+    | 'industry-data'
+    | 'field-expert'
+    | 'published-research'
+  weight: number
+}> {
   return sources.map((source) => ({
     title: source.title,
     url: source.url || '',
-    credibility: categorizeSourceCredibility(source.title) as 'peer-reviewed' | 'industry-data' | 'field-expert' | 'published-research',
+    credibility: categorizeSourceCredibility(source.title) as
+      | 'peer-reviewed'
+      | 'industry-data'
+      | 'field-expert'
+      | 'published-research',
     weight: 0.8,
   }))
 }
@@ -375,7 +378,10 @@ export function generateConceptBreadcrumbSchema(
 /**
  * Generate DefinedTerm schema for canonical concepts
  */
-export function generateConceptDefinedTermSchema(conceptId: string, baseUrl: string): object {
+export function generateConceptDefinedTermSchema(
+  conceptId: string,
+  baseUrl: string,
+): object {
   const concept = getConceptById(conceptId)
 
   if (!concept) {
@@ -394,7 +400,9 @@ export function generateConceptDefinedTermSchema(conceptId: string, baseUrl: str
     ...(concept.aliases && {
       alternateName: concept.aliases,
     }),
-    sameAs: concept.relatedConcepts.map((id) => `${baseUrl}/concepts/${getConceptById(id)?.slug || id}`),
+    sameAs: concept.relatedConcepts.map(
+      (id) => `${baseUrl}/concepts/${getConceptById(id)?.slug || id}`,
+    ),
     relatedLink: concept.canonicalArticles.map((id) => `${baseUrl}/blog/${id}`),
     // For knowledge graph integration
     ...(concept.parentConcepts.length > 0 && {
@@ -403,7 +411,9 @@ export function generateConceptDefinedTermSchema(conceptId: string, baseUrl: str
       ),
     }),
     ...(concept.childConcepts.length > 0 && {
-      hasPart: concept.childConcepts.map((id) => `${baseUrl}/concepts/${getConceptById(id)?.slug || id}`),
+      hasPart: concept.childConcepts.map(
+        (id) => `${baseUrl}/concepts/${getConceptById(id)?.slug || id}`,
+      ),
     }),
   }
 }

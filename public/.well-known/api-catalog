@@ -1,0 +1,29 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://projectnirv.studio/",
+      "service-desc": [
+        {
+          "href": "https://projectnirv.studio/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://projectnirv.studio/llms.txt",
+          "type": "text/plain"
+        },
+        {
+          "href": "https://projectnirv.studio/auth.md",
+          "type": "text/markdown"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://projectnirv.studio/.well-known/status.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

@@ -71,8 +71,7 @@ Track:
 # Source Rules
 - Treat World Bank/FAO figures as withdrawal data, not consumptive-use estimates.
 - Treat Rodell et al. as a historical regional estimate, not a current national depletion rate.
-- Treat Krishna Raj (2013) values as historical data supporting Graph 3 only.
-- Do not describe the 2007 Bengaluru UFW values as current.
+- Do not extract removed legacy chart values as current evidence.
 - Report Sharma's result as approximately 1.53%, not 1.5 percentage points.
 - Do not infer one national HDI effect from Amarasinghe et al.; results vary by region and model.
 
@@ -82,9 +81,8 @@ Track:
 3. Central Ground Water Board, National Compilation on Dynamic Ground Water Resources of India, 2025.
 4. Rodell, M., Velicogna, I., and Famiglietti, J. S. (2009), Nature 460, 999–1002.
 5. World Bank (2025), Karnataka Water Security and Resilience Program, P506272.
-6. Krishna Raj (2013), ISEC Working Paper 307 — historical figure support only.
-7. Sharma, A. (2024), Natural Hazards Review 25(4), 04024033.
-8. Amarasinghe, U., Amarnath, G., Alahacoon, N., and Ghosh, S. (2020), Climate 8(11), 123.
+6. Sharma, A. (2024), Natural Hazards Review 25(4), 04024033.
+7. Amarasinghe, U., Amarnath, G., Alahacoon, N., and Ghosh, S. (2020), Climate 8(11), 123.
 
 # Removed or Superseded Sources
 - Chatterjee and Roy (2021), ORF: valid but redundant in the shortened core article.

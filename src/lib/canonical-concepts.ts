@@ -50,7 +50,11 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'feedback-dynamics',
     ],
     parentConcepts: [],
-    childConcepts: ['platform-dynamics', 'organizational-systems', 'network-effects'],
+    childConcepts: [
+      'platform-dynamics',
+      'organizational-systems',
+      'network-effects',
+    ],
     researchThemes: [
       'Understanding how incentives shape outcomes',
       'Analyzing feedback loops and their stability',
@@ -58,7 +62,7 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Studying network effects and critical mass',
     ],
     canonicalArticles: ['the-chicken-and-egg-problem'],
-    relatedArticles: ['cloud-cost-gravity', 'why-indian-edtech-collapsed'],
+    relatedArticles: ['why-indian-edtech-collapsed'],
     entities: {
       primary: ['platforms', 'organizations', 'markets'],
       secondary: ['incentive structures', 'organizational hierarchies'],
@@ -85,7 +89,12 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Analytical approach that recognizes systems do not scale proportionally and that threshold effects create discontinuous change.',
     description:
       'Non-linear analysis examines how systems behave differently at different scales and how thresholds create phase transitions. It rejects linear extrapolation and focuses on understanding where systems break, accelerate, or reverse direction.',
-    aliases: ['nonlinear dynamics', 'threshold effects', 'phase transitions', 'discontinuous change'],
+    aliases: [
+      'nonlinear dynamics',
+      'threshold effects',
+      'phase transitions',
+      'discontinuous change',
+    ],
     relatedConcepts: [
       'systems-intelligence',
       'strategic-forecasting',
@@ -93,14 +102,21 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'emergent-systems',
     ],
     parentConcepts: [],
-    childConcepts: ['scaling-constraints', 'gravity-effects', 'bifurcation-points'],
+    childConcepts: [
+      'scaling-constraints',
+      'gravity-effects',
+      'bifurcation-points',
+    ],
     researchThemes: [
       'Identifying threshold effects in markets and systems',
       'Understanding acceleration and deceleration patterns',
       'Analyzing phase transitions and regime changes',
       'Forecasting discontinuous change',
     ],
-    canonicalArticles: ['cloud-cost-gravity', 'water-growth-constraint', 'why-indian-edtech-collapsed'],
+    canonicalArticles: [
+      'water-growth-constraint',
+      'why-indian-edtech-collapsed',
+    ],
     relatedArticles: [],
     entities: {
       primary: ['markets', 'economies', 'infrastructure systems'],
@@ -142,7 +158,11 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'macroeconomic-fragility',
     ],
     parentConcepts: [],
-    childConcepts: ['demand-gravity', 'cost-gravity', 'infrastructure-constraints'],
+    childConcepts: [
+      'demand-gravity',
+      'cost-gravity',
+      'infrastructure-constraints',
+    ],
     researchThemes: [
       'Identifying structural trends in markets',
       'Forecasting infrastructure limits',
@@ -150,7 +170,7 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Anticipating policy and regulatory change',
     ],
     canonicalArticles: ['why-indian-edtech-collapsed'],
-    relatedArticles: ['cloud-cost-gravity', 'the-chicken-and-egg-problem', 'water-growth-constraint'],
+    relatedArticles: ['the-chicken-and-egg-problem', 'water-growth-constraint'],
     entities: {
       primary: ['markets', 'technology sectors', 'policy environments'],
       secondary: ['growth patterns', 'structural constraints'],
@@ -198,10 +218,14 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Studying infrastructure lock-in and path dependency',
       'Forecasting infrastructure limits',
     ],
-    canonicalArticles: ['water-growth-constraint', 'cloud-cost-gravity'],
+    canonicalArticles: ['water-growth-constraint'],
     relatedArticles: [],
     entities: {
-      primary: ['infrastructure systems', 'technology platforms', 'water systems'],
+      primary: [
+        'infrastructure systems',
+        'technology platforms',
+        'water systems',
+      ],
       secondary: ['physical constraints', 'technological limits'],
     },
     keywords: [
@@ -233,9 +257,17 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'distributed systems',
       'collective behavior',
     ],
-    relatedConcepts: ['systems-intelligence', 'network-effects', 'platform-dynamics'],
+    relatedConcepts: [
+      'systems-intelligence',
+      'network-effects',
+      'platform-dynamics',
+    ],
     parentConcepts: ['systems-intelligence'],
-    childConcepts: ['network-topology', 'coordination-mechanisms', 'information-cascades'],
+    childConcepts: [
+      'network-topology',
+      'coordination-mechanisms',
+      'information-cascades',
+    ],
     researchThemes: [
       'Understanding how collective behavior emerges',
       'Analyzing self-organization in markets',
@@ -243,7 +275,7 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Forecasting emergent properties',
     ],
     canonicalArticles: ['the-chicken-and-egg-problem'],
-    relatedArticles: ['cloud-cost-gravity', 'why-indian-edtech-collapsed'],
+    relatedArticles: ['why-indian-edtech-collapsed'],
     entities: {
       primary: ['markets', 'networks', 'platforms'],
       secondary: ['participants', 'information flows'],
@@ -296,7 +328,10 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Studying structural economic limits',
       'Forecasting macroeconomic inflection points',
     ],
-    canonicalArticles: ['water-growth-constraint', 'why-indian-edtech-collapsed'],
+    canonicalArticles: [
+      'water-growth-constraint',
+      'why-indian-edtech-collapsed',
+    ],
     relatedArticles: [],
     entities: {
       primary: ['economies', 'sectors', 'regions'],
@@ -337,14 +372,18 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'organizational-systems',
     ],
     parentConcepts: ['infrastructure-evolution'],
-    childConcepts: ['microservices-economics', 'cloud-cost-dynamics', 'distributed-coordination'],
+    childConcepts: [
+      'microservices-economics',
+      'cloud-cost-dynamics',
+      'distributed-coordination',
+    ],
     researchThemes: [
       'Understanding distributed system economics',
       'Analyzing coordination costs in distribution',
       'Studying complexity and overhead in microservices',
       'Understanding cloud infrastructure constraints',
     ],
-    canonicalArticles: ['cloud-cost-gravity'],
+    canonicalArticles: [],
     relatedArticles: [],
     entities: {
       primary: ['cloud platforms', 'technology architectures', 'organizations'],
@@ -398,7 +437,10 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Studying market concentration trends',
       'Forecasting competitive outcomes',
     ],
-    canonicalArticles: ['the-chicken-and-egg-problem', 'why-indian-edtech-collapsed'],
+    canonicalArticles: [
+      'the-chicken-and-egg-problem',
+      'why-indian-edtech-collapsed',
+    ],
     relatedArticles: [],
     entities: {
       primary: ['markets', 'firms', 'platforms'],
@@ -433,7 +475,11 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'resource scarcity',
       'environmental constraints',
     ],
-    relatedConcepts: ['water-infrastructure', 'macroeconomic-systems', 'development-economics'],
+    relatedConcepts: [
+      'water-infrastructure',
+      'macroeconomic-systems',
+      'development-economics',
+    ],
     parentConcepts: [],
     childConcepts: ['water-systems', 'energy-systems', 'agricultural-systems'],
     researchThemes: [
@@ -484,14 +530,21 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'strategic-forecasting',
     ],
     parentConcepts: ['macroeconomic-systems'],
-    childConcepts: ['sectoral-development', 'poverty-dynamics', 'institutional-development'],
+    childConcepts: [
+      'sectoral-development',
+      'poverty-dynamics',
+      'institutional-development',
+    ],
     researchThemes: [
       'Understanding development constraints in emerging economies',
       'Analyzing sectoral development patterns',
       'Studying policy impacts on development',
       'Forecasting development trajectories',
     ],
-    canonicalArticles: ['water-growth-constraint', 'why-indian-edtech-collapsed'],
+    canonicalArticles: [
+      'water-growth-constraint',
+      'why-indian-edtech-collapsed',
+    ],
     relatedArticles: [],
     entities: {
       primary: ['emerging markets', 'sectors', 'regions'],
@@ -519,10 +572,24 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Systems for capturing, storing, distributing, and managing water resources as determinants of agricultural and economic capacity.',
     description:
       'Water infrastructure integrates hydrology, engineering, and economics to understand how water availability constrains economic activity. This includes groundwater depletion, irrigation systems, water pricing, and the nexus between water and agricultural productivity.',
-    aliases: ['water systems', 'water management', 'irrigation', 'groundwater', 'water economics'],
-    relatedConcepts: ['resource-systems', 'infrastructure-evolution', 'development-economics'],
+    aliases: [
+      'water systems',
+      'water management',
+      'irrigation',
+      'groundwater',
+      'water economics',
+    ],
+    relatedConcepts: [
+      'resource-systems',
+      'infrastructure-evolution',
+      'development-economics',
+    ],
     parentConcepts: ['resource-systems', 'infrastructure-evolution'],
-    childConcepts: ['groundwater-depletion', 'irrigation-efficiency', 'water-pricing'],
+    childConcepts: [
+      'groundwater-depletion',
+      'irrigation-efficiency',
+      'water-pricing',
+    ],
     researchThemes: [
       'Understanding groundwater depletion dynamics',
       'Analyzing water-driven agricultural constraints',
@@ -571,7 +638,11 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'structural-market-analysis',
     ],
     parentConcepts: ['macroeconomic-systems'],
-    childConcepts: ['fiscal-sustainability', 'inflation-dynamics', 'structural-unemployment'],
+    childConcepts: [
+      'fiscal-sustainability',
+      'inflation-dynamics',
+      'structural-unemployment',
+    ],
     researchThemes: [
       'Identifying hidden vulnerabilities in economic systems',
       'Analyzing unsustainable trends',
@@ -579,7 +650,7 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Understanding systemic risk amplification',
     ],
     canonicalArticles: ['why-indian-edtech-collapsed'],
-    relatedArticles: ['cloud-cost-gravity', 'water-growth-constraint'],
+    relatedArticles: ['water-growth-constraint'],
     entities: {
       primary: ['economies', 'sectors', 'markets'],
       secondary: ['policy regimes', 'structural factors'],
@@ -620,7 +691,11 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'emergent-systems',
     ],
     parentConcepts: ['systems-intelligence'],
-    childConcepts: ['cold-start-problem', 'network-effects', 'platform-concentration'],
+    childConcepts: [
+      'cold-start-problem',
+      'network-effects',
+      'platform-concentration',
+    ],
     researchThemes: [
       'Understanding platform cold-start dynamics',
       'Analyzing cross-side network effects',
@@ -669,7 +744,11 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'structural-market-analysis',
     ],
     parentConcepts: ['systems-intelligence', 'platform-dynamics'],
-    childConcepts: ['direct-network-effects', 'indirect-network-effects', 'cross-side-effects'],
+    childConcepts: [
+      'direct-network-effects',
+      'indirect-network-effects',
+      'cross-side-effects',
+    ],
     researchThemes: [
       'Understanding how network effects create competitive advantages',
       'Analyzing critical mass and inflection points',
@@ -711,7 +790,11 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'negative feedback',
       'reinforcement',
     ],
-    relatedConcepts: ['systems-intelligence', 'emergent-systems', 'non-linear-analysis'],
+    relatedConcepts: [
+      'systems-intelligence',
+      'emergent-systems',
+      'non-linear-analysis',
+    ],
     parentConcepts: ['systems-intelligence'],
     childConcepts: ['positive-feedback', 'negative-feedback', 'loop-dominance'],
     researchThemes: [
@@ -721,7 +804,10 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Forecasting system behavior from loops',
     ],
     canonicalArticles: [],
-    relatedArticles: ['the-chicken-and-egg-problem', 'cloud-cost-gravity', 'why-indian-edtech-collapsed'],
+    relatedArticles: [
+      'the-chicken-and-egg-problem',
+      'why-indian-edtech-collapsed',
+    ],
     entities: {
       primary: ['systems', 'organizations', 'markets'],
       secondary: ['variables', 'causal relationships'],
@@ -775,7 +861,7 @@ export const CANONICAL_CONCEPTS: Record<string, CanonicalConcept> = {
       'Analyzing constraint shifting and relief',
       'Forecasting where next constraints emerge',
     ],
-    canonicalArticles: ['water-growth-constraint', 'cloud-cost-gravity'],
+    canonicalArticles: ['water-growth-constraint'],
     relatedArticles: ['why-indian-edtech-collapsed'],
     entities: {
       primary: ['systems', 'infrastructure', 'organizations'],
@@ -807,13 +893,18 @@ export function getConceptById(id: string): CanonicalConcept | undefined {
  * Get a concept by slug
  */
 export function getConceptBySlug(slug: string): CanonicalConcept | undefined {
-  return Object.values(CANONICAL_CONCEPTS).find((concept) => concept.slug === slug)
+  return Object.values(CANONICAL_CONCEPTS).find(
+    (concept) => concept.slug === slug,
+  )
 }
 
 /**
  * Get all related concepts (direct and transitive)
  */
-export function getRelatedConcepts(conceptId: string, depth: number = 1): Set<string> {
+export function getRelatedConcepts(
+  conceptId: string,
+  depth: number = 1,
+): Set<string> {
   const related = new Set<string>()
   const concept = CANONICAL_CONCEPTS[conceptId]
 
@@ -882,5 +973,7 @@ export function listAllConcepts(): CanonicalConcept[] {
  * Get concepts sorted by semantic density (importance to NIRV)
  */
 export function getConceptsByDensity(): CanonicalConcept[] {
-  return Object.values(CANONICAL_CONCEPTS).sort((a, b) => b.semanticDensity - a.semanticDensity)
+  return Object.values(CANONICAL_CONCEPTS).sort(
+    (a, b) => b.semanticDensity - a.semanticDensity,
+  )
 }

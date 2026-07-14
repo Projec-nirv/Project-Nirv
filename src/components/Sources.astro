@@ -4,62 +4,107 @@ import Link from './Link.astro'
 interface Props {
   sources?: Array<{
     title: string
+    type?: string
+    evidenceType?: string
     url?: string
+    dataUrl?: string
     citation?: string
     note?: string
+    supports?: string
+    limitation?: string
+    usedFor?: string[]
   }>
 }
 
 const { sources } = Astro.props
 ---
 
-{sources && sources.length > 0 && (
-  <section class="mt-12 pt-8 border-t border-border">
-    <h2 class="mb-4 text-xl font-medium">References & Sources</h2>
-    <ol class="space-y-4 text-sm" start={1}>
-      {sources.map((source, index) => (
-        <li class="group rounded-md border border-border p-3 bg-[color-mix(in_oklab,var(--muted)_20%,transparent)]">
-          <div class="flex flex-col gap-y-1">
-            <div class="flex items-start justify-between gap-3">
-              <span class="font-medium text-foreground">
-                {index + 1}. {source.title}
-              </span>
-              {source.url && (
-                <Link
-                  href={source.url}
-                  external
-                  underline
-                  class="text-primary whitespace-nowrap"
-                >
-                  View Source
-                </Link>
+{
+  sources && sources.length > 0 && (
+    <section class="border-border mt-12 border-t pt-8">
+      <h2 class="mb-4 text-xl font-medium">References & Sources</h2>
+      <ol class="space-y-4 text-sm" start={1}>
+        {sources.map((source) => (
+          <li class="group border-border rounded-md border bg-[color-mix(in_oklab,var(--muted)_20%,transparent)] p-3">
+            <div class="flex flex-col gap-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <span class="text-foreground font-medium">{source.title}</span>
+                <div class="flex shrink-0 flex-wrap justify-end gap-2">
+                  {source.type && (
+                    <span class="border-border text-muted-foreground rounded border px-2 py-1 text-xs">
+                      {source.type}
+                    </span>
+                  )}
+                  {source.evidenceType && (
+                    <span class="border-border text-muted-foreground rounded border px-2 py-1 text-xs">
+                      {source.evidenceType}
+                    </span>
+                  )}
+                  {source.url && (
+                    <Link
+                      href={source.url}
+                      external
+                      underline
+                      class="text-primary whitespace-nowrap"
+                    >
+                      View Source
+                    </Link>
+                  )}
+                  {source.dataUrl && (
+                    <Link
+                      href={source.dataUrl}
+                      external
+                      underline
+                      class="text-primary whitespace-nowrap"
+                    >
+                      Data
+                    </Link>
+                  )}
+                </div>
+              </div>
+              {source.note && (
+                <div class="text-muted-foreground text-xs">{source.note}</div>
+              )}
+              {source.supports && (
+                <div class="text-muted-foreground text-xs">
+                  Supports: {source.supports}
+                </div>
+              )}
+              {source.usedFor && source.usedFor.length > 0 && (
+                <ul class="text-muted-foreground m-0 list-disc pl-4 text-xs">
+                  {source.usedFor.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              )}
+              {source.limitation && (
+                <div class="text-muted-foreground text-xs">
+                  Limitation: {source.limitation}
+                </div>
+              )}
+              {source.citation && (
+                <div class="mt-1 flex items-center gap-2">
+                  <div class="text-muted-foreground flex-1 text-xs italic">
+                    {source.citation}
+                  </div>
+                  <button
+                    type="button"
+                    class="copy-citation border-border rounded border px-2 py-1 text-xs hover:bg-[color-mix(in_oklab,var(--muted)_35%,transparent)]"
+                    data-citation={source.citation}
+                    aria-label="Copy citation"
+                    title="Copy citation"
+                  >
+                    Copy citation
+                  </button>
+                </div>
               )}
             </div>
-            {source.note && (
-              <div class="text-xs text-muted-foreground">{source.note}</div>
-            )}
-            {source.citation && (
-              <div class="mt-1 flex items-center gap-2">
-                <div class="text-xs italic text-muted-foreground flex-1">
-                  {source.citation}
-                </div>
-                <button
-                  type="button"
-                  class="copy-citation text-xs px-2 py-1 rounded border border-border hover:bg-[color-mix(in_oklab,var(--muted)_35%,transparent)]"
-                  data-citation={source.citation}
-                  aria-label="Copy citation"
-                  title="Copy citation"
-                >
-                  Copy
-                </button>
-              </div>
-            )}
-          </div>
-        </li>
-      ))}
-    </ol>
-  </section>
-)}
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}
 
 <script>
   document.addEventListener('astro:page-load', () => {

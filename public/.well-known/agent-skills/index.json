@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schemas/agent-skills-index-v0.2.json",
+  "skills": [
+    {
+      "name": "Project NIRV Research Discovery",
+      "type": "discovery",
+      "description": "Discover, summarize, and cite Project NIRV public research content.",
+      "url": "https://projectnirv.studio/.well-known/agent-skills/project-nirv-research/SKILL.md",
+      "sha256": "6c28878c95d17c17b2ea9ab26fda9423cae586f4a2bbe3c0aca39771a12138f9"
+    }
+  ]
+}

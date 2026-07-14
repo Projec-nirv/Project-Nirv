@@ -58,6 +58,14 @@ const combinedReadingTime =
     : null
 
 const tocSections = await getTOCSections(currentPostId)
+
+const updatedDate =
+  post.data.updated ??
+  post.data.revised ??
+  post.data.revisionDate ??
+  post.data.lastUpdated
+const dataCutoff = post.data.dataCutoff
+const version = post.data.version
 ---
 
 <Layout>
@@ -166,8 +174,32 @@ const tocSections = await getTOCSections(currentPostId)
           <div
             class="flex w-full items-center justify-center gap-2 py-2 sm:w-fit sm:px-2 sm:py-0 first:sm:pl-0 last:sm:pr-0"
           >
-            <span>{formatDate(post.data.date)}</span>
+            <span>Published {formatDate(post.data.date)}</span>
           </div>
+
+          {
+            updatedDate && (
+              <div class="flex w-full items-center justify-center gap-2 py-2 sm:w-fit sm:px-2 sm:py-0 first:sm:pl-0 last:sm:pr-0">
+                <span>Last updated {formatDate(updatedDate)}</span>
+              </div>
+            )
+          }
+
+          {
+            dataCutoff && (
+              <div class="flex w-full items-center justify-center gap-2 py-2 sm:w-fit sm:px-2 sm:py-0 first:sm:pl-0 last:sm:pr-0">
+                <span>Data cutoff {formatDate(dataCutoff)}</span>
+              </div>
+            )
+          }
+
+          {
+            version && (
+              <div class="flex w-full items-center justify-center gap-2 py-2 sm:w-fit sm:px-2 sm:py-0 first:sm:pl-0 last:sm:pr-0">
+                <span>Version {version}</span>
+              </div>
+            )
+          }
 
           <div
             class="flex w-full items-center justify-center gap-2 py-2 sm:w-fit sm:px-2 sm:py-0 first:sm:pl-0 last:sm:pr-0"

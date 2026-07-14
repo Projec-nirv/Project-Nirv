@@ -33,6 +33,7 @@ Rather than scattered notes or passing thoughts, this approach creates a visible
 ### Our Focus Areas
 
 We conduct research across interconnected domains:
+
 - **Systems Intelligence**: Understanding how complex systems operate through feedback loops and emergent behavior
 - **Infrastructure Analysis**: How infrastructure constrains growth and economic capacity
 - **Strategic Forecasting**: Identifying structural inflection points in markets and economies
@@ -47,6 +48,20 @@ Our development approach is pragmatic: core systems are developed closed-source 
 ### Our Commitment
 
 Research is grounded in verified data sources, explicit structural reasoning, and frameworks designed for non-linear systems. We publish analysis to be useful—to help decision-makers, systems thinkers, and researchers understand what actually drives outcomes.
+
+### Research Governance
+
+Project NIRV distinguishes reported facts, calculated values, modelled scenarios, illustrative frameworks, and analytical inference. Public articles are revised when source quality, arithmetic, scope, or interpretation changes materially.
+
+Current research notes follow this review sequence:
+
+- Identify the exact claim and whether it is reported, calculated, modelled, illustrative, or inferred.
+- Link the claim to a primary, official, peer-reviewed, or clearly caveated secondary source.
+- Separate public-source evidence from Project NIRV assumptions and scenario models.
+- Remove charts or figures when the underlying data, formulas, or claim boundaries are not publication-ready.
+- Record publication and update dates on the article page.
+
+Corrections, source challenges, conflicts, or requests for supporting calculations can be sent to [projectnirvstudio@gmail.com](mailto:projectnirvstudio@gmail.com).
 
 ### Join Our Vision
 

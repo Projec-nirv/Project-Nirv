@@ -1,0 +1,93 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Project NIRV Public Discovery",
+    "version": "1.0.0",
+    "description": "Read-only public discovery endpoints for Project NIRV research content and agent metadata."
+  },
+  "servers": [
+    {
+      "url": "https://projectnirv.studio"
+    }
+  ],
+  "paths": {
+    "/llms.txt": {
+      "get": {
+        "summary": "AI-oriented site guide",
+        "responses": {
+          "200": {
+            "description": "Project NIRV AI optimization guide",
+            "content": {
+              "text/plain": {}
+            }
+          }
+        }
+      }
+    },
+    "/rss.xml": {
+      "get": {
+        "summary": "RSS feed",
+        "responses": {
+          "200": {
+            "description": "Research article feed",
+            "content": {
+              "application/rss+xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/api-catalog": {
+      "get": {
+        "summary": "API catalog linkset",
+        "responses": {
+          "200": {
+            "description": "RFC 9727 API catalog",
+            "content": {
+              "application/linkset+json": {}
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/agent-skills/index.json": {
+      "get": {
+        "summary": "Agent skills discovery index",
+        "responses": {
+          "200": {
+            "description": "Agent skills index",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/mcp/server-card.json": {
+      "get": {
+        "summary": "MCP server card",
+        "responses": {
+          "200": {
+            "description": "MCP server card for public discovery metadata",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/auth.md": {
+      "get": {
+        "summary": "Agent authentication notes",
+        "responses": {
+          "200": {
+            "description": "Authentication and agent registration notes",
+            "content": {
+              "text/markdown": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

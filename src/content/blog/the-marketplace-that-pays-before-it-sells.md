@@ -1,161 +1,196 @@
 ---
-title: "The Marketplace That Pays Before It Sells"
-description: "CAC, post-view conversion, and contribution dynamics in Indian fashion marketplaces, using Myntra, Nykaa Fashion, Meesho, Flipkart, Amazon India, Reliance Retail, TMRW, and Trent as operating references."
+title: 'The Marketplace That Pays Before It Sells'
+description: 'CAC, post-view conversion, and contribution dynamics in Indian fashion marketplaces, using Myntra, Nykaa Fashion, Meesho, Flipkart, Amazon India, Reliance Retail, TMRW, and Trent as operating references.'
 date: 2026-06-04
-tags: ["market-dynamics", "fashion-commerce", "unit-economics", "marketplaces"]
-authors: ["ADV"]
+updated: 2026-07-13
+dataCutoff: 2026-06-04
+version: '1.1'
+tags: ['market-dynamics', 'fashion-commerce', 'unit-economics', 'marketplaces']
+authors: ['ADV']
 draft: false
-semanticTags: ["fashion-marketplaces", "customer-acquisition-cost", "post-view-conversion", "contribution-ltv", "retail-media", "marketplace-memory"]
-keywords: ["fashion marketplace", "Myntra", "CAC", "post-view conversion", "customer acquisition cost", "contribution LTV", "Indian ecommerce", "retail media", "Nykaa Fashion", "Meesho", "AJIO", "TMRW", "Zudio"]
-concepts: ["marketplace memory", "CAC payback", "post-view conversion", "retained orders", "contribution per order", "retail media", "creator-led acquisition", "fashion returns", "AOV economics", "category-level contribution"]
-summary: "A new Indian fashion marketplace does not fail because CAC is high; it fails when acquired customers do not create enough retained contribution and marketplace memory to make CAC recoverable."
+semanticTags:
+  [
+    'fashion-marketplaces',
+    'customer-acquisition-cost',
+    'post-view-conversion',
+    'contribution-ltv',
+    'retail-media',
+    'marketplace-memory',
+  ]
+keywords:
+  [
+    'fashion marketplace',
+    'Myntra',
+    'CAC',
+    'post-view conversion',
+    'customer acquisition cost',
+    'contribution LTV',
+    'Indian ecommerce',
+    'retail media',
+    'Nykaa Fashion',
+    'Meesho',
+    'AJIO',
+    'TMRW',
+    'Zudio',
+  ]
+concepts:
+  [
+    'marketplace memory',
+    'CAC payback',
+    'post-view conversion',
+    'retained orders',
+    'contribution per order',
+    'retail media',
+    'creator-led acquisition',
+    'fashion returns',
+    'AOV economics',
+    'category-level contribution',
+  ]
+summary: 'A new Indian fashion marketplace does not fail because CAC is high; it fails when acquired customers do not create enough retained contribution and marketplace memory to make CAC recoverable.'
 
 # Semantic Knowledge Graph Metadata
 canonicalTopics:
-  - "marketplace-dynamics"
-  - "fashion-commerce"
-  - "unit-economics"
+  - 'marketplace-dynamics'
+  - 'fashion-commerce'
+  - 'unit-economics'
 relatedConcepts:
-  - "cold-start-problem"
-  - "two-sided-marketplaces"
-  - "network-effects"
-  - "retail-media"
-  - "creator-commerce"
-  - "contribution-margin"
+  - 'cold-start-problem'
+  - 'two-sided-marketplaces'
+  - 'network-effects'
+  - 'retail-media'
+  - 'creator-commerce'
+  - 'contribution-margin'
 researchDomains:
-  - "Markets & Competition"
-  - "Systems & Dynamics"
-  - "Commerce & Retail"
+  - 'Markets & Competition'
+  - 'Systems & Dynamics'
+  - 'Commerce & Retail'
 
 # Related Research
 relatedArticles:
-  - articleId: "the-chicken-and-egg-problem"
-    relationship: "continues"
-    reason: "This article applies platform cold-start logic to Indian fashion marketplaces and CAC-dependent growth."
-  - articleId: "cloud-cost-gravity"
-    relationship: "complements"
-    reason: "Both examine how hidden infrastructure costs alter the economics of scale."
+  - articleId: 'the-chicken-and-egg-problem'
+    relationship: 'continues'
+    reason: 'This article applies platform cold-start logic to Indian fashion marketplaces and CAC-dependent growth.'
 
 # Forecast Continuations
 forecastContinuations:
-  - topic: "Retail media as the profit layer in Indian marketplaces"
-    rationale: "Myntra, Flipkart Internet, and Amazon Seller Services India all show advertising or marketplace-related services as material revenue layers."
-  - topic: "Creator commerce and attribution quality in Indian fashion ecommerce"
-    rationale: "Fashion discovery is increasingly content-led, but reported post-view and creator-driven conversions need incrementality testing."
-  - topic: "Category-level return economics in Indian apparel marketplaces"
-    rationale: "Fashion return risk is category-specific and can destroy contribution even when gross orders scale."
+  - topic: 'Retail media as the profit layer in Indian marketplaces'
+    rationale: 'Myntra, Flipkart Internet, and Amazon Seller Services India all show advertising or marketplace-related services as material revenue layers.'
+  - topic: 'Creator commerce and attribution quality in Indian fashion ecommerce'
+    rationale: 'Fashion discovery is increasingly content-led, but reported post-view and creator-driven conversions need incrementality testing.'
+  - topic: 'Category-level return economics in Indian apparel marketplaces'
+    rationale: 'Fashion return risk is category-specific and can destroy contribution even when gross orders scale.'
 
 mainArguments:
-  - "A new fashion marketplace must convert acquired demand into repeatable marketplace memory, not just orders."
-  - "CAC is a symptom of missing trust, missing habit, weak supply control, and weak repeat behavior."
-  - "Post-view conversion is useful only when adjusted for viewability and incrementality."
-  - "Contribution LTV must exceed CAC with a margin of safety; this report uses a 3x hurdle."
-  - "Product architecture, price point, category mix, and logistics determine the CAC ceiling as much as media buying does."
-  - "The first viable engine is likely curated mid-market supply plus creator-led discovery plus paid amplification of validated cohorts."
+  - 'A new fashion marketplace must convert acquired demand into repeatable marketplace memory, not just orders.'
+  - 'CAC is a symptom of missing trust, missing habit, weak supply control, and weak repeat behavior.'
+  - 'Post-view conversion is useful only when adjusted for viewability and incrementality.'
+  - 'Contribution LTV must exceed CAC with a margin of safety; this report uses a 3x hurdle.'
+  - 'Product architecture, price point, category mix, and logistics determine the CAC ceiling as much as media buying does.'
+  - 'The first viable engine is likely curated mid-market supply plus creator-led discovery plus paid amplification of validated cohorts.'
 assumptions:
-  - "The target operating scale is modeled as 150,000 monthly orders."
-  - "A 3x PVC-LTV/CAC hurdle is used as a margin of safety, not a universal law."
-  - "Internal model scenarios use contribution/order ranges of ₹60 to ₹260 and CAC ranges of ₹150 to ₹700."
-  - "Post-view CAC modeling assumes 70% viewability and 60% incrementality for stress testing."
-  - "A 12% present-value haircut is used for simplified PVC-LTV calculations."
-  - "Public company filings do not disclose exact CAC for the Indian companies discussed."
+  - 'The target operating scale is modeled as 150,000 monthly orders.'
+  - 'A 3x PVC-LTV/CAC hurdle is used as a margin of safety, not a universal law.'
+  - 'Internal model scenarios use contribution/order ranges of ₹60 to ₹260 and CAC ranges of ₹150 to ₹700.'
+  - 'Post-view CAC modeling assumes 70% viewability and 60% incrementality for stress testing.'
+  - 'A 12% present-value haircut is used for simplified PVC-LTV calculations.'
+  - 'Public company filings do not disclose exact CAC for the Indian companies discussed.'
 implications:
-  - "Order growth should be evaluated through retained orders, repeat share, contribution after CAC, and category-level economics."
-  - "A marketplace that keeps replacing demand through paid acquisition is not compounding."
-  - "Retail media should not be assumed early; sellers pay materially only after traffic has intent and conversion quality."
-  - "Low AOV fashion can convert cheaply but leaves little room for CAC mistakes."
-  - "Creator-led commerce is useful only if it produces retained customers, not merely impressions."
+  - 'Order growth should be evaluated through retained orders, repeat share, contribution after CAC, and category-level economics.'
+  - 'A marketplace that keeps replacing demand through paid acquisition is not compounding.'
+  - 'Retail media should not be assumed early; sellers pay materially only after traffic has intent and conversion quality.'
+  - 'Low AOV fashion can convert cheaply but leaves little room for CAC mistakes.'
+  - 'Creator-led commerce is useful only if it produces retained customers, not merely impressions.'
 sources:
-  - id: "S1"
-    title: "Project NIRV — The Chicken-and-Egg Problem"
-    url: "https://projectnirv.studio/blog/the-chicken-and-egg-problem/"
-    citation: "Project NIRV. The Chicken-and-Egg Problem."
-    status: "Project NIRV internal reference."
-  - id: "S2"
-    title: "Myntra Designs Pvt. Ltd. FY25 financial statements"
-    url: "https://www.medianama.com/wp-content/uploads/2025/09/Myntra-FY25.pdf"
-    citation: "Myntra Designs Private Limited. Consolidated Financial Statements for period 01/04/2024 to 31/03/2025."
-    status: "Financial statement copy, secondary-hosted on MediaNama; replace with MCA/company source before final publication if available."
-  - id: "S3"
-    title: "Nykaa FY26 Investor Presentation Q4 FY26"
-    url: "https://www.nykaa.com/media/wysiwyg/uiTools/2026-5/Investor-Presentation-Q4-2026.pdf"
-    citation: "FSN E-Commerce Ventures Limited. Investor Presentation, quarter and full year ended March 31, 2026."
-    status: "Official company investor presentation."
-  - id: "S4"
-    title: "Meesho FY26 shareholder / results update"
-    url: "https://static-assets.meesho.com/investor-relations/manual-uploads/IntimationShareholdersresult0605.pdf"
-    citation: "Meesho. FY26 shareholder / results update."
-    status: "Official company / investor-relations document."
-  - id: "S5"
-    title: "Flipkart Internet FY25 financial statements"
-    url: "https://www.medianama.com/wp-content/uploads/2025/09/Flipkart-Internet-FY25.pdf"
-    citation: "Flipkart Internet Private Limited. FY25 financial statements."
-    status: "Financial statement copy, secondary-hosted on MediaNama; replace with MCA/company source before final publication if available."
-  - id: "S6"
-    title: "Amazon Seller Services India FY25 financial statements"
-    url: "https://www.medianama.com/wp-content/uploads/2025/09/Amazon-Seller-Services-FY25.pdf"
-    citation: "Amazon Seller Services Private Limited. FY25 financial statements."
-    status: "Financial statement copy, secondary-hosted on MediaNama; replace with MCA/company source before final publication if available."
-  - id: "S7"
-    title: "Reliance Industries FY26 Q4 financial and operational performance release"
-    url: "https://www.ril.com/sites/default/files/2026-04/24042026_Media_Release_RIL_Q4_FY2025-26_Financial_and_Operational_Performance.pdf"
-    citation: "Reliance Industries Limited. Media Release: Financial and Operational Performance, Q4 FY2025-26."
-    status: "Official company release."
-  - id: "S8"
-    title: "ABFRL Q4 FY26 Investor Presentation"
-    url: "https://www.cms.adityabirla.com/uploads/ABFRL_Q4_Fy26_Investor_Presentation_compressed_141392bcf7.pdf"
-    citation: "Aditya Birla Fashion and Retail Limited. Q4 FY26 Investor Presentation."
-    status: "Official company / group-hosted investor presentation."
-  - id: "S9"
-    title: "Trent Q4 FY26 Investor Presentation"
-    url: "https://docs.trent-tata.com/Investor_Presentation_Q4_FY26.pdf"
-    citation: "Trent Limited. Q4 FY26 Investor Presentation."
-    status: "Official company investor presentation."
-  - id: "S10"
-    title: "Google Ads Help — View-through conversion window definition"
-    url: "https://support.google.com/google-ads/answer/7320922?hl=en"
-    citation: "Google Ads Help. About view-through conversion windows."
-    status: "Official Google documentation."
-  - id: "S11"
-    title: "IAB/MRC Retail Media Measurement Guidelines January 2024"
-    url: "https://www.iab.com/wp-content/uploads/2024/01/IAB_Retail_Media_Measurement_Guidelines_January2024.pdf"
-    citation: "IAB and MRC. Retail Media Measurement Guidelines. January 2024."
-    status: "Industry measurement guideline; not India-specific."
-  - id: "S12"
-    title: "McKinsey — How generative AI can boost consumer marketing"
-    url: "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/how-generative-ai-can-boost-consumer-marketing"
-    citation: "McKinsey & Company. How generative AI can boost consumer marketing."
-    status: "High-quality secondary research; not India-specific."
-  - id: "S13"
-    title: "Enabling Hyper-Personalisation: Automated Ad Creative Generation and Ranking for Fashion e-Commerce"
-    url: "https://arxiv.org/abs/1908.10139"
-    citation: "Agarwal et al. Enabling Hyper-Personalisation: Automated Ad Creative Generation and Ranking for Fashion e-Commerce. arXiv."
-    status: "Technical research paper using Myntra data; arXiv preprint, not peer-reviewed journal."
-  - id: "S14"
+  - id: 'S1'
+    title: 'Project NIRV — The Chicken-and-Egg Problem'
+    url: 'https://projectnirv.studio/blog/the-chicken-and-egg-problem/'
+    citation: 'Project NIRV. The Chicken-and-Egg Problem.'
+    status: 'Project NIRV internal reference.'
+  - id: 'S2'
+    title: 'Myntra Designs Pvt. Ltd. FY25 financial statements'
+    url: 'https://www.medianama.com/wp-content/uploads/2025/09/Myntra-FY25.pdf'
+    citation: 'Myntra Designs Private Limited. Consolidated Financial Statements for period 01/04/2024 to 31/03/2025.'
+    status: 'Financial statement copy, secondary-hosted on MediaNama; replace with MCA/company source before final publication if available.'
+  - id: 'S3'
+    title: 'Nykaa FY26 Investor Presentation Q4 FY26'
+    url: 'https://www.nykaa.com/media/wysiwyg/uiTools/2026-5/Investor-Presentation-Q4-2026.pdf'
+    citation: 'FSN E-Commerce Ventures Limited. Investor Presentation, quarter and full year ended March 31, 2026.'
+    status: 'Official company investor presentation.'
+  - id: 'S4'
+    title: 'Meesho FY26 shareholder / results update'
+    url: 'https://static-assets.meesho.com/investor-relations/manual-uploads/IntimationShareholdersresult0605.pdf'
+    citation: 'Meesho. FY26 shareholder / results update.'
+    status: 'Official company / investor-relations document.'
+  - id: 'S5'
+    title: 'Flipkart Internet FY25 financial statements'
+    url: 'https://www.medianama.com/wp-content/uploads/2025/09/Flipkart-Internet-FY25.pdf'
+    citation: 'Flipkart Internet Private Limited. FY25 financial statements.'
+    status: 'Financial statement copy, secondary-hosted on MediaNama; replace with MCA/company source before final publication if available.'
+  - id: 'S6'
+    title: 'Amazon Seller Services India FY25 financial statements'
+    url: 'https://www.medianama.com/wp-content/uploads/2025/09/Amazon-Seller-Services-FY25.pdf'
+    citation: 'Amazon Seller Services Private Limited. FY25 financial statements.'
+    status: 'Financial statement copy, secondary-hosted on MediaNama; replace with MCA/company source before final publication if available.'
+  - id: 'S7'
+    title: 'Reliance Industries FY26 Q4 financial and operational performance release'
+    url: 'https://www.ril.com/sites/default/files/2026-04/24042026_Media_Release_RIL_Q4_FY2025-26_Financial_and_Operational_Performance.pdf'
+    citation: 'Reliance Industries Limited. Media Release: Financial and Operational Performance, Q4 FY2025-26.'
+    status: 'Official company release.'
+  - id: 'S8'
+    title: 'ABFRL Q4 FY26 Investor Presentation'
+    url: 'https://www.cms.adityabirla.com/uploads/ABFRL_Q4_Fy26_Investor_Presentation_compressed_141392bcf7.pdf'
+    citation: 'Aditya Birla Fashion and Retail Limited. Q4 FY26 Investor Presentation.'
+    status: 'Official company / group-hosted investor presentation.'
+  - id: 'S9'
+    title: 'Trent Q4 FY26 Investor Presentation'
+    url: 'https://docs.trent-tata.com/Investor_Presentation_Q4_FY26.pdf'
+    citation: 'Trent Limited. Q4 FY26 Investor Presentation.'
+    status: 'Official company investor presentation.'
+  - id: 'S10'
+    title: 'Google Ads Help — View-through conversion window definition'
+    url: 'https://support.google.com/google-ads/answer/7320922?hl=en'
+    citation: 'Google Ads Help. About view-through conversion windows.'
+    status: 'Official Google documentation.'
+  - id: 'S11'
+    title: 'IAB/MRC Retail Media Measurement Guidelines January 2024'
+    url: 'https://www.iab.com/wp-content/uploads/2024/01/IAB_Retail_Media_Measurement_Guidelines_January2024.pdf'
+    citation: 'IAB and MRC. Retail Media Measurement Guidelines. January 2024.'
+    status: 'Industry measurement guideline; not India-specific.'
+  - id: 'S12'
+    title: 'McKinsey — How generative AI can boost consumer marketing'
+    url: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/how-generative-ai-can-boost-consumer-marketing'
+    citation: 'McKinsey & Company. How generative AI can boost consumer marketing.'
+    status: 'High-quality secondary research; not India-specific.'
+  - id: 'S13'
+    title: 'Enabling Hyper-Personalisation: Automated Ad Creative Generation and Ranking for Fashion e-Commerce'
+    url: 'https://arxiv.org/abs/1908.10139'
+    citation: 'Agarwal et al. Enabling Hyper-Personalisation: Automated Ad Creative Generation and Ranking for Fashion e-Commerce. arXiv.'
+    status: 'Technical research paper using Myntra data; arXiv preprint, not peer-reviewed journal.'
+  - id: 'S14'
     title: "Social commerce now drives 10% of Myntra's revenue, says Sunder Balasubramanian"
-    url: "https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613"
+    url: 'https://www.socialsamosa.com/samosa-snippets/social-commerce-drives-10-percent-myntra-revenue-sunder-balasubramanian-10651613'
     citation: "Social Samosa. Social commerce now drives 10% of Myntra's revenue, says Sunder Balasubramanian. Published November 13, 2025."
-    status: "Tier 3 reporting of company/CMO claims; not audited financial disclosure."
-  - id: "S15"
-    title: "GST Council / PIB press release PDF on 56th GST Council recommendations"
-    url: "https://gstcouncil.gov.in/sites/default/files/2025-09/press_release_press_information_bureau_0.pdf"
-    citation: "GST Council / PIB. Recommendations of the 56th GST Council meeting. September 2025."
-    status: "Official GST Council-hosted government press release PDF."
-  - id: "S16"
-    title: "Modelling and prioritizing the factors for online apparel return using BWM approach"
-    url: "https://link.springer.com/article/10.1007/s10660-020-09406-3"
-    citation: "Modelling and prioritizing the factors for online apparel return using BWM approach. Electronic Commerce Research."
-    status: "Peer-reviewed academic article; India-specific online apparel returns."
-  - id: "S17"
-    title: "PIB — Assessment of Logistics Cost in India"
-    url: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2168995"
-    citation: "Press Information Bureau. Assessment of Logistics Cost in India."
-    status: "Official government press release; macro logistics-cost source, not fashion-order-level cost source."
-  - id: "S18"
-    title: "Footwear Size Recommendation System"
-    url: "https://arxiv.org/pdf/1806.11423"
-    citation: "Footwear Size Recommendation System. arXiv."
-    status: "Technical research paper using Myntra context; arXiv preprint, not peer-reviewed journal."
+    status: 'Tier 3 reporting of company/CMO claims; not audited financial disclosure.'
+  - id: 'S15'
+    title: 'GST Council / PIB press release PDF on 56th GST Council recommendations'
+    url: 'https://gstcouncil.gov.in/sites/default/files/2025-09/press_release_press_information_bureau_0.pdf'
+    citation: 'GST Council / PIB. Recommendations of the 56th GST Council meeting. September 2025.'
+    status: 'Official GST Council-hosted government press release PDF.'
+  - id: 'S16'
+    title: 'Modelling and prioritizing the factors for online apparel return using BWM approach'
+    url: 'https://link.springer.com/article/10.1007/s10660-020-09406-3'
+    citation: 'Modelling and prioritizing the factors for online apparel return using BWM approach. Electronic Commerce Research.'
+    status: 'Peer-reviewed academic article; India-specific online apparel returns.'
+  - id: 'S17'
+    title: 'PIB — Assessment of Logistics Cost in India'
+    url: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2168995'
+    citation: 'Press Information Bureau. Assessment of Logistics Cost in India.'
+    status: 'Official government press release; macro logistics-cost source, not fashion-order-level cost source.'
+  - id: 'S18'
+    title: 'Footwear Size Recommendation System'
+    url: 'https://arxiv.org/pdf/1806.11423'
+    citation: 'Footwear Size Recommendation System. arXiv.'
+    status: 'Technical research paper using Myntra context; arXiv preprint, not peer-reviewed journal.'
 ---
 
 ## Executive Summary
@@ -178,7 +213,7 @@ The visible problem is customer acquisition. The real problem is state change. A
 
 2. **CAC is a system diagnostic, not a marketing number.** Public filings do not disclose exact CAC for Myntra, Nykaa Fashion, Meesho, Flipkart Internet, Amazon Seller Services India, AJIO, TMRW, or Trent. What is observable is the pressure around acquisition: marketing spend intensity, growth spend, repeat frequency, and ad monetization rate. CAC absorbs weaknesses from assortment, trust, fit, returns, and repeat behavior — not just ad efficiency.
 
-3. **Post-view conversion is attribution, not economics.** Fashion is visual, so ad exposure can influence purchase even without a click. But a reported post-view conversion is not automatically incremental. The model uses: $$\text{Incremental CAC} = \frac{\text{CPM}}{1000 \times \text{viewability} \times \text{post-view conversion} \times \text{incrementality}}$$ Under 70% viewability and 60% incrementality assumptions, post-view conversion must reach 0.05%–0.08% of viewable impressions for CAC to stay in a tolerable range.
+3. **Post-view conversion is attribution, not economics.** Fashion is visual, so ad exposure can influence purchase even without a click. But a reported post-view conversion is not automatically incremental. The model uses: \$\$\text{Incremental CAC} = \frac{\text{CPM}}{1000 \times \text{viewability} \times \text{post-view conversion} \times \text{incrementality}}\$\$ Under 70% viewability and 60% incrementality assumptions, post-view conversion must reach 0.05%–0.08% of viewable impressions for CAC to stay in a tolerable range.
 
 4. **Contribution LTV must carry CAC with a safety margin.** At ₹250 CAC and the 3x hurdle, the customer needs roughly ₹750 of present contribution value. At ₹500 CAC, the requirement is ₹1,500. That is a high ask in fashion, where one return on a low-AOV order can eliminate the margin entirely.
 
@@ -208,16 +243,16 @@ The order milestone target — examined later in this analysis — comes after u
 
 The companies below are not interchangeable. Each one exposes a different mechanism inside Indian fashion commerce.
 
-| Company | Latest public numbers | What the numbers reveal |
-|---|---:|---|
-| **Myntra** | FY25 operating revenue **₹6,042.7 Cr**. Marketplace services **₹2,051.8 Cr**, logistics services **₹2,918.9 Cr**, advertisement services **₹914.5 Cr**. [S2] | Myntra is a service platform. Logistics and advertising are core monetization, not side revenue. |
-| **Nykaa Fashion** | FY26 Fashion GMV **₹4,954 Cr**, NSV **₹1,447 Cr**, revenue from operations **₹832 Cr**, marketing and S&D expense **₹382 Cr**, EBITDA **-₹37 Cr**. [S3] | Fashion can grow and still stay economically tight. Scale does not automatically fix marketing, fulfilment, and contribution pressure. |
-| **Meesho** | FY26 NMV **₹41,560 Cr**, annual transacting users **264 Mn**, placed orders **2.67 Bn**, frequency **10.1 orders/user/year**. [S4] | Frequency changes the CAC equation. A marketplace that absorbs repeated transactions spreads acquisition cost across more orders. |
-| **Flipkart Internet** | FY25 operating revenue **₹20,493.3 Cr**. Marketplace services **₹7,750.6 Cr**, logistics services **₹4,224.5 Cr**, advertisement services **₹6,317 Cr**. [S5] | Mature Indian marketplaces monetize traffic through services and advertising, not only commissions. |
-| **Amazon Seller Services India** | FY25 operating revenue **₹30,138.6 Cr**. Marketplace services **₹17,328.1 Cr**, other marketplace-related services (primarily advertising) **₹8,342.3 Cr**. [S6] | Once traffic is high-intent and repeatable, advertising becomes a major value layer. |
-| **Reliance Retail / AJIO** | FY26 gross revenue **₹3,70,026 Cr**, EBITDA **₹27,033 Cr**, registered customers **387 Mn**. AJIO reported **23% YoY increase in average bill value**; Shein India crossed **11 Mn app installs**. [S7] | Reliance is not a digital marketplace comp. It is an omnichannel machine with stores, supply, customer base, and logistics infrastructure that a standalone startup cannot replicate. |
-| **TMRW / ABFRL** | FY26 ABFRL revenue **₹8,177 Cr**. TMRW revenue **₹872 Cr**, up **34% YoY**, EBITDA **-₹207 Cr**. [S8] | Digital-first fashion brands can scale, but brand-building and unit economics still consume capital. |
-| **Trent / Zudio / Westside** | Q4 FY26 revenue from operations **₹4,937 Cr**, store count **1,286**, city presence **321**, retail area **17.70 Mn sq. ft.** [S9] | Trent is not a marketplace comp. It is the owned-retail benchmark showing how price architecture, store density, and supply control can substitute for marketplace liquidity. |
+| Company                          |                                                                                                                                                                                   Latest public numbers | What the numbers reveal                                                                                                                                                               |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Myntra**                       |                                            FY25 operating revenue **₹6,042.7 Cr**. Marketplace services **₹2,051.8 Cr**, logistics services **₹2,918.9 Cr**, advertisement services **₹914.5 Cr**. [S2] | Myntra is a service platform. Logistics and advertising are core monetization, not side revenue.                                                                                      |
+| **Nykaa Fashion**                |                                                 FY26 Fashion GMV **₹4,954 Cr**, NSV **₹1,447 Cr**, revenue from operations **₹832 Cr**, marketing and S&D expense **₹382 Cr**, EBITDA **-₹37 Cr**. [S3] | Fashion can grow and still stay economically tight. Scale does not automatically fix marketing, fulfilment, and contribution pressure.                                                |
+| **Meesho**                       |                                                                      FY26 NMV **₹41,560 Cr**, annual transacting users **264 Mn**, placed orders **2.67 Bn**, frequency **10.1 orders/user/year**. [S4] | Frequency changes the CAC equation. A marketplace that absorbs repeated transactions spreads acquisition cost across more orders.                                                     |
+| **Flipkart Internet**            |                                           FY25 operating revenue **₹20,493.3 Cr**. Marketplace services **₹7,750.6 Cr**, logistics services **₹4,224.5 Cr**, advertisement services **₹6,317 Cr**. [S5] | Mature Indian marketplaces monetize traffic through services and advertising, not only commissions.                                                                                   |
+| **Amazon Seller Services India** |                                        FY25 operating revenue **₹30,138.6 Cr**. Marketplace services **₹17,328.1 Cr**, other marketplace-related services (primarily advertising) **₹8,342.3 Cr**. [S6] | Once traffic is high-intent and repeatable, advertising becomes a major value layer.                                                                                                  |
+| **Reliance Retail / AJIO**       | FY26 gross revenue **₹3,70,026 Cr**, EBITDA **₹27,033 Cr**, registered customers **387 Mn**. AJIO reported **23% YoY increase in average bill value**; Shein India crossed **11 Mn app installs**. [S7] | Reliance is not a digital marketplace comp. It is an omnichannel machine with stores, supply, customer base, and logistics infrastructure that a standalone startup cannot replicate. |
+| **TMRW / ABFRL**                 |                                                                                                   FY26 ABFRL revenue **₹8,177 Cr**. TMRW revenue **₹872 Cr**, up **34% YoY**, EBITDA **-₹207 Cr**. [S8] | Digital-first fashion brands can scale, but brand-building and unit economics still consume capital.                                                                                  |
+| **Trent / Zudio / Westside**     |                                                                      Q4 FY26 revenue from operations **₹4,937 Cr**, store count **1,286**, city presence **321**, retail area **17.70 Mn sq. ft.** [S9] | Trent is not a marketplace comp. It is the owned-retail benchmark showing how price architecture, store density, and supply control can substitute for marketplace liquidity.         |
 
 Indian fashion commerce survives when at least one of four engines becomes strong enough: marketplace liquidity, owned supply, repeat purchase, or retail media. A new marketplace starts with none of these. Its first orders are paid experiments in whether attention can become trust, and whether trust can eventually become habit.
 
@@ -237,12 +272,12 @@ Comparing fashion companies by GMV or order count obscures this. GMV is a surfac
 
 Most Indian fashion businesses run on one or more of four engines:
 
-| Engine | What it solves | What it creates |
-|---|---|---|
-| **Marketplace liquidity** | Enough sellers, brands, SKUs, and buyers in one place | More choice, but weaker control over quality and discovery |
-| **Owned supply** | Better margin, pricing, and inventory control | Higher contribution, but inventory and design risk |
-| **Repeat purchase** | Lower effective CAC over time | Habit and frequency, but requires trust to form first |
-| **Retail media** | Monetizes traffic through ads and placements | An extra revenue layer, but only after meaningful traffic exists |
+| Engine                    | What it solves                                        | What it creates                                                  |
+| ------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------- |
+| **Marketplace liquidity** | Enough sellers, brands, SKUs, and buyers in one place | More choice, but weaker control over quality and discovery       |
+| **Owned supply**          | Better margin, pricing, and inventory control         | Higher contribution, but inventory and design risk               |
+| **Repeat purchase**       | Lower effective CAC over time                         | Habit and frequency, but requires trust to form first            |
+| **Retail media**          | Monetizes traffic through ads and placements          | An extra revenue layer, but only after meaningful traffic exists |
 
 A new marketplace starts with none of these developed. That is why early orders are expensive. It is not only acquiring users. It is manufacturing liquidity, trust, and habit before the system has earned them.
 
@@ -314,16 +349,16 @@ Trent is useful as a reminder that fashion demand can be built through physical 
 
 ### 2.9 The map
 
-| Company | Dominant engine | What it teaches |
-|---|---|---|
-| **Myntra** | Marketplace + logistics + retail media | Mature fashion marketplaces monetize services around the transaction |
-| **Nykaa Fashion** | Brand trust + curated vertical | Fashion can stay margin-tight even after scale |
-| **Meesho** | Frequency + value marketplace | Repeat transactions spread acquisition cost |
-| **Flipkart Internet** | Marketplace + retail media | Large marketplaces monetize seller demand through ads |
-| **Amazon Seller Services India** | Marketplace + retail media | Advertising becomes powerful when traffic is high-intent |
-| **Reliance Retail / AJIO** | Omnichannel distribution | Stores, supply, and customer base reduce standalone digital burden |
-| **TMRW / ABFRL** | Digital-first brand ownership | Owned brands improve control but add inventory and brand risk |
-| **Trent / Zudio / Westside** | Owned retail + price architecture | Owned supply and store density can substitute for marketplace liquidity |
+| Company                          | Dominant engine                        | What it teaches                                                         |
+| -------------------------------- | -------------------------------------- | ----------------------------------------------------------------------- |
+| **Myntra**                       | Marketplace + logistics + retail media | Mature fashion marketplaces monetize services around the transaction    |
+| **Nykaa Fashion**                | Brand trust + curated vertical         | Fashion can stay margin-tight even after scale                          |
+| **Meesho**                       | Frequency + value marketplace          | Repeat transactions spread acquisition cost                             |
+| **Flipkart Internet**            | Marketplace + retail media             | Large marketplaces monetize seller demand through ads                   |
+| **Amazon Seller Services India** | Marketplace + retail media             | Advertising becomes powerful when traffic is high-intent                |
+| **Reliance Retail / AJIO**       | Omnichannel distribution               | Stores, supply, and customer base reduce standalone digital burden      |
+| **TMRW / ABFRL**                 | Digital-first brand ownership          | Owned brands improve control but add inventory and brand risk           |
+| **Trent / Zudio / Westside**     | Owned retail + price architecture      | Owned supply and store density can substitute for marketplace liquidity |
 
 Indian fashion commerce is not one race. It is several races happening on the same shopping surface. A new marketplace cannot claim to be "like Myntra." It has to decide which engine it is building first — and in what order.
 
@@ -373,17 +408,17 @@ At **60%** new-customer share, acquisition pressure is severe. At **35%**, the m
 
 Monthly acquisition spend is:
 
-$$\text{Monthly acquisition spend} = \text{monthly orders} \times \text{new customer share} \times \text{CAC}$$
+\$\$\text{Monthly acquisition spend} = \text{monthly orders} \times \text{new customer share} \times \text{CAC}\$\$
 
 At **150,000 monthly orders**:
 
-| CAC | New customer share 25% | New customer share 35% | New customer share 45% | New customer share 60% |
-|---:|---:|---:|---:|---:|
-| ₹150 | ₹0.56 Cr | ₹0.79 Cr | ₹1.01 Cr | ₹1.35 Cr |
-| ₹250 | ₹0.94 Cr | ₹1.31 Cr | ₹1.69 Cr | ₹2.25 Cr |
-| ₹350 | ₹1.31 Cr | ₹1.84 Cr | ₹2.36 Cr | ₹3.15 Cr |
-| ₹500 | ₹1.88 Cr | ₹2.63 Cr | ₹3.38 Cr | ₹4.50 Cr |
-| ₹700 | ₹2.63 Cr | ₹3.68 Cr | ₹4.73 Cr | ₹6.30 Cr |
+|  CAC | New customer share 25% | New customer share 35% | New customer share 45% | New customer share 60% |
+| ---: | ---------------------: | ---------------------: | ---------------------: | ---------------------: |
+| ₹150 |               ₹0.56 Cr |               ₹0.79 Cr |               ₹1.01 Cr |               ₹1.35 Cr |
+| ₹250 |               ₹0.94 Cr |               ₹1.31 Cr |               ₹1.69 Cr |               ₹2.25 Cr |
+| ₹350 |               ₹1.31 Cr |               ₹1.84 Cr |               ₹2.36 Cr |               ₹3.15 Cr |
+| ₹500 |               ₹1.88 Cr |               ₹2.63 Cr |               ₹3.38 Cr |               ₹4.50 Cr |
+| ₹700 |               ₹2.63 Cr |               ₹3.68 Cr |               ₹4.73 Cr |               ₹6.30 Cr |
 
 The same CAC is manageable or fatal depending on how many orders are still being purchased from outside. CAC cannot be evaluated in isolation from repeat share.
 
@@ -405,25 +440,25 @@ The model should not ask how many impressions were served. It should ask: how ma
 
 ### 3.5 The post-view CAC formula
 
-$$\text{Incremental CAC} = \frac{\text{CPM}}{1000 \times \text{viewability rate} \times \text{post-view conversion rate} \times \text{incrementality factor}}$$
+\$\$\text{Incremental CAC} = \frac{\text{CPM}}{1000 \times \text{viewability rate} \times \text{post-view conversion rate} \times \text{incrementality factor}}\$\$
 
-| Variable | Meaning |
-|---|---|
-| **CPM** | Cost of 1,000 impressions |
-| **Viewability rate** | Share of impressions that were actually viewable |
-| **Post-view conversion rate** | Share of viewable impressions that later converted |
-| **Incrementality factor** | Share of those conversions actually caused by the ad |
+| Variable                      | Meaning                                              |
+| ----------------------------- | ---------------------------------------------------- |
+| **CPM**                       | Cost of 1,000 impressions                            |
+| **Viewability rate**          | Share of impressions that were actually viewable     |
+| **Post-view conversion rate** | Share of viewable impressions that later converted   |
+| **Incrementality factor**     | Share of those conversions actually caused by the ad |
 
 This is a constraint equation, not a prediction. Using **70% viewability**, **60% incrementality**, and CPM cases of ₹50, ₹80, and ₹120, post-view conversion must reach roughly **0.05%–0.08% from viewable impressions** for CAC to stay in a tolerable range.
 
 At **₹80 CPM**:
 
 | Post-view conversion rate | Incremental CAC |
-|---:|---:|
-| 0.02% | ₹952 |
-| 0.05% | ₹381 |
-| 0.08% | ₹238 |
-| 0.10% | ₹190 |
+| ------------------------: | --------------: |
+|                     0.02% |            ₹952 |
+|                     0.05% |            ₹381 |
+|                     0.08% |            ₹238 |
+|                     0.10% |            ₹190 |
 
 Below 0.03%, post-view advertising becomes too expensive for a new fashion marketplace unless the acquired customer has unusually high future contribution.
 
@@ -437,13 +472,13 @@ A weak company treats CAC as the cost to get an order. A stronger company treats
 
 That is why high CAC is not automatically bad. High CAC is bad when it buys a low-memory customer.
 
-| Acquisition outcome | Business meaning |
-|---|---|
-| One discounted order | Paid transaction |
-| App install with no repeat | Weak memory |
-| First order plus repeat | Recoverable CAC |
-| Repeat customer with low returns | Contribution asset |
-| Repeat customer who influences others | CAC reducer |
+| Acquisition outcome                   | Business meaning   |
+| ------------------------------------- | ------------------ |
+| One discounted order                  | Paid transaction   |
+| App install with no repeat            | Weak memory        |
+| First order plus repeat               | Recoverable CAC    |
+| Repeat customer with low returns      | Contribution asset |
+| Repeat customer who influences others | CAC reducer        |
 
 CAC should be measured in relation to future contribution, not in isolation.
 
@@ -467,9 +502,9 @@ A first order can be produced through many channels: a discount, a creator post,
 
 This is why the two PVCs must remain separate.
 
-| Term | Meaning | What it tests |
-|---|---|---|
-| **PVC-Ad** | Post-view conversion | Whether ad exposure contributed to conversion |
+| Term        | Meaning                       | What it tests                                               |
+| ----------- | ----------------------------- | ----------------------------------------------------------- |
+| **PVC-Ad**  | Post-view conversion          | Whether ad exposure contributed to conversion               |
 | **PVC-LTV** | Present value of contribution | Whether the acquired customer is economically worth the CAC |
 
 Post-view conversion is an attribution question. PVC-LTV is an economics question. Mixing the two produces false confidence. A campaign can show conversions while the customers it acquires fail to generate enough contribution to repay acquisition cost.
@@ -480,25 +515,25 @@ The complete chain is longer than any ad dashboard shows: ad exposure, first ord
 
 The minimum condition is:
 
-$$\text{PVC-LTV} > \text{CAC}$$
+\$\$\text{PVC-LTV} > \text{CAC}\$\$
 
 But this condition is too weak for an early fashion marketplace. Data is noisy, returns are delayed, attribution can over-credit campaigns, discounts distort demand, and repeat behavior is uncertain. A small positive spread between PVC-LTV and CAC can disappear once operational leakage is properly measured.
 
 For this reason, the model uses a stricter hurdle:
 
-$$\frac{\text{PVC-LTV}}{\text{CAC}} \geq 3$$
+\$\$\frac{\text{PVC-LTV}}{\text{CAC}} \geq 3\$\$
 
 This is not a universal rule. It is a margin of safety. The earlier the marketplace, the more uncertain the cohort data — and the more margin of safety the model requires.
 
 ![Required Contribution Value by CAC](./fashion-marketplace-cac/assets/section4_required_pvc_ltv_by_cac.png)
 
-| CAC | PVC-LTV needed at 1x | PVC-LTV needed at 2x | PVC-LTV needed at 3x | PVC-LTV needed at 4x |
-|---:|---:|---:|---:|---:|
-| ₹150 | ₹150 | ₹300 | ₹450 | ₹600 |
-| ₹250 | ₹250 | ₹500 | ₹750 | ₹1,000 |
-| ₹350 | ₹350 | ₹700 | ₹1,050 | ₹1,400 |
-| ₹500 | ₹500 | ₹1,000 | ₹1,500 | ₹2,000 |
-| ₹700 | ₹700 | ₹1,400 | ₹2,100 | ₹2,800 |
+|  CAC | PVC-LTV needed at 1x | PVC-LTV needed at 2x | PVC-LTV needed at 3x | PVC-LTV needed at 4x |
+| ---: | -------------------: | -------------------: | -------------------: | -------------------: |
+| ₹150 |                 ₹150 |                 ₹300 |                 ₹450 |                 ₹600 |
+| ₹250 |                 ₹250 |                 ₹500 |                 ₹750 |               ₹1,000 |
+| ₹350 |                 ₹350 |                 ₹700 |               ₹1,050 |               ₹1,400 |
+| ₹500 |                 ₹500 |               ₹1,000 |               ₹1,500 |               ₹2,000 |
+| ₹700 |                 ₹700 |               ₹1,400 |               ₹2,100 |               ₹2,800 |
 
 A ₹500 CAC under a 3x hurdle requires ₹1,500 of present contribution value from one customer. In fashion, that requires enough retained orders, enough margin per order, controlled returns, and limited reacquisition cost. If the customer buys once and returns part of the order, the required contribution pool rarely appears.
 
@@ -506,19 +541,19 @@ A ₹500 CAC under a 3x hurdle requires ₹1,500 of present contribution value f
 
 CAC is recovered through contribution per order:
 
-$$\text{Orders needed to recover CAC} = \frac{\text{CAC}}{\text{contribution per order}}$$
+\$\$\text{Orders needed to recover CAC} = \frac{\text{CAC}}{\text{contribution per order}}\$\$
 
 This equation removes the distraction of GMV. A high-GMV order is not necessarily a high-contribution order. The relevant figure is what remains after platform-funded discounts, fulfilment, returns, payments, support, and leakage.
 
 ![Orders Needed to Recover CAC](./fashion-marketplace-cac/assets/section4_orders_needed_to_recover_cac.png)
 
-| CAC | ₹60 contribution/order | ₹100 contribution/order | ₹140 contribution/order | ₹200 contribution/order | ₹260 contribution/order |
-|---:|---:|---:|---:|---:|---:|
-| ₹150 | 2.5 orders | 1.5 orders | 1.1 orders | 0.8 orders | 0.6 orders |
-| ₹250 | 4.2 orders | 2.5 orders | 1.8 orders | 1.3 orders | 1.0 order |
-| ₹350 | 5.8 orders | 3.5 orders | 2.5 orders | 1.8 orders | 1.3 orders |
-| ₹500 | 8.3 orders | 5.0 orders | 3.6 orders | 2.5 orders | 1.9 orders |
-| ₹700 | 11.7 orders | 7.0 orders | 5.0 orders | 3.5 orders | 2.7 orders |
+|  CAC | ₹60 contribution/order | ₹100 contribution/order | ₹140 contribution/order | ₹200 contribution/order | ₹260 contribution/order |
+| ---: | ---------------------: | ----------------------: | ----------------------: | ----------------------: | ----------------------: |
+| ₹150 |             2.5 orders |              1.5 orders |              1.1 orders |              0.8 orders |              0.6 orders |
+| ₹250 |             4.2 orders |              2.5 orders |              1.8 orders |              1.3 orders |               1.0 order |
+| ₹350 |             5.8 orders |              3.5 orders |              2.5 orders |              1.8 orders |              1.3 orders |
+| ₹500 |             8.3 orders |              5.0 orders |              3.6 orders |              2.5 orders |              1.9 orders |
+| ₹700 |            11.7 orders |              7.0 orders |              5.0 orders |              3.5 orders |              2.7 orders |
 
 When contribution per order is ₹60, even a ₹250 CAC requires more than four contribution-bearing orders to recover acquisition cost. When contribution per order is ₹140, the same CAC needs fewer than two orders. When contribution per order is ₹260, the first order can nearly recover acquisition cost. CAC is not independently good or bad. Its quality depends entirely on the contribution depth behind each retained order.
 
@@ -528,7 +563,7 @@ Contribution is not GMV. It is not platform revenue. It is the cash-like value l
 
 For a Myntra-like marketplace:
 
-$$\text{Contribution/order} = \text{platform revenue/order} - \text{variable cost/order}$$
+\$\$\text{Contribution/order} = \text{platform revenue/order} - \text{variable cost/order}\$\$
 
 Platform revenue may include: marketplace commission, logistics or service revenue, seller or brand advertising revenue, and platform fees.
 
@@ -542,19 +577,19 @@ Nykaa Fashion shows why this separation matters. In FY26, it had gross profit of
 
 PVC-LTV depends on repeat depth and contribution per order:
 
-$$\text{PVC-LTV} = \text{contribution per order} \times \text{contribution-bearing orders per customer} \times \text{present-value adjustment}$$
+\$\$\text{PVC-LTV} = \text{contribution per order} \times \text{contribution-bearing orders per customer} \times \text{present-value adjustment}\$\$
 
 The present-value adjustment accounts for delay, uncertainty, and cohort decay. This model uses a **12% haircut**, meaning future contribution is valued at 88% of nominal. This is an internal model assumption, not a reported company figure.
 
 ![PVC-LTV by Contribution and Repeat Depth](./fashion-marketplace-cac/assets/section4_pvc_ltv_by_contribution_and_repeat_depth.png)
 
 | Contribution/order | 1.5 orders/customer | 2.5 orders/customer | 3.5 orders/customer | 5.0 orders/customer |
-|---:|---:|---:|---:|---:|
-| ₹60 | ₹79 | ₹132 | ₹185 | ₹264 |
-| ₹100 | ₹132 | ₹220 | ₹308 | ₹440 |
-| ₹140 | ₹185 | ₹308 | ₹431 | ₹616 |
-| ₹200 | ₹264 | ₹440 | ₹616 | ₹880 |
-| ₹260 | ₹343 | ₹572 | ₹801 | ₹1,144 |
+| -----------------: | ------------------: | ------------------: | ------------------: | ------------------: |
+|                ₹60 |                 ₹79 |                ₹132 |                ₹185 |                ₹264 |
+|               ₹100 |                ₹132 |                ₹220 |                ₹308 |                ₹440 |
+|               ₹140 |                ₹185 |                ₹308 |                ₹431 |                ₹616 |
+|               ₹200 |                ₹264 |                ₹440 |                ₹616 |                ₹880 |
+|               ₹260 |                ₹343 |                ₹572 |                ₹801 |              ₹1,144 |
 
 The weak zone is easy to spot. Low contribution per order and low repeat depth cannot support meaningful CAC. The model may still produce orders, but those orders do not create enough customer value.
 
@@ -564,16 +599,16 @@ A customer generating ₹140 contribution per order across 3.5 contribution-bear
 
 At a 3x hurdle:
 
-$$\text{CAC ceiling} = \frac{\text{PVC-LTV}}{3}$$
+\$\$\text{CAC ceiling} = \frac{\text{PVC-LTV}}{3}\$\$
 
 ![CAC Ceiling at 3x PVC-LTV/CAC](./fashion-marketplace-cac/assets/section4_cac_ceiling_at_3x_pvc_ltv.png)
 
-| Customer value condition | CAC interpretation |
-|---|---|
-| PVC-LTV below ₹450 | Paid scaling is fragile |
-| PVC-LTV around ₹750 | ₹250 CAC becomes acceptable at 3x |
-| PVC-LTV around ₹1,200 | ₹400 CAC becomes acceptable at 3x |
-| PVC-LTV above ₹1,500 | ₹500 CAC can be justified, but only with strong cohort evidence |
+| Customer value condition | CAC interpretation                                              |
+| ------------------------ | --------------------------------------------------------------- |
+| PVC-LTV below ₹450       | Paid scaling is fragile                                         |
+| PVC-LTV around ₹750      | ₹250 CAC becomes acceptable at 3x                               |
+| PVC-LTV around ₹1,200    | ₹400 CAC becomes acceptable at 3x                               |
+| PVC-LTV above ₹1,500     | ₹500 CAC can be justified, but only with strong cohort evidence |
 
 Early fashion marketplaces have a narrow CAC window because repeat depth is low. If repeat depth is low, the CAC ceiling stays low even when contribution per order improves. If repeat depth improves, the same business can afford more acquisition without weakening the model.
 
@@ -591,16 +626,16 @@ The same order milestone can describe two entirely different systems. In a weak 
 
 These are not predictions. They are the conditions the model requires to remain internally coherent.
 
-| Metric | Minimum workable range | Stronger range |
-|---|---:|---:|
-| Blended CAC | ₹150–₹250 | Below ₹200 |
-| Paid CAC | ₹200–₹300 | Below ₹250 |
-| PVC-LTV/customer | ₹750–₹1,200 | ₹1,200+ |
-| PVC-LTV / CAC | 3x | 4x+ |
-| Contribution/order before CAC | ₹120+ | ₹200+ |
-| Contribution-bearing orders/customer | 3+ | 4–5+ |
-| New customer share of orders | 30–40% | 25–30% |
-| Repeat / CRM / direct share | 60%+ | 70%+ |
+| Metric                               | Minimum workable range | Stronger range |
+| ------------------------------------ | ---------------------: | -------------: |
+| Blended CAC                          |              ₹150–₹250 |     Below ₹200 |
+| Paid CAC                             |              ₹200–₹300 |     Below ₹250 |
+| PVC-LTV/customer                     |            ₹750–₹1,200 |        ₹1,200+ |
+| PVC-LTV / CAC                        |                     3x |            4x+ |
+| Contribution/order before CAC        |                  ₹120+ |          ₹200+ |
+| Contribution-bearing orders/customer |                     3+ |           4–5+ |
+| New customer share of orders         |                 30–40% |         25–30% |
+| Repeat / CRM / direct share          |                   60%+ |           70%+ |
 
 If these conditions are not met, the order target can still be reached. The system remains acquisition-dependent, and the company is scaling transactions before proving customer value.
 
@@ -626,11 +661,11 @@ If order volume rises while new-customer dependence stays high, the company has 
 
 ### 5.1 Three ways to reach the same order volume
 
-| Path | Time to 150,000 monthly orders | What the path assumes | Main analytical risk |
-|---|---:|---|---|
-| **Aggressive** | 6 months | Faster paid acquisition, stronger launch inventory, higher discount tolerance | Scale arrives before cohort quality is understood |
-| **Base** | 10 months | Paid acquisition declines as creator, CRM, and repeat loops improve | The model requires month-by-month operating improvement |
-| **Controlled** | 14 months | Slower expansion, more cohort data, tighter logistics discipline | The company may underuse real early demand |
+| Path           | Time to 150,000 monthly orders | What the path assumes                                                         | Main analytical risk                                    |
+| -------------- | -----------------------------: | ----------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **Aggressive** |                       6 months | Faster paid acquisition, stronger launch inventory, higher discount tolerance | Scale arrives before cohort quality is understood       |
+| **Base**       |                      10 months | Paid acquisition declines as creator, CRM, and repeat loops improve           | The model requires month-by-month operating improvement |
+| **Controlled** |                      14 months | Slower expansion, more cohort data, tighter logistics discipline              | The company may underuse real early demand              |
 
 The aggressive path is not structurally wrong. It is simply less informative. Fashion cohorts need time to reveal whether customers keep products, return excessively, buy again, respond to CRM, and trust the platform after the first transaction. The base path gives enough time to observe early customer behavior while forcing meaningful scale.
 
@@ -643,17 +678,17 @@ The base path moves from **9,000 monthly orders** in Month 1 to **150,000 monthl
 The order ramp is only the visible layer. The critical layer is the decline in paid dependence. By Month 10, the model requires new-customer share to fall to **35%**, paid share of new customers to fall to **40%**, and paid CAC to fall to **₹250**.
 
 | Month | Monthly orders | New customer share | Paid share of new customers | Paid CAC | Paid acquisition spend |
-|---:|---:|---:|---:|---:|---:|
-| 1 | 9,000 | 85% | 75% | ₹520 | ₹0.30 Cr |
-| 2 | 18,000 | 80% | 70% | ₹480 | ₹0.48 Cr |
-| 3 | 30,000 | 75% | 65% | ₹430 | ₹0.63 Cr |
-| 4 | 45,000 | 68% | 60% | ₹380 | ₹0.70 Cr |
-| 5 | 66,000 | 60% | 55% | ₹340 | ₹0.74 Cr |
-| 6 | 90,000 | 52% | 50% | ₹310 | ₹0.73 Cr |
-| 7 | 111,000 | 46% | 47% | ₹290 | ₹0.70 Cr |
-| 8 | 129,000 | 42% | 44% | ₹270 | ₹0.64 Cr |
-| 9 | 141,000 | 38% | 42% | ₹260 | ₹0.59 Cr |
-| 10 | 150,000 | 35% | 40% | ₹250 | ₹0.52 Cr |
+| ----: | -------------: | -----------------: | --------------------------: | -------: | ---------------------: |
+|     1 |          9,000 |                85% |                         75% |     ₹520 |               ₹0.30 Cr |
+|     2 |         18,000 |                80% |                         70% |     ₹480 |               ₹0.48 Cr |
+|     3 |         30,000 |                75% |                         65% |     ₹430 |               ₹0.63 Cr |
+|     4 |         45,000 |                68% |                         60% |     ₹380 |               ₹0.70 Cr |
+|     5 |         66,000 |                60% |                         55% |     ₹340 |               ₹0.74 Cr |
+|     6 |         90,000 |                52% |                         50% |     ₹310 |               ₹0.73 Cr |
+|     7 |        111,000 |                46% |                         47% |     ₹290 |               ₹0.70 Cr |
+|     8 |        129,000 |                42% |                         44% |     ₹270 |               ₹0.64 Cr |
+|     9 |        141,000 |                38% |                         42% |     ₹260 |               ₹0.59 Cr |
+|    10 |        150,000 |                35% |                         40% |     ₹250 |               ₹0.52 Cr |
 
 The model becomes healthier only if paid acquisition spend peaks before the order target is reached. If paid spend keeps rising in proportion to orders, the business is not compounding. It is renting a larger volume of demand.
 
@@ -663,7 +698,7 @@ The model becomes healthier only if paid acquisition spend peaks before the orde
 
 Monthly paid acquisition burden is:
 
-$$\text{Monthly paid acquisition spend} = \text{monthly orders} \times \text{new-customer share} \times \text{paid share of new customers} \times \text{paid CAC}$$
+\$\$\text{Monthly paid acquisition spend} = \text{monthly orders} \times \text{new-customer share} \times \text{paid share of new customers} \times \text{paid CAC}\$\$
 
 This equation shows why order growth can mislead. A company grows orders while reducing paid acquisition burden only if repeat behavior improves and CAC falls. Without those two changes, the marketplace remains dependent on outside demand.
 
@@ -677,12 +712,12 @@ Isolating direct paid acquisition is methodologically useful. It is the cleanest
 
 Early orders can come from paid performance. Later orders cannot depend on it at the same rate. The model assumes a shift from paid acquisition toward creator, affiliate, CRM, and repeat behavior.
 
-| Channel group | Month 1 | Month 10 |
-|---|---:|---:|
-| Paid performance | 60% | 18% |
-| Creator / affiliate | 20% | 30% |
-| CRM / repeat | 5% | 42% |
-| Organic / direct | 15% | 10% |
+| Channel group       | Month 1 | Month 10 |
+| ------------------- | ------: | -------: |
+| Paid performance    |     60% |      18% |
+| Creator / affiliate |     20% |      30% |
+| CRM / repeat        |      5% |      42% |
+| Organic / direct    |     15% |      10% |
 
 The key shift is the rise of CRM and repeat orders. If CRM and repeat do not become the largest bucket by Month 10, the marketplace has not converted acquisition into customer memory. The decline in organic/direct share is a modelling choice — behavior that initially appears as broad organic demand should become measurable repeat behavior as the platform matures.
 
@@ -692,11 +727,11 @@ The key shift is the rise of CRM and repeat orders. If CRM and repeat do not bec
 
 The same order ramp produces different economic outcomes depending on contribution per order.
 
-| Contribution per order | What it implies |
-|---:|---|
-| ₹100 | The system has thin contribution and limited room after acquisition |
-| ₹140 | The model becomes workable only if CAC declines on schedule |
-| ₹200 | The ramp creates more room for fixed costs, operating leakage, and reinvestment |
+| Contribution per order | What it implies                                                                 |
+| ---------------------: | ------------------------------------------------------------------------------- |
+|                   ₹100 | The system has thin contribution and limited room after acquisition             |
+|                   ₹140 | The model becomes workable only if CAC declines on schedule                     |
+|                   ₹200 | The ramp creates more room for fixed costs, operating leakage, and reinvestment |
 
 Two marketplaces can both reach the same monthly order count, but one may generate enough contribution to absorb CAC while the other remains dependent on fresh capital.
 
@@ -708,11 +743,11 @@ At lower contribution per order, paid acquisition consumes most of the system's 
 
 The ten-month path should not be read as one repeated growth tactic. Each phase tests a different part of the system.
 
-| Phase | Main bottleneck | What must be learned |
-|---|---|---|
-| Months 1–2 | Demand evidence | Whether customers respond without excessive artificial incentives |
-| Months 3–5 | Channel quality | Which channels produce retained contribution, not just cheap first orders |
-| Months 6–8 | Repeat behavior | Whether early customers return without full reacquisition |
+| Phase       | Main bottleneck     | What must be learned                                                                      |
+| ----------- | ------------------- | ----------------------------------------------------------------------------------------- |
+| Months 1–2  | Demand evidence     | Whether customers respond without excessive artificial incentives                         |
+| Months 3–5  | Channel quality     | Which channels produce retained contribution, not just cheap first orders                 |
+| Months 6–8  | Repeat behavior     | Whether early customers return without full reacquisition                                 |
 | Months 9–10 | Discipline at scale | Whether weak channels, categories, and geographies can be rejected despite order pressure |
 
 In the first phase, the risk is mistaking novelty for demand. Launch curiosity creates orders that may not repeat. Heavy discounts distort the signal so much the company learns very little from early volume.
@@ -727,12 +762,12 @@ In the fourth phase, the company must reject low-quality scale. A weak channel s
 
 By Month 10, the target condition is:
 
-| Metric | Target |
-|---|---:|
-| Monthly orders | 150,000 |
-| New-customer share | 35% or lower |
-| Paid CAC | ₹250 or lower |
-| Repeat / CRM / direct order share | 60%+ |
+| Metric                            |        Target |
+| --------------------------------- | ------------: |
+| Monthly orders                    |       150,000 |
+| New-customer share                |  35% or lower |
+| Paid CAC                          | ₹250 or lower |
+| Repeat / CRM / direct order share |          60%+ |
 
 This does not prove long-term durability. It proves only that the first layer of marketplace memory exists.
 
@@ -740,11 +775,11 @@ This does not prove long-term durability. It proves only that the first layer of
 
 The healthy loop:
 
-$$\text{better cohort evidence} \rightarrow \text{better channel allocation} \rightarrow \text{lower CAC} \rightarrow \text{more retained customers} \rightarrow \text{higher repeat share} \rightarrow \text{more contribution available for growth}$$
+\$\$\text{better cohort evidence} \rightarrow \text{better channel allocation} \rightarrow \text{lower CAC} \rightarrow \text{more retained customers} \rightarrow \text{higher repeat share} \rightarrow \text{more contribution available for growth}\$\$
 
 The weak loop:
 
-$$\text{weak repeat} \rightarrow \text{more paid acquisition required} \rightarrow \text{higher CAC pressure} \rightarrow \text{more discounting} \rightarrow \text{lower contribution} \rightarrow \text{greater dependence on paid growth}$$
+\$\$\text{weak repeat} \rightarrow \text{more paid acquisition required} \rightarrow \text{higher CAC pressure} \rightarrow \text{more discounting} \rightarrow \text{lower contribution} \rightarrow \text{greater dependence on paid growth}\$\$
 
 Both loops can produce order growth for some time. Only the first creates a marketplace whose economics improve with scale. The ramp is not evidence by itself. The evidence is whether dependency falls while the ramp happens.
 
@@ -766,7 +801,7 @@ The mistake is comparing channels only by reported CAC. A lower-CAC channel can 
 
 The correct metric is:
 
-$$\text{Effective CAC} = \frac{\text{media spend + creator payouts + discounts + production + tools}}{\text{new retained customers}}$$
+\$\$\text{Effective CAC} = \frac{\text{media spend + creator payouts + discounts + production + tools}}{\text{new retained customers}}\$\$
 
 The denominator matters. A customer who places an order and returns it fully is not the same as a customer who keeps the product and buys again.
 
@@ -774,15 +809,15 @@ The denominator matters. A customer who places an order and returns it fully is 
 
 The acquisition system should be built around channel functions, not channel names.
 
-| Channel type | What it can solve | What it cannot solve alone |
-|---|---|---|
-| **Paid performance** | Fast demand testing and measurable acquisition | Trust, habit, and long-term differentiation |
-| **Influencer / affiliate** | Borrowed trust and product discovery | Cohort quality unless attribution and returns are measured |
-| **Founder-led content** | Narrative, credibility, and category point of view | Scale if the founder is the only demand source |
-| **Brand-led content** | Familiarity and trust over time | Fast CAC payback in early stages |
-| **SEO / owned content** | Compounding intent capture | Immediate order volume |
-| **CRM / repeat** | Lower-cost reactivation and habit formation | New demand creation from zero |
-| **Retail media / seller-funded promotions** | Monetization of traffic | Early-stage acquisition before meaningful traffic exists |
+| Channel type                                | What it can solve                                  | What it cannot solve alone                                 |
+| ------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------- |
+| **Paid performance**                        | Fast demand testing and measurable acquisition     | Trust, habit, and long-term differentiation                |
+| **Influencer / affiliate**                  | Borrowed trust and product discovery               | Cohort quality unless attribution and returns are measured |
+| **Founder-led content**                     | Narrative, credibility, and category point of view | Scale if the founder is the only demand source             |
+| **Brand-led content**                       | Familiarity and trust over time                    | Fast CAC payback in early stages                           |
+| **SEO / owned content**                     | Compounding intent capture                         | Immediate order volume                                     |
+| **CRM / repeat**                            | Lower-cost reactivation and habit formation        | New demand creation from zero                              |
+| **Retail media / seller-funded promotions** | Monetization of traffic                            | Early-stage acquisition before meaningful traffic exists   |
 
 Paid performance should be used as a testing layer, not a permanent foundation. The foundation has to move toward repeat, creator trust, owned content, and CRM.
 
@@ -840,12 +875,12 @@ AI is not only a content tool. In ecommerce, it affects acquisition efficiency t
 
 ### 6.8 The acquisition stack should change by stage
 
-| Stage | Primary task | Channel emphasis | What should be measured |
-|---|---|---|---|
-| **Months 1–2** | Test demand quality | Founder-led content, small creator cohorts, paid performance tests | Kept orders, first repeat, return rate, discount dependence |
-| **Months 3–5** | Identify retained channels | Creator / affiliate, paid amplification of winners, category landing pages | Channel-level PVC-LTV, contribution after returns |
-| **Months 6–8** | Build memory | CRM, recommendations, size confidence, wishlist reactivation, UGC | Repeat rate, reacquisition cost, cohort contribution |
-| **Months 9–10** | Cut weak scale | Creator affiliates, CRM, selective paid, early seller-funded campaigns | New-customer share, paid CAC, contribution/order |
+| Stage           | Primary task               | Channel emphasis                                                           | What should be measured                                     |
+| --------------- | -------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Months 1–2**  | Test demand quality        | Founder-led content, small creator cohorts, paid performance tests         | Kept orders, first repeat, return rate, discount dependence |
+| **Months 3–5**  | Identify retained channels | Creator / affiliate, paid amplification of winners, category landing pages | Channel-level PVC-LTV, contribution after returns           |
+| **Months 6–8**  | Build memory               | CRM, recommendations, size confidence, wishlist reactivation, UGC          | Repeat rate, reacquisition cost, cohort contribution        |
+| **Months 9–10** | Cut weak scale             | Creator affiliates, CRM, selective paid, early seller-funded campaigns     | New-customer share, paid CAC, contribution/order            |
 
 The sequence matters. Retail media cannot be the first engine because sellers do not pay much for weak traffic. CRM cannot work before the platform has customers to reactivate. Brand marketing should not scale before the customer promise is operationally reliable. Paid performance should not remain the main engine after repeat cohorts become visible.
 
@@ -853,14 +888,14 @@ The sequence matters. Retail media cannot be the first engine because sellers do
 
 The strongest early model is not purely performance-led, influencer-led, founder-led, or brand-led. It is a layered system.
 
-| Layer | Function |
-|---|---|
-| **Founder-led thesis** | Explains why this marketplace should exist |
-| **Creator-led discovery** | Converts fashion browsing into social trust |
-| **Paid amplification** | Scales only the creatives and cohorts that show retained contribution |
-| **AI creative and catalogue system** | Increases testing speed and personalization |
-| **CRM and repeat engine** | Converts first orders into lower-cost future demand |
-| **Selective seller-funded promotion** | Begins monetizing traffic once intent is proven |
+| Layer                                 | Function                                                              |
+| ------------------------------------- | --------------------------------------------------------------------- |
+| **Founder-led thesis**                | Explains why this marketplace should exist                            |
+| **Creator-led discovery**             | Converts fashion browsing into social trust                           |
+| **Paid amplification**                | Scales only the creatives and cohorts that show retained contribution |
+| **AI creative and catalogue system**  | Increases testing speed and personalization                           |
+| **CRM and repeat engine**             | Converts first orders into lower-cost future demand                   |
+| **Selective seller-funded promotion** | Begins monetizing traffic once intent is proven                       |
 
 The purpose is not to make every channel cheap. The purpose is to make every acquired customer more likely to become cheaper to reactivate.
 
@@ -932,14 +967,14 @@ Myntra's footwear size recommendation paper states the same mechanism from an op
 
 Return risk is not evenly distributed across categories:
 
-| Category type | Return pressure | Why it matters |
-|---|---|---|
-| Fitted apparel | High | Size, body type, fabric fall, expectation mismatch |
-| Footwear | High | Size variation across brands and comfort uncertainty |
-| Occasion wear | Medium-high | Higher expectation, fit, color, material perception |
-| Accessories | Lower | Less fit dependence, lower trial uncertainty |
+| Category type  | Return pressure             | Why it matters                                               |
+| -------------- | --------------------------- | ------------------------------------------------------------ |
+| Fitted apparel | High                        | Size, body type, fabric fall, expectation mismatch           |
+| Footwear       | High                        | Size variation across brands and comfort uncertainty         |
+| Occasion wear  | Medium-high                 | Higher expectation, fit, color, material perception          |
+| Accessories    | Lower                       | Less fit dependence, lower trial uncertainty                 |
 | Beauty add-ons | Lower, but policy-sensitive | Often lower returnability, but trust and authenticity matter |
-| Basics | Medium | Lower fashion risk, but high price sensitivity |
+| Basics         | Medium                      | Lower fashion risk, but high price sensitivity               |
 
 Category-level contribution should not be averaged too early. A marketplace can hide weak categories inside blended order growth. Category-level contribution is more useful than platform-level contribution in the first year.
 
@@ -955,14 +990,14 @@ Fit, product data, quality control, and return policy are not customer-experienc
 
 ### 7.6 Brand type changes both CAC and contribution
 
-| Brand type | CAC effect | Contribution effect | Main risk |
-|---|---|---|---|
-| Known national brands | Lower trust friction | Lower platform control, more price comparison | Customer may use marketplace only for discovery |
-| Emerging D2C brands | Medium trust friction | Better margin potential | Quality and consistency vary |
-| Creator-led drops | Lower cold-start CAC if audience trusts creator | Can generate urgency and social proof | Demand may be personality-dependent |
-| Private label | Highest control over margin and pricing | Stronger contribution potential | Inventory and design risk move to platform |
-| Value/unbranded supply | Price can convert fast | Thin contribution and higher quality risk | Returns and low loyalty |
-| Accessories/add-ons | Lower fit risk | Useful for basket expansion | Lower standalone demand |
+| Brand type             | CAC effect                                      | Contribution effect                           | Main risk                                       |
+| ---------------------- | ----------------------------------------------- | --------------------------------------------- | ----------------------------------------------- |
+| Known national brands  | Lower trust friction                            | Lower platform control, more price comparison | Customer may use marketplace only for discovery |
+| Emerging D2C brands    | Medium trust friction                           | Better margin potential                       | Quality and consistency vary                    |
+| Creator-led drops      | Lower cold-start CAC if audience trusts creator | Can generate urgency and social proof         | Demand may be personality-dependent             |
+| Private label          | Highest control over margin and pricing         | Stronger contribution potential               | Inventory and design risk move to platform      |
+| Value/unbranded supply | Price can convert fast                          | Thin contribution and higher quality risk     | Returns and low loyalty                         |
+| Accessories/add-ons    | Lower fit risk                                  | Useful for basket expansion                   | Lower standalone demand                         |
 
 A completely open catalogue increases assortment but also increases quality variance, return risk, and discovery noise. A curated marketplace has fewer SKUs, but it can control the customer promise more tightly. In early stages, that control may be more valuable than assortment breadth.
 
@@ -974,12 +1009,12 @@ Geographic expansion should follow contribution evidence. A city or pin code sho
 
 ### 7.8 The product strategy implied by the model
 
-| Product band | Likely role | CAC implication |
-|---|---|---|
-| Below ₹799 | Traffic and value entry | CAC must be very low; contribution room is thin |
-| ₹999–₹1,499 | Mass-fashion working zone | Good for creator-led and paid testing if returns are controlled |
-| ₹1,500–₹2,499 | Stronger contribution zone | Better CAC tolerance, but requires stronger trust |
-| Above ₹2,500 | Premium / brand-led zone | Can carry higher CAC only if brand and quality reduce hesitation |
+| Product band  | Likely role                | CAC implication                                                  |
+| ------------- | -------------------------- | ---------------------------------------------------------------- |
+| Below ₹799    | Traffic and value entry    | CAC must be very low; contribution room is thin                  |
+| ₹999–₹1,499   | Mass-fashion working zone  | Good for creator-led and paid testing if returns are controlled  |
+| ₹1,500–₹2,499 | Stronger contribution zone | Better CAC tolerance, but requires stronger trust                |
+| Above ₹2,500  | Premium / brand-led zone   | Can carry higher CAC only if brand and quality reduce hesitation |
 
 The model points toward staged product architecture. In the first phase, the marketplace should use a narrow set of mid-price products to test demand without making CAC unrecoverable. In the second phase, add categories with lower return pressure to improve basket economics. In the third phase, add premium or owned supply only where trust and repeat behavior already exist.
 
@@ -1027,10 +1062,10 @@ The IAB/MRC retail media guidelines define incrementality as the causal impact o
 
 The model should measure three layers separately:
 
-| Layer | What it asks |
-|---|---|
-| **Reported conversion** | Did the platform attribute the conversion to a campaign? |
-| **Incremental conversion** | Would the conversion have happened without the campaign? |
+| Layer                               | What it asks                                              |
+| ----------------------------------- | --------------------------------------------------------- |
+| **Reported conversion**             | Did the platform attribute the conversion to a campaign?  |
+| **Incremental conversion**          | Would the conversion have happened without the campaign?  |
 | **Contribution-bearing conversion** | Did the customer keep the order and produce contribution? |
 
 Only the third layer can support CAC recovery. A campaign that produces attributed conversions but not retained contribution is not solving acquisition. It is producing measurement noise.
@@ -1045,12 +1080,12 @@ The model below uses **₹140 contribution per order** and compares weak, base, 
 
 A weak cohort may recover part of CAC but fail to approach the required contribution value. A stronger cohort justifies the same CAC because customers keep buying. The question behind every acquisition decision is whether the cohort produces enough retained contribution before it decays.
 
-| Channel view | Better cohort view |
-|---|---|
-| CAC by channel | CAC by retained customer |
-| Orders by channel | Retained orders by channel |
-| Revenue by channel | Contribution after returns by channel |
-| ROAS by channel | PVC-LTV / CAC by channel |
+| Channel view          | Better cohort view                         |
+| --------------------- | ------------------------------------------ |
+| CAC by channel        | CAC by retained customer                   |
+| Orders by channel     | Retained orders by channel                 |
+| Revenue by channel    | Contribution after returns by channel      |
+| ROAS by channel       | PVC-LTV / CAC by channel                   |
 | Conversion by channel | Incremental retained conversion by channel |
 
 The channel that looks cheapest on Day 1 may be expensive by Month 3 if its customers do not repeat.
@@ -1067,12 +1102,12 @@ The model assumes a base contribution of **₹180 per order** before platform-fu
 
 Discount reporting should be split:
 
-| Discount type | Economic interpretation |
-|---|---|
-| **Brand-funded** | May not directly reduce platform contribution |
-| **Seller-funded** | Can support conversion without platform bearing full cost |
-| **Platform-funded** | Should be treated as acquisition or contribution leakage |
-| **Customer-funded via wallet/referral liability** | Must be tracked as future cost, not free growth |
+| Discount type                                     | Economic interpretation                                   |
+| ------------------------------------------------- | --------------------------------------------------------- |
+| **Brand-funded**                                  | May not directly reduce platform contribution             |
+| **Seller-funded**                                 | Can support conversion without platform bearing full cost |
+| **Platform-funded**                               | Should be treated as acquisition or contribution leakage  |
+| **Customer-funded via wallet/referral liability** | Must be tracked as future cost, not free growth           |
 
 Without this split, a marketplace can show declining CAC while quietly increasing acquisition subsidy through discounts.
 
@@ -1084,7 +1119,7 @@ A platform-level CAC may look acceptable while one category destroys contributio
 
 The minimum useful measurement unit is:
 
-$$\text{channel} \times \text{category} \times \text{price band} \times \text{city cohort}$$
+\$\$\text{channel} \times \text{category} \times \text{price band} \times \text{city cohort}\$\$
 
 A customer acquired through a creator for ₹1,499 western wear in Bengaluru is not economically identical to a customer acquired through paid search for ₹699 value footwear in a Tier-2 city. Treating them as the same customer creates false averages.
 
@@ -1092,28 +1127,28 @@ A customer acquired through a creator for ₹1,499 western wear in Bengaluru is 
 
 The model should be judged by whether these metrics move together:
 
-| Metric | Weak signal | Base signal | Strong signal |
-|---|---:|---:|---:|
-| New-customer share of orders | 60%+ | ~35% | 25–30% |
-| Paid CAC | ₹500+ | ~₹250 | ₹200 or lower |
-| Return rate | 35–45% | 25–30% | Below 25% |
-| Platform-funded discount/order | ₹100+ | ₹40–₹60 | Below ₹25 |
-| Repeat / CRM / direct share | Below 40% | 60%+ | 70%+ |
-| Contribution/order before CAC | Below ₹100 | ₹120–₹160 | ₹200+ |
-| PVC-LTV / CAC | Below 2x | 3x | 4x+ |
+| Metric                         | Weak signal | Base signal | Strong signal |
+| ------------------------------ | ----------: | ----------: | ------------: |
+| New-customer share of orders   |        60%+ |        ~35% |        25–30% |
+| Paid CAC                       |       ₹500+ |       ~₹250 | ₹200 or lower |
+| Return rate                    |      35–45% |      25–30% |     Below 25% |
+| Platform-funded discount/order |       ₹100+ |     ₹40–₹60 |     Below ₹25 |
+| Repeat / CRM / direct share    |   Below 40% |        60%+ |          70%+ |
+| Contribution/order before CAC  |  Below ₹100 |   ₹120–₹160 |         ₹200+ |
+| PVC-LTV / CAC                  |    Below 2x |          3x |           4x+ |
 
 No single metric proves health. A lower CAC is not enough if return rate rises. A higher repeat share is not enough if repeat orders are discount-funded. A higher contribution/order is not enough if volume comes from a small premium niche that cannot scale. A lower return rate is not enough if customers do not repeat. The scorecard is designed to make contradictions visible.
 
 ### 8.7 The six tests before scaling harder
 
-| Test | What it checks | Failure mode |
-|---|---|---|
-| **Retained-order test** | Placed orders survive cancellation, returns, and refunds | Gross order growth overstates demand |
-| **Incrementality test** | Campaigns create customers who would not have bought anyway | Attribution inflates performance |
-| **Cohort payback test** | Customers recover CAC through retained contribution | First orders do not become customer value |
-| **Discount dependency test** | Orders persist without platform-funded subsidy | CAC is hidden inside discounts |
-| **Category contribution test** | Categories remain positive after returns and fulfilment | Blended margin hides weak categories |
-| **City economics test** | Delivery, RTO, return, and repeat work by geography | Expansion increases order count but weakens contribution |
+| Test                           | What it checks                                              | Failure mode                                             |
+| ------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------- |
+| **Retained-order test**        | Placed orders survive cancellation, returns, and refunds    | Gross order growth overstates demand                     |
+| **Incrementality test**        | Campaigns create customers who would not have bought anyway | Attribution inflates performance                         |
+| **Cohort payback test**        | Customers recover CAC through retained contribution         | First orders do not become customer value                |
+| **Discount dependency test**   | Orders persist without platform-funded subsidy              | CAC is hidden inside discounts                           |
+| **Category contribution test** | Categories remain positive after returns and fulfilment     | Blended margin hides weak categories                     |
+| **City economics test**        | Delivery, RTO, return, and repeat work by geography         | Expansion increases order count but weakens contribution |
 
 These tests do not slow growth. They prevent the company from scaling the wrong version of growth.
 
@@ -1143,16 +1178,16 @@ A new marketplace should not claim to be all of these at once. That would usuall
 
 At the target scale of **150,000 monthly orders**, the same order count can describe three fundamentally different businesses:
 
-| Metric | Weak system | Base system | Strong system |
-|---|---:|---:|---:|
-| Monthly orders | 150,000 | 150,000 | 150,000 |
-| Contribution/order | ₹80 | ₹140 | ₹200 |
-| New-customer share | 60% | 35% | 25% |
-| Paid share of new customers | 70% | 40% | 35% |
-| Paid CAC | ₹500 | ₹250 | ₹200 |
-| PVC-LTV/customer | ₹600 | ₹850 | ₹1,200 |
-| Return rate | 40% | 28% | 20% |
-| Repeat / CRM / direct share | 40% | 65% | 75% |
+| Metric                      | Weak system | Base system | Strong system |
+| --------------------------- | ----------: | ----------: | ------------: |
+| Monthly orders              |     150,000 |     150,000 |       150,000 |
+| Contribution/order          |         ₹80 |        ₹140 |          ₹200 |
+| New-customer share          |         60% |         35% |           25% |
+| Paid share of new customers |         70% |         40% |           35% |
+| Paid CAC                    |        ₹500 |        ₹250 |          ₹200 |
+| PVC-LTV/customer            |        ₹600 |        ₹850 |        ₹1,200 |
+| Return rate                 |         40% |         28% |           20% |
+| Repeat / CRM / direct share |         40% |         65% |           75% |
 
 The order count is identical. The system underneath is not.
 
@@ -1184,12 +1219,12 @@ A marketplace does not become healthier because it processes more orders. It bec
 
 Four plausible first engines exist for a new Indian fashion marketplace:
 
-| First engine | What it tries to reduce | Main risk |
-|---|---|---|
-| **Creator-led demand** | Cold-start CAC and trust friction | Attribution noise and personality-dependent demand |
-| **Curated mid-market supply** | Return risk and discovery noise | Slower assortment expansion |
-| **Owned / exclusive supply** | Low contribution per order | Inventory, design, and working-capital risk |
-| **Repeat and CRM system** | Reacquisition cost | Cannot work before enough first customers exist |
+| First engine                  | What it tries to reduce           | Main risk                                          |
+| ----------------------------- | --------------------------------- | -------------------------------------------------- |
+| **Creator-led demand**        | Cold-start CAC and trust friction | Attribution noise and personality-dependent demand |
+| **Curated mid-market supply** | Return risk and discovery noise   | Slower assortment expansion                        |
+| **Owned / exclusive supply**  | Low contribution per order        | Inventory, design, and working-capital risk        |
+| **Repeat and CRM system**     | Reacquisition cost                | Cannot work before enough first customers exist    |
 
 The most coherent starting point is a narrow system combining creator-led demand with curated mid-market supply.
 
@@ -1223,13 +1258,13 @@ The correct unit is not acquired customer. It is acquired retained customer with
 
 ### 9.6 What the company should not do first
 
-| Move | Why it is dangerous |
-|---|---|
-| Launching as a broad open marketplace | Increases assortment but weakens control over quality, returns, and discovery |
-| Scaling paid performance before cohort proof | Buys demand before knowing whether the customer repays CAC |
-| Using discounts as the main acquisition tool | Hides CAC inside contribution leakage |
-| Expanding geographically before logistics evidence | Creates orders in zones that may not support retained contribution |
-| Assuming retail media too early | Sellers pay for traffic only when the platform proves intent and conversion |
+| Move                                               | Why it is dangerous                                                           |
+| -------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Launching as a broad open marketplace              | Increases assortment but weakens control over quality, returns, and discovery |
+| Scaling paid performance before cohort proof       | Buys demand before knowing whether the customer repays CAC                    |
+| Using discounts as the main acquisition tool       | Hides CAC inside contribution leakage                                         |
+| Expanding geographically before logistics evidence | Creates orders in zones that may not support retained contribution            |
+| Assuming retail media too early                    | Sellers pay for traffic only when the platform proves intent and conversion   |
 
 Each of these moves can increase order volume. That is why they are tempting. But each can weaken the system while making the surface metric look better. The early-stage discipline is to reject volume that does not improve the customer-value equation.
 
@@ -1249,14 +1284,14 @@ Delay retail media monetization until traffic is strong enough to deserve seller
 
 The first viable engine is not simply "fashion marketplace."
 
-| Layer | Function |
-|---|---|
-| Curated mid-market supply | Controls return risk and improves contribution consistency |
-| Creator-led discovery | Reduces cold-start trust friction |
-| Paid amplification | Scales only validated cohorts |
-| CRM and repeat system | Converts first orders into lower-cost future orders |
-| Category-level contribution tracking | Prevents blended metrics from hiding weak segments |
-| Selective logistics expansion | Avoids growing into geographies that weaken contribution |
+| Layer                                | Function                                                   |
+| ------------------------------------ | ---------------------------------------------------------- |
+| Curated mid-market supply            | Controls return risk and improves contribution consistency |
+| Creator-led discovery                | Reduces cold-start trust friction                          |
+| Paid amplification                   | Scales only validated cohorts                              |
+| CRM and repeat system                | Converts first orders into lower-cost future orders        |
+| Category-level contribution tracking | Prevents blended metrics from hiding weak segments         |
+| Selective logistics expansion        | Avoids growing into geographies that weaken contribution   |
 
 This engine does not guarantee success. It only creates a structure where success can be measured honestly.
 
@@ -1301,51 +1336,3 @@ The weaker path is also clear: broad catalogue, discount-led first orders, prema
 The marketplace that matters is not the one that gets the first order.
 
 It is the one where the second order costs less to create.
-
----
-
-## Appendix: Visual Assets
-
-| Section | Visual | File |
-|---|---|---|
-| Section 2 | Myntra FY25 Revenue Layers | `./fashion-marketplace-cac/assets/section2_myntra_revenue_layers.png` |
-| Section 2 | Nykaa Fashion FY26 Economic Stack | `./fashion-marketplace-cac/assets/section2_nykaa_fashion_economic_stack.png` |
-| Section 2 | Meesho FY26 Frequency and NMV Loop | `./fashion-marketplace-cac/assets/section2_meesho_frequency_nmv_loop.png` |
-| Section 2 | Indian Marketplace Advertising Layer | `./fashion-marketplace-cac/assets/section2_indian_marketplace_ad_layer.png` |
-| Section 3 | Marketing and Growth Spend Intensity | `./fashion-marketplace-cac/assets/section3_marketing_growth_spend_intensity.png` |
-| Section 3 | Monthly CAC Burden | `./fashion-marketplace-cac/assets/section3_monthly_cac_burden_5000_orders.png` |
-| Section 3 | Incremental CAC vs Post-View Conversion | `./fashion-marketplace-cac/assets/section3_incremental_cac_vs_post_view_conversion.png` |
-| Section 4 | Required Contribution Value by CAC | `./fashion-marketplace-cac/assets/section4_required_pvc_ltv_by_cac.png` |
-| Section 4 | Orders Needed to Recover CAC | `./fashion-marketplace-cac/assets/section4_orders_needed_to_recover_cac.png` |
-| Section 4 | PVC-LTV by Contribution and Repeat Depth | `./fashion-marketplace-cac/assets/section4_pvc_ltv_by_contribution_and_repeat_depth.png` |
-| Section 4 | CAC Ceiling at 3x PVC-LTV/CAC | `./fashion-marketplace-cac/assets/section4_cac_ceiling_at_3x_pvc_ltv.png` |
-| Section 5 | Ramp Variants to 150,000 Monthly Orders | `./fashion-marketplace-cac/assets/section5_ramp_variants_150k_monthly_orders.png` |
-| Section 5 | Base Path Orders vs CAC | `./fashion-marketplace-cac/assets/section5_base_path_orders_vs_cac.png` |
-| Section 5 | Base Path Monthly Paid Acquisition Spend | `./fashion-marketplace-cac/assets/section5_base_path_paid_acquisition_spend.png` |
-| Section 5 | Target Order Mix Shift | `./fashion-marketplace-cac/assets/section5_target_order_mix_shift.png` |
-| Section 5 | Contribution After Paid CAC | `./fashion-marketplace-cac/assets/section5_contribution_after_paid_cac.png` |
-| Section 6 | Acquisition Channels CAC Range and Memory Potential | `./fashion-marketplace-cac/assets/section6_channel_cac_range_memory_potential.png` |
-| Section 6 | AI Productivity Marketing Budget Sensitivity | `./fashion-marketplace-cac/assets/section6_ai_productivity_marketing_budget_sensitivity.png` |
-| Section 7 | Fixed Cost Burden by AOV | `./fashion-marketplace-cac/assets/section7_fixed_cost_burden_by_aov.png` |
-| Section 7 | Indian Value Anchors | `./fashion-marketplace-cac/assets/section7_indian_value_anchors.png` |
-| Section 7 | CAC Ceiling by AOV | `./fashion-marketplace-cac/assets/section7_cac_ceiling_by_aov.png` |
-| Section 7 | Expected Return Handling Cost | `./fashion-marketplace-cac/assets/section7_expected_return_handling_cost.png` |
-| Section 8 | Retained Orders Under Return Scenarios | `./fashion-marketplace-cac/assets/section8_retained_orders_return_scenarios.png` |
-| Section 8 | Cohort PVC Build-Up | `./fashion-marketplace-cac/assets/section8_cohort_pvc_build_up.png` |
-| Section 8 | Discount Dependency Payback Orders | `./fashion-marketplace-cac/assets/section8_discount_dependency_payback_orders.png` |
-| Section 9 | Scenario PVC-LTV / CAC | `./fashion-marketplace-cac/assets/section9_scenario_pvc_ltv_cac.png` |
-| Section 9 | Contribution Before and After Paid CAC | `./fashion-marketplace-cac/assets/section9_contribution_before_after_paid_cac.png` |
-| Section 9 | Order Mix Scenarios | `./fashion-marketplace-cac/assets/section9_order_mix_scenarios.png` |
-| Section 9 | Contribution Depth and Return Pressure | `./fashion-marketplace-cac/assets/section9_contribution_depth_return_pressure.png` |
-
-## Appendix: Source Quality Notes
-
-S2, S5, and S6 are financial-statement PDFs hosted by MediaNama rather than MCA or the companies themselves. They are usable working copies of filings. For final publication, replace them with MCA-hosted or company-hosted filing links if available.
-
-S11 is not India-specific, but it is relevant for the definitions of viewability, attribution, and incrementality.
-
-S12 is not India-specific. It supports only the general AI productivity range and should not be used as proof of Indian media-cost reduction.
-
-S13 and S18 are arXiv papers. They are useful technical research sources using Myntra context, but they are not peer-reviewed journal publications.
-
-S14 is marketing-industry reporting of company claims. It should be used as directional evidence about Myntra's creator-commerce positioning, not as audited financial data.

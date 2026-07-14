@@ -38,6 +38,12 @@ export interface RetrievalMetadata {
   criticisms?: string[]
 }
 
+type BlogSourceMetadata = {
+  title: string
+  url?: string
+  citation?: string
+}
+
 // ============================================================================
 // JSON-LD SCHEMA GENERATORS
 // ============================================================================
@@ -115,6 +121,12 @@ export function generateBlogPostingSchema(
   imageUrl?: string,
 ) {
   const datePublished = post.data.date ? new Date(post.data.date) : new Date()
+  const dateModified =
+    post.data.updated ??
+    post.data.revised ??
+    post.data.revisionDate ??
+    post.data.lastUpdated ??
+    datePublished
 
   return {
     '@context': 'https://schema.org',
@@ -125,7 +137,7 @@ export function generateBlogPostingSchema(
     abstract: post.data.description,
     image: imageUrl || `${SITE.href}/static/1200x630.png`,
     datePublished: datePublished.toISOString(),
-    dateModified: datePublished.toISOString(),
+    dateModified: dateModified.toISOString(),
     inLanguage: SITE.locale,
     isPartOf: {
       '@type': 'Blog',
@@ -156,13 +168,16 @@ export function generateBlogPostingSchema(
     },
     keywords: post.data.tags?.join(', ') || '',
     articleSection: 'Research',
-    articleBody: '[[Article content would be inserted here - handled by CMS rendering]]',
+    articleBody:
+      '[[Article content would be inserted here - handled by CMS rendering]]',
     mentions: post.data.sources
-      ? post.data.sources.map((source) => ({
-          '@type': 'Thing',
-          name: source.title,
-          url: source.url,
-        }))
+      ? (post.data.sources as BlogSourceMetadata[]).map(
+          (source: BlogSourceMetadata) => ({
+            '@type': 'Thing',
+            name: source.title,
+            url: source.url,
+          }),
+        )
       : [],
   }
 }
@@ -170,7 +185,9 @@ export function generateBlogPostingSchema(
 /**
  * Generates JSON-LD schema for Breadcrumbs
  */
-export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+export function generateBreadcrumbSchema(
+  items: { name: string; url: string }[],
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -192,6 +209,12 @@ export function generateArticleSchema(
   imageUrl?: string,
 ) {
   const datePublished = post.data.date ? new Date(post.data.date) : new Date()
+  const dateModified =
+    post.data.updated ??
+    post.data.revised ??
+    post.data.revisionDate ??
+    post.data.lastUpdated ??
+    datePublished
 
   return {
     '@context': 'https://schema.org',
@@ -202,10 +225,10 @@ export function generateArticleSchema(
     description: post.data.description,
     image: imageUrl || `${SITE.href}/static/1200x630.png`,
     datePublished: datePublished.toISOString(),
-    dateModified: datePublished.toISOString(),
+    dateModified: dateModified.toISOString(),
     inLanguage: SITE.locale,
     author: post.data.authors
-      ? post.data.authors.map((author) => ({
+      ? (post.data.authors as string[]).map((author: string) => ({
           '@type': 'Person',
           name: author,
         }))
@@ -310,9 +333,7 @@ export function generateBlogCollectionSchema() {
 /**
  * Generates semantic metadata for AI-optimized retrieval
  */
-export function generateSemanticMetadata(
-  post: CollectionEntry<'blog'>,
-): {
+export function generateSemanticMetadata(post: CollectionEntry<'blog'>): {
   title: string
   metaDescription: string
   keywords: string[]
@@ -338,7 +359,11 @@ export function generateSemanticMetadata(
       'competitive-dynamics',
       'market-entry',
     ],
-    ideas: ['conceptual-frameworks', 'thought-leadership', 'research-synthesis'],
+    ideas: [
+      'conceptual-frameworks',
+      'thought-leadership',
+      'research-synthesis',
+    ],
     development: [
       'economic-development',
       'growth-dynamics',
@@ -350,11 +375,18 @@ export function generateSemanticMetadata(
   }
 
   const semanticTags = tags
-    .flatMap((tag) => semanticTagMap[tag as keyof typeof semanticTagMap] || [tag])
-    .filter((tag, index, arr) => arr.indexOf(tag) === index)
+    .flatMap(
+      (tag: string) =>
+        semanticTagMap[tag as keyof typeof semanticTagMap] || [tag],
+    )
+    .filter(
+      (tag: string, index: number, arr: string[]) => arr.indexOf(tag) === index,
+    )
 
   // Extract key entities (authors, sources)
-  const entities: SemanticEntity[] = (post.data.authors || []).map((author) => ({
+  const entities: SemanticEntity[] = (
+    (post.data.authors || []) as string[]
+  ).map((author: string) => ({
     type: 'Person',
     name: author,
     url: `${SITE.href}/authors`,
@@ -363,12 +395,14 @@ export function generateSemanticMetadata(
   // Add source entities
   if (post.data.sources) {
     entities.push(
-      ...post.data.sources.map((source) => ({
-        type: 'CreativeWork',
-        name: source.title,
-        url: source.url,
-        description: source.citation,
-      })),
+      ...(post.data.sources as BlogSourceMetadata[]).map(
+        (source: BlogSourceMetadata) => ({
+          type: 'CreativeWork',
+          name: source.title,
+          url: source.url,
+          description: source.citation,
+        }),
+      ),
     )
   }
 
@@ -402,7 +436,9 @@ export function generateTopicMapping(
 
   const primaryTag = tags[0] as keyof typeof primaryTopicMap
   const primary = primaryTopicMap[primaryTag] || 'Research'
-  const secondary = tags.slice(1).map((tag) => primaryTopicMap[tag as keyof typeof primaryTopicMap] || tag)
+  const secondary = tags
+    .slice(1)
+    .map((tag) => primaryTopicMap[tag as keyof typeof primaryTopicMap] || tag)
 
   // Infer concepts from title/description keywords
   const conceptKeywords = [
@@ -526,7 +562,10 @@ export function generateSemanticSearchMetadata(
     keywords: post.data.tags?.join(', '),
     inLanguage: SITE.locale,
     author: post.data.authors
-      ? post.data.authors.map((a) => ({ '@type': 'Person', name: a }))
+      ? (post.data.authors as string[]).map((a: string) => ({
+          '@type': 'Person',
+          name: a,
+        }))
       : undefined,
   }
 }
@@ -539,8 +578,12 @@ export function generateAIMetadataSummary(post: CollectionEntry<'blog'>) {
     title: post.data.title,
     description: post.data.description,
     tags: post.data.tags || [],
-    topics: generateTopicMapping(post.data.title, post.data.description, post.data.tags || []),
-    entities: (post.data.authors || []).map((a) => ({
+    topics: generateTopicMapping(
+      post.data.title,
+      post.data.description,
+      post.data.tags || [],
+    ),
+    entities: ((post.data.authors || []) as string[]).map((a: string) => ({
       type: 'author',
       name: a,
     })),
@@ -557,9 +600,11 @@ export function calculateRetrievalScore(post: CollectionEntry<'blog'>): number {
   let score = 50 // Base score
 
   // Factors that improve retrievability
-  if (post.data.description?.length) score += Math.min(20, post.data.description.length / 100)
+  if (post.data.description?.length)
+    score += Math.min(20, post.data.description.length / 100)
   if (post.data.tags?.length) score += Math.min(15, post.data.tags.length * 2)
-  if (post.data.sources?.length) score += Math.min(15, post.data.sources.length * 1.5)
+  if (post.data.sources?.length)
+    score += Math.min(15, post.data.sources.length * 1.5)
 
   return Math.min(100, score)
 }

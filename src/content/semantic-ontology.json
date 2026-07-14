@@ -323,27 +323,6 @@
       }
     },
     "conceptualRelationships": {
-      "cloudCostGravity": {
-        "name": "Cloud Cost Gravity",
-        "definition": "Structural economic phenomenon where infrastructure expenses grow faster than revenue as startups scale",
-        "relatedConcepts": [
-          "unit economics",
-          "organizational misalignment",
-          "technical debt",
-          "cost management",
-          "scaling challenges"
-        ],
-        "implications": [
-          "Infrastructure costs eventually constrain profitability",
-          "Architectural decisions early on create permanent cost drag",
-          "Cost reduction requires organizational transformation"
-        ],
-        "oppositeOf": "Economies of Scale (traditional)",
-        "examples": [
-          "AWS cost growth outpacing SaaS revenue growth",
-          "Microservices creating baseline infrastructure overhead"
-        ]
-      },
       "demandGravity": {
         "name": "Demand Gravity",
         "definition": "Structural phenomenon where user demand normalizes after emergency conditions, creating unsustainable unit economics",
@@ -380,9 +359,7 @@
           "Timing and sequencing of supply/demand acquisition is critical",
           "Bootstrap success determines long-term viability"
         ],
-        "relatedArticles": [
-          "The Chicken-and-Egg Problem"
-        ]
+        "relatedArticles": ["The Chicken-and-Egg Problem"]
       },
       "waterConstraint": {
         "name": "Water as Growth Constraint",
@@ -399,9 +376,7 @@
           "Urbanization and industrialization face physical limits",
           "Infrastructure inefficiency amplifies resource constraints"
         ],
-        "relatedArticles": [
-          "Water Scarcity and India's Economic Growth"
-        ]
+        "relatedArticles": ["Water Scarcity and India's Economic Growth"]
       }
     },
     "researchMethodology": {

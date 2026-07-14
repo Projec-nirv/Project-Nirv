@@ -15,6 +15,7 @@ import remarkMath from 'remark-math'
 
 import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-sections'
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+import { rehypeNumericDataPoints } from './src/lib/rehype-numeric-data-points'
 
 import tailwindcss from '@tailwindcss/vite'
 
@@ -40,8 +41,7 @@ export default defineConfig({
         codeFontSize: '0.75rem',
         borderColor: 'var(--border)',
         codeFontFamily: 'var(--font-mono)',
-        codeBackground:
-          'color-mix(in oklab, var(--muted) 25%, transparent)',
+        codeBackground: 'color-mix(in oklab, var(--muted) 25%, transparent)',
         frames: {
           editorActiveTabForeground: 'var(--muted-foreground)',
           editorActiveTabBackground:
@@ -91,6 +91,7 @@ export default defineConfig({
       ],
       rehypeHeadingIds,
       rehypeKatex,
+      rehypeNumericDataPoints,
       [
         rehypePrettyCode,
         {
@@ -101,6 +102,6 @@ export default defineConfig({
         },
       ],
     ],
-    remarkPlugins: [remarkMath, remarkEmoji],
+    remarkPlugins: [[remarkMath, { singleDollarTextMath: false }], remarkEmoji],
   },
 })

@@ -8,7 +8,8 @@
   h4,
   h5,
   h6 {
-    @apply wrap-break-word;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   h1,
@@ -86,7 +87,8 @@
       color: var(--foreground);
       text-decoration-color: var(--muted-foreground);
       font-weight: 500;
-      word-break: break-word;
+      overflow-wrap: anywhere;
+      word-break: normal;
       text-decoration-line: underline;
       text-underline-offset: 3px;
       transition: color 200ms;
@@ -100,6 +102,11 @@
       color: #60a5fa;
       font-weight: 700;
       letter-spacing: 0;
+    }
+
+    :where(.numeric-data-point):not(:where(.not-prose, .not-prose *)) {
+      color: #60a5fa;
+      font-weight: 600;
     }
 
     :where(ul):not(:where(.not-prose, .not-prose *)) {
@@ -144,7 +151,8 @@
       padding-bottom: 0.2rem;
       font-size: 0.875rem;
       font-weight: 500;
-      word-break: break-word;
+      overflow-wrap: anywhere;
+      word-break: normal;
     }
 
     :where(blockquote):not(:where(.not-prose, .not-prose *)) {
@@ -210,7 +218,8 @@
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       vertical-align: top;
-      word-break: break-word;
+      overflow-wrap: anywhere;
+      word-break: normal;
       font-size: 0.875rem;
     }
 
@@ -222,7 +231,9 @@
       margin-bottom: 0 !important;
     }
 
-    :where(img, video, figure, .expressive-code):not(:where(.not-prose, .not-prose *)) {
+    :where(img, video, figure, .expressive-code):not(
+        :where(.not-prose, .not-prose *)
+      ) {
       margin-left: auto;
       margin-right: auto;
       margin-top: 1.5rem;
