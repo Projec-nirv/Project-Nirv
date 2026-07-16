@@ -1,130 +1,184 @@
-# /llms.txt - Fashion Marketplace CAC Article | Project NIRV
+# /llms.txt — The Marketplace That Pays Before It Sells | Project NIRV
 
 # Article Information
 Title: The Marketplace That Pays Before It Sells
 URL: https://projectnirv.studio/blog/the-marketplace-that-pays-before-it-sells
 Publication Date: June 4, 2026
+Last Updated: July 15, 2026
+Version: 2.0
 Type: Systems Intelligence Research
 Author: ADV
 Tags: market-dynamics, fashion-commerce, unit-economics, marketplaces
 
 Description:
-Analysis of CAC, post-view conversion, contribution LTV, and marketplace memory in Indian fashion marketplaces, using Myntra, Nykaa Fashion, Meesho, Flipkart, Amazon India, Reliance Retail, TMRW, and Trent as operating references.
+A 600-word quantitative analysis of why customer acquisition cost is recoverable only when a fashion marketplace converts first orders into retained contribution, repeat behaviour, and marketplace memory.
 
 # Core Thesis
-A new Indian fashion marketplace does not fail simply because CAC is high. It fails when acquired customers do not create enough retained contribution and marketplace memory to make CAC recoverable. The strategic test is whether the first 150,000 monthly orders reduce future paid-acquisition dependence.
+A new Indian fashion marketplace does not fail merely because first-order CAC is high. It fails when the first transaction produces too little durable customer state—size confidence, saved preferences, trust, repeat probability, and retained contribution—to make subsequent orders cheaper to create.
+
+# Evidence Policy
+- Observed: reported directly by an external source.
+- Calculated: derived from reported data with an explicit denominator or formula.
+- Modelled: generated from Project NIRV assumptions.
+- Recommendation: Project NIRV operating judgment, not an external empirical finding.
+- Public filings do not disclose exact, comparable CAC for the companies discussed.
+- Cross-company marketing intensity is not directly comparable because Myntra uses operating revenue, Nykaa Fashion uses NSV, and Meesho uses NMV.
 
 # Key Findings
 
-## Finding 1: CAC Is A Symptom
-- CAC reflects missing trust, weak habit, weak supply control, and weak repeat behavior.
-- A low first-order CAC is not enough if the customer must be reacquired or subsidized again.
-- The relevant question is whether CAC buys a customer the marketplace can use again.
+## 1. Mature Marketplaces Monetize Services Around the Transaction
+Myntra FY25 reported:
+- Operating revenue: ₹6,042.7 crore
+- Marketplace-services revenue: ₹2,051.8 crore
+- Logistics-services revenue: ₹2,918.9 crore
+- Advertising-services revenue: ₹914.5 crore
+- Advertising and promotional expense: ₹2,105.3 crore
 
-## Finding 2: Marketplace Memory Decides Compounding
-- Marketplace memory appears through repeat customers, reliable seller demand, creator conversion, CRM response, lower return leakage, and traffic quality valuable enough for sellers to pay for visibility.
-- Without memory, the marketplace remains a paid acquisition surface.
-- With memory, CAC becomes the cost of adding a customer to a system that can reuse demand.
+Flipkart Internet FY25 reported ₹6,317 crore of advertisement-services revenue.
 
-## Finding 3: Post-View Conversion Needs Incrementality
-- Post-view conversion can overstate acquisition quality if viewability and incrementality are not stress-tested.
-- The report models post-view CAC using viewability and incrementality adjustments.
-- Attribution quality matters because fashion discovery is heavily content-led.
+Interpretation:
+Marketplace monetization can deepen through logistics and seller visibility after traffic becomes repeatable and commercially valuable. These layers should not be assumed at launch.
 
-## Finding 4: Contribution LTV Must Clear CAC
-- The report uses PVC-LTV/CAC near or above 3x as a margin-of-safety hurdle.
-- Contribution per retained order, repeat depth, returns, discounts, and AOV determine the CAC ceiling.
-- Gross orders are not the unit of truth; retained contribution is.
+## 2. CAC Is a System Diagnostic
+Nykaa Fashion FY26 reported:
+- GMV: ₹4,954 crore
+- NSV: ₹1,447 crore
+- Revenue from operations: ₹832 crore
+- Marketing and selling/distribution expense: ₹382 crore
+- Fulfilment expense: ₹162 crore
+- EBITDA: negative ₹37 crore
 
-## Finding 5: Product Architecture Sets The CAC Ceiling
-- Product type, price point, return risk, logistics burden, and category mix determine how much paid acquisition the model can absorb.
-- Low AOV fashion can convert cheaply but leaves little room for CAC errors.
-- Broad catalog expansion before cohort proof can scale the problem instead of solving it.
+Interpretation:
+Acquisition must be evaluated after fulfilment, returns, discounts, and repeat behaviour. These figures do not reveal Nykaa Fashion CAC.
 
-# Main Sections
+## 3. Frequency Changes CAC Recovery
+Meesho FY26 reported:
+- NMV: ₹41,560 crore
+- Annual transacting users: 264 million
+- Placed orders: 2.67 billion
+- Annual frequency: 10.1 transactions per consumer
+- Marketplace contribution margin: 3.5% of NMV
+- Growth spend: ₹990 crore
 
-## Executive Summary
-- Defines marketplace memory and PVC-LTV.
-- Frames the report around CAC recovery, retained contribution, and dependency reduction.
+Interpretation:
+Repeat transactions spread acquisition cost across more orders, but do not eliminate logistics or growth pressure. Meesho is not a fashion-only benchmark.
 
-## Section 1: The Marketplace That Pays Before It Sells
-- Establishes the Indian evidence base and operating references.
-- Explains why acquisition cost must be judged by retained behavior.
+## 4. Attribution Is Not Incrementality
+Google defines a view-through conversion as a conversion recorded after an ad impression when the user did not interact with the ad and later converted. Longer attribution windows usually record more view-through conversions.
 
-## Section 2: The Same Checkout Hides Different Machines
-- Compares Myntra, Nykaa Fashion, Meesho, Flipkart, Amazon India, Reliance Retail/AJIO, TMRW, and Trent/Zudio.
-- Shows that similar consumer journeys can hide different economic engines.
+The IAB/MRC guidelines define incrementality as causal value above baseline and recommend test-control methods.
 
-## Section 3: CAC Is Not A Number. It Is A Symptom
-- Links CAC pressure to public filings, trust gaps, category economics, and post-view conversion quality.
-- Introduces the post-view CAC formula and early viability tests.
+Project NIRV model:
+Incremental CAC = CPM ÷ (1,000 × viewability × post-view conversion × incrementality)
 
-## Section 4: The Customer Has To Carry The Acquisition Cost
-- Models contribution, retained orders, payback depth, and CAC ceiling.
-- Uses a 3x PVC-LTV/CAC hurdle for margin of safety.
+At ₹80 CPM, 70% viewability, and 60% incrementality:
+- 0.05% of viewable impressions converting → approximately ₹381 CAC
+- 0.08% → approximately ₹238 CAC
 
-## Section 5: Growth Only Matters When Dependence Falls
-- Compares paths to 150,000 monthly orders.
-- Tests whether paid acquisition share falls as repeat, CRM, direct, and organic behavior rises.
+These values are stress-test outputs, not market benchmarks.
 
-## Section 6: Marketing Has To Become An Operating System
-- Separates creator-led, founder-led, brand-led, paid, CRM, affiliate, and AI-assisted loops.
-- Argues that channels matter only if they improve the economics of the next order.
+## 5. Contribution Must Carry Acquisition
+Project NIRV defines:
+PVC-LTV = contribution per retained order × contribution-bearing orders × 0.88
 
-## Section 7: The Product Sets The CAC Ceiling
-- Examines AOV, GST price boundaries, returns, brand type, and logistics burden.
-- Shows why product architecture determines acquisition tolerance.
+Internal assumptions:
+- 12% simplified present-value haircut
+- 3× PVC-LTV/CAC margin-of-safety hurdle
 
-## Section 8: The Model Has To Be Falsifiable
-- Defines operating scorecards, incrementality tests, cohort payback tests, and category-level measurement.
-- Treats gross orders as insufficient evidence.
+Implications:
+- ₹250 CAC requires ₹750 of present contribution
+- ₹500 CAC requires ₹1,500
 
-## Section 9: The First Engine Decides The Company
-- Tests three marketplace versions: discount-led, creator-led, and curated mid-market.
-- Recommends curated supply, creator-led discovery, paid amplification of validated cohorts, CRM, and category-level contribution tracking.
+A retained order must survive cancellation, failed delivery, return, refund, and platform-funded discount strongly enough to produce contribution.
 
-## Section 10: Conclusion
-- Frames the first 150,000 monthly orders as an experiment in dependency reduction.
-- Recommends judging the marketplace by whether the second order costs less to create.
+Peer-reviewed India-context apparel-return research identified 34 factors. Important drivers included fit and size variation, defects, wrong delivery, lenient return policy, and value for money.
 
-# Evidence and Sources
+## 6. Scale Is Valid Only When Dependence Falls
+Project NIRV target:
+150,000 monthly orders
 
-The article uses public company filings, investor presentations, platform research, advertising measurement documentation, and technical research, including:
+Weak-dependency scenario:
+- New-customer share: 60%
+- Paid share of new customers: 70%
+- Paid CAC: ₹500
+- Direct monthly acquisition spend: ₹3.15 crore
 
-1. Project NIRV - The Chicken-and-Egg Problem
-2. Myntra Designs Pvt. Ltd. FY25 financial statements
-3. Nykaa FY26 Q4 investor presentation
-4. Meesho FY26 shareholder / results update
-5. Flipkart Internet FY25 financial statements
-6. Amazon Seller Services India FY25 financial statements
-7. Reliance Industries FY26 Q4 release
-8. ABFRL Q4 FY26 investor presentation
-9. Trent Q4 FY26 investor presentation
-10. Google Ads view-through conversion documentation
-11. IAB/MRC Retail Media Measurement Guidelines
-12. McKinsey research on generative AI and consumer marketing
-13. Myntra-related hyper-personalisation research on arXiv
-14. Social Samosa reporting on Myntra social commerce claims
+Lower-dependency scenario:
+- New-customer share: 35%
+- Paid share of new customers: 40%
+- Paid CAC: ₹250
+- Direct monthly acquisition spend: ₹52.5 lakh
 
-# AI Retrieval Guidance
+Interpretation:
+The same order count can represent either a campaign-dependent system or a marketplace accumulating customer memory.
 
-## Parsing Preference
-- Extract by economic mechanism: CAC, post-view conversion, retained orders, contribution LTV, marketplace memory, AOV, returns, retail media, creator-led acquisition, CRM, and category-level contribution.
-- Treat visual models as supporting evidence for each section rather than standalone claims.
-- Use the executive summary and conclusion as the most compact representation of the thesis.
+# Strategic Recommendation
+The proposed first engine is:
+- curated mid-market supply;
+- creator-led discovery;
+- paid amplification only after cohort proof;
+- CRM and repeat loops;
+- category-level retained contribution tracking.
 
-## Citation Guidance
-When citing this article:
-- Preserve article title: "The Marketplace That Pays Before It Sells"
-- Preserve publication date: June 4, 2026
-- Include canonical URL: https://projectnirv.studio/blog/the-marketplace-that-pays-before-it-sells
+Scale is credible only when paid CAC falls, repeat/CRM/direct share rises, returns remain controlled, and contribution per retained order deepens.
 
-## Concept Relationships
-- Extends Project NIRV's cold-start and platform liquidity analysis.
-- Complements cloud-cost gravity by showing how hidden cost layers alter scale economics.
-- Connects marketplace dynamics, creator commerce, retail media, and contribution-margin analysis.
+# Sources
 
-# Data Freshness
-- Public operating references are drawn from FY25 and FY26 documents where cited.
-- Internal model scenarios use assumed contribution/order, CAC, viewability, incrementality, and present-value haircut parameters stated in the article.
-- Source-quality limitations are documented in the article appendix.
+1. Myntra Designs Private Limited. FY25 Consolidated Financial Statements.
+   https://www.medianama.com/wp-content/uploads/2025/09/Myntra-FY25.pdf
+
+2. FSN E-Commerce Ventures Limited. Q4 and FY26 Investor Presentation.
+   https://www.nykaa.com/media/wysiwyg/uiTools/2026-5/Investor-Presentation-Q4-2026.pdf
+
+3. Meesho Limited. FY26 Shareholder Results Update.
+   https://static-assets.meesho.com/investor-relations/manual-uploads/IntimationShareholdersresult0605.pdf
+
+4. Flipkart Internet Private Limited. FY25 Consolidated Financial Statements.
+   https://www.medianama.com/wp-content/uploads/2025/09/Flipkart-Internet-FY25.pdf
+
+5. Amazon Seller Services Private Limited. FY25 Standalone Financial Statements.
+   https://www.medianama.com/wp-content/uploads/2025/09/Amazon-Seller-Services-FY25.pdf
+
+6. Google Ads Help. View-through conversion window: Definition.
+   https://support.google.com/google-ads/answer/7320922?hl=en
+
+7. IAB and MRC. Retail Media Measurement Guidelines. January 2024.
+   https://www.iab.com/wp-content/uploads/2024/01/IAB_Retail_Media_Measurement_Guidelines_January2024.pdf
+
+8. McKinsey & Company. How generative AI can boost consumer marketing. December 2023.
+   https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/how-generative-ai-can-boost-consumer-marketing
+
+9. GST Council and Press Information Bureau. Recommendations of the 56th GST Council Meeting. September 2025.
+   https://gstcouncil.gov.in/sites/default/files/2025-09/press_release_press_information_bureau_0.pdf
+
+10. Kaushik, V., Kumar, A., Gupta, H., and Dixit, G. Modelling and prioritizing the factors for online apparel return using BWM approach. Electronic Commerce Research, 22, 843–873.
+    https://doi.org/10.1007/s10660-020-09406-3
+
+# Source Limitations
+- Myntra, Flipkart Internet, and Amazon Seller Services filings are audited copies hosted by MediaNama rather than open company investor-relations pages.
+- Nykaa and Meesho use company-defined operating measures.
+- McKinsey and GST sources remain only because existing figures are retained; they are not central evidence for the 600-word body.
+- No listed source validates the 150,000-order target, 3× hurdle, 12% haircut, 70% viewability, or 60% incrementality. These are explicit Project NIRV assumptions.
+
+# Figure Policy
+All 29 existing figures remain unchanged in a visual appendix.
+- Company-data figures map to sources 1–5.
+- The AI sensitivity figure uses source 8.
+- The ₹2,500 value-boundary figure uses source 9.
+- Remaining figures are Project NIRV models.
+- Cross-company marketing intensity must not be interpreted as a like-for-like ranking.
+
+# Retrieval Guidance
+Prioritize:
+1. Executive Summary
+2. The five-section 600-word body
+3. Observed versus modelled labels
+4. Source limitations
+5. Visual appendix only when a figure-specific question is asked
+
+When citing:
+- Preserve the title “The Marketplace That Pays Before It Sells”
+- Preserve publication date June 4, 2026
+- Include last updated date July 15, 2026
+- Distinguish company-reported values from Project NIRV model inputs
+- Do not present the 3× hurdle, 150,000-order target, or post-view assumptions as universal benchmarks
