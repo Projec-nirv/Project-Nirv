@@ -1,77 +1,19 @@
 ---
 import BlogCard from '@/components/BlogCard.astro'
-import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import PageHead from '@/components/PageHead.astro'
 import PaginationComponent from '@/components/ui/pagination'
 import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
 import { getAllPosts, groupPostsByYear } from '@/lib/data-utils'
 import type { PaginateFunction } from 'astro'
-
-export async function getStaticPaths({
-  paginate,
-}: {
-  paginate: PaginateFunction
-}) {
-  const allPosts = await getAllPosts()
-  return paginate(allPosts, { pageSize: SITE.postsPerPage })
-}
-
+export async function getStaticPaths({ paginate }: { paginate: PaginateFunction }) { return paginate(await getAllPosts(), { pageSize: SITE.postsPerPage }) }
 const { page } = Astro.props
-
 const postsByYear = groupPostsByYear(page.data)
-const years = Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a))
+const years = Object.keys(postsByYear).sort((a,b) => parseInt(b)-parseInt(a))
 ---
-
-<Layout class="max-w-3xl">
+<Layout>
   <PageHead slot="head" title="Research" />
-  <Breadcrumbs
-    items={[
-      { label: 'Research', href: '/blog', icon: 'lucide:library-big' },
-      { label: `Page ${page.currentPage}`, icon: 'lucide:book-copy' },
-    ]}
-  />
-
-  <div class="mb-8 animate-slide-up">
-    <h1 class="text-3xl font-bold mb-2">Research on Systems Intelligence, Infrastructure, Markets, and Strategic Forecasting</h1>
-    <p class="text-gray-600 dark:text-gray-400">Strategic signals in infrastructure and systems change. Data-backed analysis of structural economics, platform dynamics, resource constraints, and macroeconomic fragility.</p>
-  </div>
-
-  <div class="flex min-h-[calc(100vh-18rem)] flex-col gap-y-8">
-    {years.length > 0 ? (
-      years.map((year) => (
-        <section class="flex flex-col gap-y-4">
-          <div class="font-medium">{year}</div>
-          <ul class="flex flex-col gap-4">
-            {postsByYear[year].map((post) => (
-              <li>
-                <BlogCard entry={post} />
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))
-    ) : (
-      <div class="flex flex-col items-center justify-center py-24 px-4 rounded-lg border border-blue-600/30 bg-slate-950/50">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="text-blue-400 text-xl font-medium">Still Researching</span>
-          <div class="flex gap-1">
-            <span class="w-2 h-2 bg-blue-400 rounded-full animate-thinking-dots" style="animation-delay: 0s"></span>
-            <span class="w-2 h-2 bg-blue-400 rounded-full animate-thinking-dots" style="animation-delay: 0.2s"></span>
-            <span class="w-2 h-2 bg-blue-400 rounded-full animate-thinking-dots" style="animation-delay: 0.4s"></span>
-          </div>
-        </div>
-        <p class="text-slate-400 text-center max-w-md">
-          New insights and research articles are being compiled. Check back soon for data-backed analysis on systems, markets, and ideas.
-        </p>
-      </div>
-    )}
-  </div>
-
-  <PaginationComponent
-    currentPage={page.currentPage}
-    totalPages={page.lastPage}
-    baseUrl="/blog/"
-    client:load
-  />
+  <header class="page-intro"><div><span class="section-index">02 / RESEARCH</span><h1>Research</h1></div><p class="page-note">Strategic signals in infrastructure and systems change. Analysis of structural economics, platform dynamics, resource constraints and macroeconomic fragility.</p></header>
+  <div class="listing-layout"><aside class="technical-label">NIRV / WORKS<br />{page.currentPage.toString().padStart(2,'0')} — {page.lastPage.toString().padStart(2,'0')}</aside><div>{years.length > 0 ? years.map(year => <section aria-label={`Research from ${year}`}><h2 class="research-year">{year}</h2><ul class="research-list">{postsByYear[year].map(post => <li><BlogCard entry={post} /></li>)}</ul></section>) : <p>No research entries yet.</p>}<PaginationComponent currentPage={page.currentPage} totalPages={page.lastPage} baseUrl="/blog/" client:load /></div></div>
 </Layout>
+<style>.listing-layout{display:grid;grid-template-columns:1fr minmax(0,900px);gap:6vw}.listing-layout aside{padding-top:58px;line-height:1.9;color:var(--muted-ink)}.listing-layout>div{padding-bottom:60px}@media(max-width:750px){.listing-layout{grid-template-columns:1fr}.listing-layout aside{display:none}}</style>

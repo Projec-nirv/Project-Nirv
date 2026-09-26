@@ -1,40 +1,12 @@
 ---
-import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
 import Layout from '@/layouts/Layout.astro'
 import { getEntry, render } from 'astro:content'
-
-const aboutContent = await getEntry('about', 'about')
-const { Content } = aboutContent ? await render(aboutContent) : { Content: null }
+const entry = await getEntry('about', 'about')
+const { Content } = entry ? await render(entry) : { Content: null }
 ---
-
-<Layout class="max-w-3xl">
+<Layout>
   <PageHead slot="head" title="About" />
-  <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
-
-  <section>
-    <div class="min-w-full">
-      <div class="prose mb-8">
-        {Content && <Content />}
-      </div>
-
-
-      <div class="mt-12 pt-8 border-t border-blue-600">
-        <p class="text-muted-foreground text-sm text-center">
-          Built with the <Link
-            href="https://github.com/jktrn/astro-erudite"
-            class="text-foreground"
-            external
-            underline>astro-erudite</Link
-          > template by <Link
-            href="https://github.com/jktrn"
-            class="text-foreground"
-            external
-            underline>enscribe</Link
-          >
-        </p>
-      </div>
-    </div>
-  </section>
+  <header class="page-intro"><div><span class="section-index">04 / ABOUT</span><h1>About NIRV</h1></div><p class="page-note">An independent research initiative studying how complex systems operate, fail and evolve.</p></header>
+  <section class="content-sheet"><span class="side-label">NIRV / PURPOSE<br />& METHOD</span><div class="prose">{Content && <Content />}</div></section>
 </Layout>

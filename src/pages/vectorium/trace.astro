@@ -1,6 +1,4 @@
 ---
-import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
 import Layout from '@/layouts/Layout.astro'
 import { getEntry, render } from 'astro:content'
@@ -91,41 +89,11 @@ const breadcrumbSchema = {
 }
 ---
 
-<Layout class="max-w-3xl">
+<Layout>
   <PageHead slot="head" title={title} description={description} />
   <script type="application/ld+json" set:html={JSON.stringify(traceSchema)} is:inline />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
   
-  <Breadcrumbs items={[
-    { label: 'Vectorium', href: '/vectorium' },
-    { label: 'Trace', icon: 'lucide:zap' }
-  ]} />
-
-  <section>
-    <div class="min-w-full">
-      <div class="prose mb-8">
-        {Content && <Content />}
-      </div>
-
-      <div class="mt-12 pt-8 border-t border-blue-600">
-        <div class="flex flex-col space-y-4">
-          <p class="text-muted-foreground text-sm">
-            Trace is part of <Link
-              href="/vectorium"
-              class="text-foreground font-medium"
-              underline>Vectorium</Link
-            >, the applied research ecosystem of Project NIRV.
-          </p>
-          <p class="text-muted-foreground text-sm">
-            Repository: <Link
-              href="https://github.com/Reuxbite/Trace"
-              class="text-foreground font-medium"
-              external
-              underline>github.com/Reuxbite/Trace</Link
-            >
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <header class="page-intro"><div><a href="/vectorium" class="section-index">← / VECTORIUM</a><h1>Trace</h1></div><p class="page-note">Attribution intelligence and verification across revenue and advertising signals.</p></header>
+  <section class="content-sheet"><span class="side-label">VECTORIUM / 01<br />EXPERIMENTAL SYSTEM</span><div class="prose">{Content && <Content />}<p>Trace is part of <a href="/vectorium">Vectorium</a>, the applied research ecosystem of Project NIRV.</p><p>Repository: <a href="https://github.com/Reuxbite/Trace">github.com/Reuxbite/Trace</a></p></div></section>
 </Layout>

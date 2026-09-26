@@ -1,0 +1,47 @@
+---
+interface Props {
+  caption?: string
+  compact?: boolean
+}
+const { caption = 'SYSTEM FIELD / PLOT 01', compact = false } = Astro.props
+---
+
+<figure class:list={['plotter-figure', { compact }]}>
+  <img
+    src="/static/nirv-surface.webp"
+    width="1254"
+    height="1254"
+    alt="Hand-plotted folded mathematical surface with dense ink hatching and survey marks"
+    loading="lazy"
+  />
+  <figcaption>{caption}</figcaption>
+</figure>
+<style>
+  .plotter-figure {
+    margin: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 20px 0 38px;
+    position: relative;
+    text-align: center;
+  }
+  .plotter-figure img {
+    display: block;
+    width: min(100%, 650px);
+    max-height: 460px;
+    object-fit: contain;
+    margin: auto;
+    mix-blend-mode: multiply;
+  }
+  .plotter-figure figcaption {
+    font: 10px var(--mono);
+    letter-spacing: 0.17em;
+    text-align: right;
+  }
+  .plotter-figure.compact {
+    padding: 0;
+    border: 0;
+  }
+  .plotter-figure.compact img {
+    max-height: 230px;
+  }
+</style>

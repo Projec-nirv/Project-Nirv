@@ -7,6 +7,7 @@ import Head from '@/components/Head.astro'
 import Header from '@/components/Header.astro'
 import { SITE } from '@/consts'
 import { cn } from '@/lib/utils'
+import '@/styles/nirv.css'
 
 interface Props {
   class?: string
@@ -16,26 +17,18 @@ const { class: className } = Astro.props
 ---
 
 <!doctype html>
-<html
-  class="dark bg-gradient-to-b from-slate-950 via-black to-black text-slate-100 scheme-light-dark"
-  lang={SITE.locale}
-  data-theme="dark"
->
+<html class="" lang={SITE.locale}>
   <Head>
     <slot name="head" />
   </Head>
-  <body class="flex h-fit min-h-screen flex-col gap-y-6 font-mono" style="animation: fadeIn 0.3s ease-out;">
-    <header
-      class="bg-gradient-to-b from-slate-950/80 via-black/80 to-black/80 sticky top-0 z-50 divide-y divide-blue-600 backdrop-blur-sm xl:divide-none" 
-      style="animation: slideInDown 0.3s ease-out;"
-    >
+  <body class="nirv-body">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
       <Header />
       <slot name="subposts-navigation" />
       <slot name="table-of-contents" />
     </header>
-    <main
-      class={cn('w-full mx-auto flex grow flex-col gap-y-6 px-4', className)}
-    >
+    <main id="main-content" class={cn('site-main', className)}>
       <slot />
     </main>
     <Footer />

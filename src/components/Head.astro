@@ -16,6 +16,22 @@ const orgSchema = generateResearchOrganizationSchema()
     content="width=device-width, initial-scale=1.0, user-scalable=yes"
   />
   <meta name="generator" content={Astro.generator} />
+  <script is:inline data-astro-rerun>
+    ;(() => {
+      let choice = null
+      try {
+        choice = localStorage.getItem('theme')
+      } catch {}
+      const theme =
+        choice === 'light' || choice === 'dark'
+          ? choice
+          : matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+      document.documentElement.dataset.theme = theme
+      document.documentElement.style.colorScheme = theme
+    })()
+  </script>
 
   <!-- Mobile & App Metadata -->
   <meta name="HandheldFriendly" content="True" />
@@ -28,16 +44,7 @@ const orgSchema = generateResearchOrganizationSchema()
   />
 
   <!-- Theme Color -->
-  <meta
-    name="theme-color"
-    content="#121212"
-    media="(prefers-color-scheme: dark)"
-  />
-  <meta
-    name="theme-color"
-    content="#121212"
-    media="(prefers-color-scheme: light)"
-  />
+  <meta name="theme-color" content="#f1eee5" />
 
   <!-- SEO & Discovery -->
   <link rel="sitemap" href="/sitemap-index.xml" />
@@ -50,24 +57,39 @@ const orgSchema = generateResearchOrganizationSchema()
   />
 
   <!-- AI & LLM Optimization -->
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <meta
+    name="googlebot"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <meta
+    name="bingbot"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+
   <!-- Semantic Metadata for AI Systems -->
   <meta name="description" content={SITE.description} />
-  <meta name="keywords" content="research, systems, markets, data-driven analysis, structured thinking, intelligence" />
+  <meta
+    name="keywords"
+    content="research, systems, markets, data-driven analysis, structured thinking, intelligence"
+  />
   <meta name="author" content={SITE.author} />
   <meta name="creator" content={SITE.author} />
   <meta name="publisher" content={SITE.title} />
   <meta name="language" content={SITE.locale} />
   <meta name="revisit-after" content="7 days" />
-  
+
   <!-- Open Graph - Social Media & LLM Context Windows -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content={SITE.title} />
   <meta property="og:description" content={SITE.description} />
-  <meta property="og:image" content={new URL('/static/1200x630.png', Astro.site)} />
+  <meta
+    property="og:image"
+    content={new URL('/static/1200x630.png', Astro.site)}
+  />
   <meta property="og:image:alt" content={SITE.title} />
   <meta property="og:url" content={SITE.href} />
   <meta property="og:site_name" content={SITE.title} />
@@ -77,13 +99,21 @@ const orgSchema = generateResearchOrganizationSchema()
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={SITE.title} />
   <meta name="twitter:description" content={SITE.description} />
-  <meta name="twitter:image" content={new URL('/static/1200x630.png', Astro.site)} />
+  <meta
+    name="twitter:image"
+    content={new URL('/static/1200x630.png', Astro.site)}
+  />
   <meta name="twitter:image:alt" content={SITE.title} />
 
   <!-- Canonical & Link Relations for Search -->
-  <link rel="canonical" href={SITE.href} />
+  <link rel="canonical" href={Astro.url} />
   <link rel="home" href={SITE.href} />
-  <link rel="search" type="application/opensearchdescription+xml" title={SITE.title} href="/opensearch.xml" />
+  <link
+    rel="search"
+    type="application/opensearchdescription+xml"
+    title={SITE.title}
+    href="/opensearch.xml"
+  />
 
   <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -91,10 +121,14 @@ const orgSchema = generateResearchOrganizationSchema()
 
   <!-- Favicons -->
   <Favicons />
-  
+
   <!-- ResearchOrganization Schema - Identifies NIRV as research infrastructure -->
-  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} is:inline />
-  
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(orgSchema)}
+    is:inline
+  />
+
   <!-- Client-side Router -->
   <ClientRouter />
 

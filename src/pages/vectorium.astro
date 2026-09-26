@@ -1,8 +1,7 @@
 ---
-import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
 import Layout from '@/layouts/Layout.astro'
+import PlotterFigure from '@/components/PlotterFigure.astro'
 import { getEntry, render } from 'astro:content'
 import { SITE } from '@/consts'
 
@@ -75,29 +74,12 @@ const breadcrumbSchema = {
 }
 ---
 
-<Layout class="max-w-3xl">
+<Layout>
   <PageHead slot="head" title={title} description={description} />
   <script type="application/ld+json" set:html={JSON.stringify(vectoriumSchema)} is:inline />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
   
-  <Breadcrumbs items={[{ label: 'Vectorium', icon: 'lucide:zap' }]} />
-
-  <section>
-    <div class="min-w-full">
-      <div class="prose mb-8">
-        {Content && <Content />}
-      </div>
-
-      <div class="mt-12 pt-8 border-t border-blue-600">
-        <p class="text-muted-foreground text-sm text-center">
-          Part of <Link
-            href="https://projectnirv.studio"
-            class="text-foreground"
-            external
-            underline>Project NIRV</Link
-          >—Research-driven initiative for systems intelligence and strategic forecasting.
-        </p>
-      </div>
-    </div>
-  </section>
+  <header class="page-intro"><div><span class="section-index">03 / APPLIED RESEARCH</span><h1>Vectorium</h1></div><p class="page-note">Where NIRV research becomes experimental systems and operational infrastructure.</p></header>
+  <PlotterFigure caption="FIG. 02 / EXPERIMENTAL SYSTEMS" />
+  <section class="content-sheet"><span class="side-label">NIRV / SYSTEMS<br />& EXPERIMENTS</span><div class="prose">{Content && <Content />}</div></section>
 </Layout>

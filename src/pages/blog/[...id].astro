@@ -68,7 +68,7 @@ const dataCutoff = post.data.dataCutoff
 const version = post.data.version
 ---
 
-<Layout>
+<Layout class="article-shell">
   <PostHead slot="head" post={post} />
   {
     (hasChildPosts || isCurrentSubpost) && (
@@ -229,11 +229,6 @@ const version = post.data.version
         </div>
       </div>
 
-      <PostNavigation
-        newerPost={navigation.newer}
-        olderPost={navigation.older}
-        parentPost={isCurrentSubpost ? navigation.parent : undefined}
-      />
     </section>
 
     {

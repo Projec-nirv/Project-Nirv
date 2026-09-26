@@ -1,20 +1,9 @@
 ---
-import { SOCIAL_LINKS } from '@/consts'
-import SocialIcons from './SocialIcons.astro'
-
-const socialLinksWithLabels = SOCIAL_LINKS.map(link => ({
-  ...link,
-  label: link.icon
-}))
+import { NAV_LINKS, SITE } from '@/consts'
 ---
 
-<footer
-  class="mx-auto mb-8 flex w-full max-w-3xl flex-col items-center justify-center gap-y-2 px-4 sm:mb-4 sm:flex-row sm:justify-between"
->
-  <div class="flex flex-wrap items-center justify-center gap-x-2 text-center">
-    <span class="text-muted-foreground text-sm">
-      &copy; {new Date().getFullYear()} All rights reserved.
-    </span>
-  </div>
-  <SocialIcons links={socialLinksWithLabels} />
+<footer class="site-footer">
+  <span class="footer-identity">NIRV <small>/ {new Date().getFullYear()}</small></span>
+  <span class="footer-description">{SITE.title} · Non-Linear Intelligence Research Vector</span>
+  <nav aria-label="Footer navigation">{NAV_LINKS.map(item => <a href={item.href}>{item.label}</a>)}</nav>
 </footer>

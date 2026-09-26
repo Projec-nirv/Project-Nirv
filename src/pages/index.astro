@@ -1,75 +1,29 @@
 ---
 import BlogCard from '@/components/BlogCard.astro'
-import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
-import { buttonVariants } from '@/components/ui/button'
-import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
 import { getRecentPosts } from '@/lib/data-utils'
-import { getEntry, render } from 'astro:content'
-
-const blog = await getRecentPosts(SITE.featuredPostCount)
-const homeContent = await getEntry('home', 'home')
-const { Content } = homeContent ? await render(homeContent) : { Content: null }
+import { SITE } from '@/consts'
+const posts = await getRecentPosts(SITE.featuredPostCount)
 ---
-
-<Layout class="max-w-3xl">
+<Layout>
   <PageHead slot="head" title="Home" />
-  <section class="rounded-lg border hover-lift animate-slide-up">
-    <div class="flex flex-col items-center space-y-4 p-6">
-      <img src="/static/logo.png" alt="Project NIRV Logo" class="w-full max-w-md aspect-auto drop-shadow-lg" />
-      <div class="flex flex-col space-y-1.5 text-center">
-        <h3 class="text-3xl leading-none font-medium">Project NIRV</h3>
-        <p class="text-muted-foreground text-sm">
-          <span class="font-medium">Non-Linear Intelligence Research Vector</span>
-        </p>
-      </div>
+  <section class="home-hero" aria-labelledby="home-title">
+    <div class="home-copy">
+      <span class="section-index">01 / NIRV</span>
+      <h1 id="home-title">Understanding<br />how systems<br />operate, fail<br />and <em>evolve.</em></h1>
+      <p>Project NIRV is an independent research initiative focused on systems intelligence, infrastructure evolution and strategic forecasting across technology, markets, society and the physical world.</p>
+      <a class="text-action" href="/about"><span aria-hidden="true">→</span> Explore NIRV</a>
     </div>
-    <div class="p-6 pt-0">
-      <div class="prose text-sm">
-        {Content && <Content />}
-      </div>
-    </div>
+    <figure class="hero-figure"><img src="/static/nirv-landscape-ink.webp" alt="Hand-inked survey landscape of layered mountains, valleys and subtle plotted marks" width="1774" height="887" fetchpriority="high" /><figcaption>FIG. 01 &nbsp; / &nbsp; SYSTEMS IN MOTION</figcaption></figure>
+    <span class="hero-coordinate" aria-hidden="true">19.076° N<br />72.877° E<br />/ INDIA</span>
   </section>
-  <section class="flex flex-col gap-y-4 animate-slide-up">
-    <h2 class="text-2xl font-medium">Research on Systems Intelligence, Infrastructure, Markets, and Strategic Forecasting</h2>
-    {blog.length > 0 ? (
-      <>
-        <ul class="flex flex-col gap-y-4">
-          {
-            blog.map((post) => (
-              <li>
-                <BlogCard entry={post} />
-              </li>
-            ))
-          }
-        </ul>
-        <div class="flex justify-center">
-          <Link
-            href="/blog"
-            class={buttonVariants({ variant: 'ghost' }) + ' group'}
-          >
-            See all research <span
-              class="ml-1.5 transition-transform group-hover:translate-x-1"
-              >&rarr;</span
-            >
-          </Link>
-        </div>
-      </>
-    ) : (
-      <div class="flex flex-col items-center justify-center py-16 px-4 rounded-lg border border-blue-600/30 bg-slate-950/50">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="text-blue-400 text-lg font-medium">Still Researching</span>
-          <div class="flex gap-1">
-            <span class="w-2 h-2 bg-blue-400 rounded-full animate-thinking-dots" style="animation-delay: 0s"></span>
-            <span class="w-2 h-2 bg-blue-400 rounded-full animate-thinking-dots" style="animation-delay: 0.2s"></span>
-            <span class="w-2 h-2 bg-blue-400 rounded-full animate-thinking-dots" style="animation-delay: 0.4s"></span>
-          </div>
-        </div>
-        <p class="text-slate-400 text-sm text-center max-w-md">
-          New insights and research articles are being compiled. Check back soon for data-backed analysis.
-        </p>
-      </div>
-    )}
+  <section class="home-directions" aria-label="Areas of work">
+    <a href="/blog" class="direction"><span class="section-index">02 / RESEARCH</span><div class="direction-art contour-art" aria-hidden="true"></div><div><h2>Systems intelligence</h2><p>Research into the behavior, constraints and evolution of complex systems.</p></div><span class="direction-arrow" aria-hidden="true">↗</span></a>
+    <a href="/vectorium" class="direction"><span class="section-index">03 / VECTORIUM</span><div class="direction-art vector-art" aria-hidden="true"></div><div><h2>Vectorium</h2><p>Experimental systems and operational infrastructure emerging from NIRV research.</p></div><span class="direction-arrow" aria-hidden="true">↗</span></a>
   </section>
+  {posts.length > 0 && <section class="home-latest" aria-labelledby="latest-title"><div class="latest-heading"><span class="section-index">04 / CURRENT WORK</span><h2 id="latest-title">Recent research</h2><a href="/blog" class="text-action">All research ↗</a></div><ul class="research-list">{posts.map(post => <li><BlogCard entry={post} /></li>)}</ul></section>}
 </Layout>
+<style>
+.home-hero{min-height:590px;position:relative;display:grid;grid-template-columns:42% 58%;border-bottom:1px solid var(--rule);align-items:center}.home-copy{position:relative;z-index:2;padding:50px 0 45px}.home-copy h1{font:normal clamp(3.6rem,5.8vw,6.8rem)/.94 var(--serif);letter-spacing:-.065em;margin:32px 0 26px}.home-copy h1 em{color:var(--accent);font-weight:400}.home-copy p{font:14px/1.6 var(--mono);max-width:355px;letter-spacing:.01em}.text-action{font:11px var(--mono);text-transform:uppercase;letter-spacing:.16em;text-decoration:none;display:inline-flex;align-items:center;gap:18px;margin-top:30px}.text-action:hover{color:var(--accent)}.text-action span{font:25px var(--serif)}.hero-figure{margin:0 -3vw 0 -10vw;align-self:end;position:relative}.hero-figure img{width:100%;height:auto;mix-blend-mode:multiply}.hero-figure figcaption{position:absolute;right:8%;bottom:4%;font:10px var(--mono);letter-spacing:.13em}.hero-coordinate{position:absolute;left:39%;top:13%;font:10px/1.7 var(--mono);letter-spacing:.12em;color:var(--muted-ink)}.home-directions{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}.direction{position:relative;min-height:310px;padding:27px 50px 40px 0;display:grid;grid-template-columns:43% 1fr;grid-template-rows:auto 1fr;gap:25px;text-decoration:none}.direction+.direction{border-left:1px solid var(--rule);padding-left:45px}.direction .section-index{grid-column:1/-1}.direction-art{height:170px;border:1px solid var(--rule);align-self:start}.contour-art{background:repeating-radial-gradient(ellipse at 32% 55%,transparent 0 7px,#3b3e3855 8px 8.7px,transparent 9px 15px)}.vector-art{background:repeating-radial-gradient(ellipse at 50% 50%,transparent 0 10px,#3b3e3844 11px 11.7px,transparent 12px 20px);transform:skew(-12deg) scale(.9);border:0}.direction h2{font:normal clamp(1.8rem,2.8vw,3rem)/1.05 var(--serif);letter-spacing:-.045em;margin:0 0 15px}.direction p{font:13px/1.6 var(--mono);color:var(--muted-ink);max-width:280px}.direction-arrow{position:absolute;right:15px;top:28px;font:22px var(--serif)}.direction:hover h2,.direction:hover .direction-arrow{color:var(--accent)}.home-latest{padding-top:85px}.latest-heading{display:flex;align-items:end;gap:35px;margin-bottom:20px}.latest-heading h2{font:normal clamp(2.5rem,4vw,4rem) var(--serif);letter-spacing:-.05em;margin:0}.latest-heading .text-action{margin:0 0 12px auto}@media(max-width:800px){.home-hero{grid-template-columns:1fr;min-height:0}.home-copy{padding:55px 0 0}.home-copy h1{font-size:clamp(3.9rem,12vw,6rem)}.hero-figure{margin:0 -15vw 0 -4vw}.hero-coordinate{display:none}.home-directions{grid-template-columns:1fr}.direction+.direction{border-left:0;border-top:1px solid var(--rule);padding-left:0}.direction{min-height:245px}.latest-heading{display:block}.latest-heading .text-action{margin:10px 0 0}}@media(max-width:520px){.direction{grid-template-columns:1fr;gap:20px;padding-right:0}.direction-art{height:125px}.home-copy p{font-size:12px}.latest-heading h2{margin-top:12px}}
+</style>
