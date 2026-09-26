@@ -243,9 +243,11 @@ const version = post.data.version
     </article>
 
     <!-- Semantic Knowledge Graph Relationships -->
-    <div class="col-start-2">
-      <SemanticRelationships post={post} />
-    </div>
+    {(post.data.relatedArticles?.length || post.data.forecastContinuations?.length) && (
+      <div class="col-start-2">
+        <SemanticRelationships post={post} />
+      </div>
+    )}
 
     {
       (hasChildPosts || isCurrentSubpost) && (
