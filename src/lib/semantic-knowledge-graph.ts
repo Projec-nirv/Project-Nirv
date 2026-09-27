@@ -21,8 +21,7 @@ export function generateResearchOrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'ResearchOrganization',
     name: 'Project NIRV',
-    description:
-      'Structured research infrastructure for systems intelligence, infrastructure analysis, strategic forecasting, and non-linear systems analysis.',
+    description: 'Research, writing and things I build.',
     url: 'https://projectnirv.studio',
     sameAs: ['https://github.com/Reuxbite', 'https://projectnirv.studio'],
     contactPoint: {
@@ -43,8 +42,7 @@ export function generateResearchOrganizationSchema() {
     /**
      * Research methodology - how research is conducted
      */
-    researchMethodology:
-      'Systems analysis, non-linear dynamics, structural constraint identification, data-driven forecasting',
+    researchMethodology: 'I read, check sources, write and test ideas.',
     /**
      * Knowledge graph definition - canonical topics covered
      */
@@ -53,8 +51,7 @@ export function generateResearchOrganizationSchema() {
      * Scholarly articles published
      */
     foundingDate: '2024-01-01',
-    publishingPrinciples:
-      'Data-backed analysis, structural reasoning, non-linear forecasting, verified sources, explicit assumptions',
+    publishingPrinciples: 'I separate evidence from assumptions and correct errors.',
   }
 }
 

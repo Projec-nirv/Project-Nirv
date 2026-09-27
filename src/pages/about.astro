@@ -7,6 +7,6 @@ const { Content } = entry ? await render(entry) : { Content: null }
 ---
 <Layout>
   <PageHead slot="head" title="About" />
-  <header class="page-intro"><div><span class="section-index">04 / ABOUT</span><h1>About NIRV</h1></div><p class="page-note">An independent research initiative studying how complex systems operate, fail and evolve.</p></header>
-  <section class="content-sheet"><span class="side-label">NIRV / PURPOSE<br />& METHOD</span><div class="prose">{Content && <Content />}</div></section>
+  <header class="page-intro"><div><span class="section-index">04 / ABOUT</span><h1>About NIRV</h1></div><p class="page-note">NIRV is where I put the things I'm researching, writing about and building.</p></header>
+  <section class="content-sheet"><span class="side-label">NIRV / ABOUT</span><div class="prose">{Content && <Content />}</div></section>
 </Layout>

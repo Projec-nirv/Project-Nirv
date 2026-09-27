@@ -8,8 +8,8 @@ import { SITE } from '@/consts'
 const vectoriumContent = await getEntry('vectorium', 'vectorium')
 const { Content } = vectoriumContent ? await render(vectoriumContent) : { Content: null }
 
-const title = "Vectorium - Experimental Systems & Applied Research"
-const description = "Vectorium is the applied research ecosystem of Project NIRV—a dedicated space for experimental systems, intelligence platforms, and research-driven products emerging from rigorous analysis."
+const title = "Vectorium"
+const description = "Things I'm building."
 
 // Generate JSON-LD schemas for Vectorium
 const vectoriumSchema = {
@@ -26,14 +26,14 @@ const vectoriumSchema = {
   },
   about: {
     '@type': 'Thing',
-    name: 'Experimental Systems Research',
-    description: 'Applied research infrastructure and experimental systems'
+    name: 'Things I am building',
+    description: 'Small projects that start with questions.'
   },
   mainEntity: {
     '@type': 'Organization',
     '@id': `${SITE.href}/#organization`,
     name: 'Project NIRV',
-    description: 'Research-driven initiative for systems intelligence',
+    description: 'Research, writing and things I build.',
     url: SITE.href
   },
   hasPart: [
@@ -41,7 +41,7 @@ const vectoriumSchema = {
       '@type': 'SoftwareApplication',
       '@id': new URL('/vectorium/trace', Astro.site).toString(),
       name: 'Trace',
-      description: 'Attribution intelligence and verification system',
+      description: "I'm building Trace to see where advertising attribution and actual revenue stop lining up.",
       url: new URL('/vectorium/trace', Astro.site).toString(),
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
@@ -79,7 +79,7 @@ const breadcrumbSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(vectoriumSchema)} is:inline />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
   
-  <header class="page-intro"><div><span class="section-index">03 / APPLIED RESEARCH</span><h1>Vectorium</h1></div><p class="page-note">Where NIRV research becomes experimental systems and operational infrastructure.</p></header>
-  <PlotterFigure caption="FIG. 02 / EXPERIMENTAL SYSTEMS" />
-  <section class="content-sheet"><span class="side-label">NIRV / SYSTEMS<br />& EXPERIMENTS</span><div class="prose">{Content && <Content />}</div></section>
+  <header class="page-intro"><div><span class="section-index">03 / VECTORIUM</span><h1>Vectorium</h1></div><p class="page-note">Things I'm building.</p></header>
+  <PlotterFigure caption="FIG. 02 / VECTORIUM" />
+  <section class="content-sheet"><span class="side-label">NIRV / PROJECTS</span><div class="prose">{Content && <Content />}</div></section>
 </Layout>

@@ -2,6 +2,6 @@
 name: 'ADV'
 title: 'Researcher'
 avatar: '/static/profile.png'
-bio: 'Independent researcher behind Project NIRV, focused on systems intelligence, market structure, infrastructure economics, and evidence-led strategic analysis.'
+bio: 'I research systems, markets and infrastructure.'
 mail: 'projectnirvstudio@gmail.com'
 ---

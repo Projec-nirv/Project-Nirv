@@ -31,8 +31,7 @@ const formatLabel = (value: string) =>
       <section class="rounded-lg border border-gray-200 bg-gradient-to-br from-green-50 to-green-50/50 p-6 dark:border-gray-700 dark:from-green-900/20 dark:to-green-900/10">
         <h3 class="mb-4 text-lg font-bold">Related Research</h3>
         <p class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-          Other articles in Project NIRV's knowledge graph with semantic
-          relationships.
+          More on this question.
         </p>
         <div class="space-y-4">
           {relatedArticles.map((rel) => (
@@ -62,9 +61,9 @@ const formatLabel = (value: string) =>
   {
     forecastContinuations.length > 0 && (
       <section class="rounded-lg border border-gray-200 bg-gradient-to-br from-purple-50 to-purple-50/50 p-6 dark:border-gray-700 dark:from-purple-900/20 dark:to-purple-900/10">
-        <h3 class="mb-4 text-lg font-bold">Future Research Directions</h3>
+        <h3 class="mb-4 text-lg font-bold">Next questions</h3>
         <p class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-          Follow-up research topics identified by this analysis.
+          Things I might look at next.
         </p>
         <div class="space-y-4">
           {forecastContinuations.map((continuation) => (
@@ -82,18 +81,4 @@ const formatLabel = (value: string) =>
     )
   }
 
-  <!-- Knowledge Graph Metadata -->
-  {
-    (relatedArticles.length > 0 || forecastContinuations.length > 0) && (
-      <section class="rounded-lg border border-gray-200 bg-gray-50 p-4 text-xs text-gray-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400">
-        <p class="mb-2 font-medium">Machine-Readable Metadata</p>
-        <p>
-          This article is part of Project NIRV's interconnected semantic
-          research graph. All related concepts and article relationships are
-          exposed through structured data (JSON-LD and Schema.org schemas) for
-          improved AI understanding and knowledge retrieval.
-        </p>
-      </section>
-    )
-  }
 </aside>

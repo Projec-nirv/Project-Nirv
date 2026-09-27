@@ -6,7 +6,7 @@ const tags = await getSortedTags()
 ---
 <Layout>
   <PageHead slot="head" title="Topics" />
-  <header class="page-intro"><div><span class="section-index">06 / INDEX</span><h1>Topics</h1></div><p class="page-note">Browse the subjects connected to NIRV research.</p></header>
+  <header class="page-intro"><div><span class="section-index">06 / INDEX</span><h1>Topics</h1></div><p class="page-note">Subjects I've written about.</p></header>
   <ul class="research-list topic-list">{tags.map(({tag,count},index) => <li class="research-entry"><a href={`/tags/${tag}`}><div><span class="entry-meta">{String(index+1).padStart(2,'0')} / {count} {count===1?'WORK':'WORKS'}</span><h3>{tag.replaceAll('-', ' ')}</h3></div><span class="entry-arrow" aria-hidden="true">↗</span></a></li>)}</ul>
 </Layout>
 <style>.topic-list{max-width:900px;margin:65px 0 0 auto}</style>

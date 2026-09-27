@@ -24,7 +24,7 @@ const authorPosts = await getPostsByAuthor(author.id)
     description={author.data.bio || `Profile of ${author.data.name}.`}
     noindex
   />
-  <header class="page-intro"><div><a href="/authors" class="section-index">← / AUTHORS</a><h1>{author.data.name}</h1></div><p class="page-note">{author.data.bio}</p></header>
+  <header class="page-intro"><div><a href="/authors" class="section-index">← / AUTHOR</a><h1>{author.data.name}</h1></div><p class="page-note">{author.data.bio}</p></header>
 
   <section>
     <AuthorCard author={author} />

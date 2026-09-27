@@ -7,8 +7,8 @@ import { SITE } from '@/consts'
 const traceContent = await getEntry('vectorium', 'trace')
 const { Content } = traceContent ? await render(traceContent) : { Content: null }
 
-const title = "Trace - Attribution Intelligence System"
-const description = "Trace is an attribution intelligence and verification system designed to analyze inconsistencies between ecommerce revenue signals and advertising platform attribution across Shopify, Meta Ads, Instagram Ads, and Google Ads."
+const title = "Trace"
+const description = "I'm building Trace to compare what advertising platforms say they drove with what actually happened."
 
 // Generate JSON-LD schemas for Trace
 const traceSchema = {
@@ -21,7 +21,7 @@ const traceSchema = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   keywords: ['attribution', 'verification', 'ecommerce', 'advertising', 'analytics', 'signal integrity'],
-  abstract: 'An attribution intelligence platform that analyzes inconsistencies between revenue signals and advertising platform attribution data across multiple platforms.',
+  abstract: 'A project for comparing advertising claims with revenue data.',
   about: [
     {
       '@type': 'Thing',
@@ -55,11 +55,8 @@ const traceSchema = {
     url: SITE.href
   },
   featureList: [
-    'Cross-platform signal reconciliation',
-    'Revenue and advertising data reconciliation',
-    'Consistency analysis across platforms',
-    'Structured anomaly detection',
-    'Operational visibility and verification'
+    'Revenue and advertising data comparison',
+    'Inconsistency checks'
   ]
 }
 
@@ -94,6 +91,6 @@ const breadcrumbSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(traceSchema)} is:inline />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
   
-  <header class="page-intro"><div><a href="/vectorium" class="section-index">← / VECTORIUM</a><h1>Trace</h1></div><p class="page-note">Attribution intelligence and verification across revenue and advertising signals.</p></header>
-  <section class="content-sheet"><span class="side-label">VECTORIUM / 01<br />EXPERIMENTAL SYSTEM</span><div class="prose">{Content && <Content />}<p>Trace is part of <a href="/vectorium">Vectorium</a>, the applied research ecosystem of Project NIRV.</p><p>Repository: <a href="https://github.com/Reuxbite/Trace">github.com/Reuxbite/Trace</a></p></div></section>
+  <header class="page-intro"><div><a href="/vectorium" class="section-index">← / VECTORIUM</a><h1>Trace</h1></div><p class="page-note">I'm building Trace to compare what advertising platforms say they drove with what actually happened.</p></header>
+  <section class="content-sheet"><span class="side-label">VECTORIUM / 01<br />TRACE</span><div class="prose">{Content && <Content />}</div></section>
 </Layout>

@@ -1,6 +1,6 @@
 export const SITE = {
   title: "Project NIRV",
-  description: "Project NIRV is a research-driven initiative focused on systems intelligence, strategic forecasting, infrastructure evolution, and non-linear analysis. We build products, publish research and insights, and explore emerging systems across technology, markets, society, and infrastructure.",
+  description: "I look at systems, write about what I find, and sometimes build things around them.",
   href: "https://projectnirv.studio",
   locale: "en",
   author: "Project NIRV",
