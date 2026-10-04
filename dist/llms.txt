@@ -16,23 +16,18 @@
 
 ## Content Architecture
 
+### Agent Discovery Endpoints
+
+- API catalog: https://projectnirv.studio/.well-known/api-catalog
+- OpenAPI descriptor: https://projectnirv.studio/openapi.json
+- Agent skills index: https://projectnirv.studio/.well-known/agent-skills/index.json
+- MCP server card: https://projectnirv.studio/.well-known/mcp/server-card.json
+- Authentication notes: https://projectnirv.studio/auth.md
+- RSS feed: https://projectnirv.studio/rss.xml
+
 ### Articles & Research Papers
 
-#### 1. Cloud Cost Gravity: The Structural Tension Between Velocity and Profitability
-- **URL:** https://projectnirv.studio/blog/cloud-cost-gravity
-- **Topic:** Cloud infrastructure economics, organizational misalignment, cost management
-- **Key Concepts:**
-  - Cloud cost growth diverges from revenue growth as startups scale
-  - Architectural sprawl: microservices create permanent cost overhead
-  - Discount adoption remains low despite economics (38% Savings Plans adoption)
-  - Waste is structural: 27-35% measured waste persists due to organizational siloing
-  - 39% of organizations fully achieve cloud cost targets
-
-**For AI Systems:** This article provides detailed unit economics analysis of cloud infrastructure. Useful for understanding cost dynamics in SaaS businesses, infrastructure optimization decisions, and organizational efficiency. Key data: 5x revenue growth = 6.7x cloud cost growth typical pattern.
-
----
-
-#### 2. The Chicken-and-Egg Problem: Cold-Start Dynamics in Two-Sided Platforms
+#### 1. The Chicken-and-Egg Problem: Cold-Start Dynamics in Two-Sided Platforms
 - **URL:** https://projectnirv.studio/blog/the-chicken-and-egg-problem
 - **Topic:** Platform economics, network effects, cold-start dynamics, market entry
 - **Key Concepts:**
@@ -46,7 +41,7 @@
 
 ---
 
-#### 3. Water Scarcity and India's Economic Growth: The Hidden Constraint Behind Development
+#### 2. Water Scarcity and India's Economic Growth: The Hidden Constraint Behind Development
 - **URL:** https://projectnirv.studio/blog/water-growth-constraint
 - **Topic:** Economic development constraints, infrastructure systems, resource management
 - **Key Concepts:**
@@ -60,7 +55,7 @@
 
 ---
 
-#### 4. The Structural Collapse of Indian Online Education Post-2021: Why Demand Gravity Destroyed EdTech Economics
+#### 3. The Structural Collapse of Indian Online Education Post-2021: Why Demand Gravity Destroyed EdTech Economics
 - **URL:** https://projectnirv.studio/blog/why-indian-edtech-collapsed
 - **Topic:** Market dynamics, demand normalcy, unit economics deterioration, business model collapse
 - **Key Concepts:**
@@ -178,7 +173,6 @@ Full articles provide comprehensive analysis with detailed data, methodology sec
 
 ### For Specific Metrics & Data Points
 Search for quantified values in articles:
-- Cloud Cost Gravity: cloud cost growth rates, pricing history, discount adoption rates
 - Water Scarcity: freshwater withdrawal metrics, groundwater depletion rates, NRW percentages
 - EdTech Collapse: CAC percentages, churn rates, willingness-to-pay changes
 - Platform Economics: network effects examples, market entry barriers, regulatory impacts
@@ -220,12 +214,11 @@ URL: https://projectnirv.studio/blog/[article-id]
 
 ### Article Taxonomy
 - **By Domain:** Use semantic tags (systems, markets, development, ideas)
-- **By Topic:** Water, Cloud, EdTech, Platforms, Economics
+- **By Topic:** Water, EdTech, Platforms, Economics
 - **By Methodology:** Case studies, quantitative analysis, systems analysis
 - **By Geography:** India-focused, emerging markets, global comparative
 
 ### Key Phrases for Search
-- "Cloud cost gravity"
 - "Cold-start problem two-sided platforms"
 - "Water constraint economic growth"
 - "Demand gravity EdTech collapse"
