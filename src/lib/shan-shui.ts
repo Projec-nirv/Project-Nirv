@@ -865,7 +865,7 @@ export class ShanShui {
             },
             wid: Math.random() * wid * 0.75 + wid * 0.5,
             len: Math.random() * hei * 0.75 + hei * 0.5,
-            // col key comment removed duplicate occurrence
+            col: col,
           },
         );
       }
