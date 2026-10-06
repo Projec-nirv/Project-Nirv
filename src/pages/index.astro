@@ -2,16 +2,12 @@
 import BlogCard from '@/components/BlogCard.astro'
 import PageHead from '@/components/PageHead.astro'
 import Layout from '@/layouts/Layout.astro'
-import ShanShuiHero from '@/components/ShanShuiHero.astro'
 import { getRecentPosts } from '@/lib/data-utils'
 import { SITE } from '@/consts'
 const posts = await getRecentPosts(SITE.featuredPostCount)
 ---
 <Layout>
   <PageHead slot="head" title="Home" />
-  <section class="home-hero" aria-label="Procedural landscape">
-    <ShanShuiHero caption="FIG. 01 / SYSTEMS IN MOTION" initialSeed="nirv-alpha-01" />
-  </section>
   <section class="home-directions" aria-label="Areas of work">
     <a href="/blog" class="direction"><span class="section-index">02 / RESEARCH</span><div class="direction-art contour-art" aria-hidden="true"></div><div><h2>Research</h2><p>Things I've been looking into.</p></div><span class="direction-arrow" aria-hidden="true">↗</span></a>
     <a href="/vectorium" class="direction"><span class="section-index">03 / VECTORIUM</span><div class="direction-art vector-art" aria-hidden="true"></div><div><h2>Vectorium</h2><p>Things I'm building.</p></div><span class="direction-arrow" aria-hidden="true">↗</span></a>
